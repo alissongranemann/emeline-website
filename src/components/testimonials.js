@@ -1,10 +1,10 @@
 import React from "react"
 
 const Testimonials = () => (
-  <section>
+  <div>
     <h2>Testimonials</h2>
     <p>Testomonials text</p>
-  </section>
+  </div>
 )
 
 export default Testimonials

@@ -1,10 +1,10 @@
 import React from "react"
 
 const Contact = () => (
-  <section>
+  <div>
     <h2>Contact</h2>
     <p>Contact text</p>
-  </section>
+  </div>
 )
 
 export default Contact

@@ -1,10 +1,10 @@
 import React from "react"
 
 const Services = () => (
-  <section>
+  <div>
     <h2>Services</h2>
     <p>Services text</p>
-  </section>
+  </div>
 )
 
 export default Services
