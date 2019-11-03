@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import Picture from "../images/profile-picture.jpg"
+import Picture from "./profile-picture"
 
-const Image = styled.img`
-  max-width: 45%;
+const ProfilePicture = styled(Picture)`
+  width: 45%;
   height: auto;
   object-fit: cover;
   max-height: 700px;
@@ -23,7 +23,7 @@ const TextContainer = styled.div`
 
 const About = () => (
   <Container>
-    <Image src={Picture} />
+    <ProfilePicture />
     <TextContainer>
       <h2>Sobre mim</h2>
       <p>
