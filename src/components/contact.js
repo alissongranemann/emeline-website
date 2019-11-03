@@ -1,10 +1,15 @@
 import React from "react"
+import styled from "styled-components"
+
+const Container = styled.div`
+  text-align: center;
+`
 
 const Contact = () => (
-  <div>
+  <Container>
     <h2>Contact</h2>
-    <p>Contact text</p>
-  </div>
+    <p>Contact section</p>
+  </Container>
 )
 
 export default Contact

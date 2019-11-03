@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import HomeIcon from "../images/ic-home.svg"
 import PersonIcon from "../images/ic-person.svg"
+import SpecialtiesIcon from "../images/ic-specialties.svg"
 import ServicesIcon from "../images/ic-services.svg"
 import ContactIcon from "../images/ic-contact.svg"
 import styles from "./navbar.module.css"
@@ -19,8 +20,6 @@ const Nav = styled.nav`
   left: 100px;
   padding: 15px 10px;
   border-radius: 25px;
-  /* background-color: rgba(165, 55, 148, 0.8); */
-  background-color: rgba(37, 49, 57, 0.5);
   box-shadow: -1px 0px 5px 0px;
 `
 
@@ -39,7 +38,7 @@ const Link = styled.a`
 const NavBar = () => (
   <Nav>
     <StyledScrollSpy
-      items={["welcome", "about", "services", "contact"]}
+      items={["welcome", "about", "specialties", "services", "contact"]}
       currentClassName={styles.active}
       offset={-300}
     >
@@ -51,6 +50,11 @@ const NavBar = () => (
       <ListItem>
         <Link href="#about">
           <PersonIcon />
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link href="#specialties">
+          <SpecialtiesIcon />
         </Link>
       </ListItem>
       <ListItem>
