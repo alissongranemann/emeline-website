@@ -8,6 +8,8 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
 `
 
 const Image = styled.img`
@@ -50,7 +52,8 @@ const Footer = () => (
     </IconsContainer>
     <Image src={FullLogo} />
     <div>
-      © {new Date().getFullYear()}, desenvolvido por
+      {new Date().getFullYear()}
+      {` `}© desenvolvido por
       {` `}
       <a href="https://github.com/alissongranemann">Alisson</a>
     </div>

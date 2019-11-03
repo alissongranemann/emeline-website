@@ -1,12 +1,8 @@
 import React from "react"
 import Scrollspy from "react-scrollspy"
 import styled from "styled-components"
+import { FaHome, FaUser, FaListAlt, FaWrench, FaComments } from "react-icons/fa"
 
-import HomeIcon from "../images/ic-home.svg"
-import PersonIcon from "../images/ic-person.svg"
-import SpecialtiesIcon from "../images/ic-specialties.svg"
-import ServicesIcon from "../images/ic-services.svg"
-import ContactIcon from "../images/ic-contact.svg"
 import styles from "./navbar.module.css"
 
 const StyledScrollSpy = styled(Scrollspy)`
@@ -33,6 +29,12 @@ const ListItem = styled.li`
 
 const Link = styled.a`
   display: inline-flex;
+  color: unset;
+
+  svg {
+    width: 30px;
+    height: auto;
+  }
 `
 
 const NavBar = () => (
@@ -44,27 +46,27 @@ const NavBar = () => (
     >
       <ListItem>
         <Link href="#welcome">
-          <HomeIcon />
+          <FaHome />
         </Link>
       </ListItem>
       <ListItem>
         <Link href="#about">
-          <PersonIcon />
+          <FaUser />
         </Link>
       </ListItem>
       <ListItem>
         <Link href="#specialties">
-          <SpecialtiesIcon />
+          <FaListAlt />
         </Link>
       </ListItem>
       <ListItem>
         <Link href="#services">
-          <ServicesIcon />
+          <FaWrench />
         </Link>
       </ListItem>
       <ListItem>
         <Link href="#contact">
-          <ContactIcon />
+          <FaComments />
         </Link>
       </ListItem>
     </StyledScrollSpy>

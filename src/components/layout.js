@@ -18,22 +18,20 @@ const StyledHeader = styled(Header)`
   margin-bottom: 50px;
 `
 
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0px 20px 25px;
+  padding-top: 0;
+`
+
 const Layout = ({ children }) => {
   return (
     <>
       <StyledHeader />
       <NavBar />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1400,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <Main>{children}</Main>
+      <Footer />
     </>
   )
 }
