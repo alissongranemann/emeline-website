@@ -12,6 +12,7 @@ import styled from "styled-components"
 import Header from "./header"
 import NavBar from "../components/navbar"
 import "./layout.css"
+import Footer from "./footer"
 
 const StyledHeader = styled(Header)`
   margin-bottom: 50px;
@@ -31,11 +32,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Developed by
-          {` `}
-          <a href="https://github.com/alissongranemann">Alisson</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )
