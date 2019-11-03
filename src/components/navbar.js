@@ -13,17 +13,19 @@ const StyledScrollSpy = styled(Scrollspy)`
 const Nav = styled.nav`
   position: fixed;
   top: 35%;
-  left: 100px;
+  left: 5%;
   padding: 15px 10px;
   border-radius: 25px;
   box-shadow: -1px 0px 5px 0px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
 `
 
 const ListItem = styled.li`
   margin: unset;
 
   & + & {
-    margin-top: 20px;
+    margin-top: 25px;
   }
 `
 
@@ -34,6 +36,7 @@ const Link = styled.a`
   svg {
     width: 30px;
     height: auto;
+    color: #d8d8d8;
   }
 `
 

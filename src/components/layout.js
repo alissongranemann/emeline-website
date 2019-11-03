@@ -8,6 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import "typeface-montserrat"
+import "typeface-roboto"
+import "typeface-lato"
 
 import Header from "./header"
 import NavBar from "../components/navbar"
@@ -15,14 +18,13 @@ import "./layout.css"
 import Footer from "./footer"
 
 const StyledHeader = styled(Header)`
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 `
 
 const Main = styled.main`
   margin: 0 auto;
-  max-width: 1400px;
-  padding: 0px 20px 25px;
   padding-top: 0;
+  max-width: 75vw;
 `
 
 const Layout = ({ children }) => {

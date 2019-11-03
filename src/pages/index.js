@@ -12,19 +12,11 @@ import Contact from "../components/contact"
 const Section = styled.section`
   min-height: 600px;
   margin-bottom: 100px;
-
-  &:first-child {
-    min-height: unset;
-    height: 50vh;
-  }
 `
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Nutricionista" />
-    <Section id="welcome">
-      <Welcome />
-    </Section>
     <Section id="about">
       <About />
     </Section>
