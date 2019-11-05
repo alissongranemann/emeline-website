@@ -11,6 +11,7 @@ const StyledFooter = styled.footer`
   padding: 0 12%;
   background-color: #311231;
   color: #fff;
+  font-size: 14px;
 
   a {
     text-decoration: none;
@@ -19,16 +20,16 @@ const StyledFooter = styled.footer`
 `
 
 const Image = styled.img`
-  max-width: 350px;
+  max-width: 300px;
   height: auto;
   object-fit: contain;
-  margin: 20px 0;
+  margin: 10px 0;
 `
 
 const IconsContainer = styled.div`
   svg {
     height: auto;
-    width: 30px;
+    width: 25px;
   }
 
   a + a {

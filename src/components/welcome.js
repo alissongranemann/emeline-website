@@ -14,12 +14,12 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: 56px;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
 `
 
 const Subtitle = styled.p`
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 300;
   color: #fff;
 `

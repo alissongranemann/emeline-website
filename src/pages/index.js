@@ -3,20 +3,24 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Welcome from "../components/welcome"
 import About from "../components/about"
 import Specialties from "../components/specialties"
 import Services from "../components/services"
 import Contact from "../components/contact"
 
 const Section = styled.section`
-  min-height: 600px;
   margin-bottom: 100px;
+
+  h2 {
+    font-weight: 900;
+    font-size: 34px;
+    text-transform: uppercase;
+  }
 `
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Nutricionista" />
+    <SEO title="Home" />
     <Section id="about">
       <About />
     </Section>

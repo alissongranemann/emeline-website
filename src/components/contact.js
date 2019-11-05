@@ -37,7 +37,7 @@ const StyledForm = styled(Form)`
 const IconsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
 
   svg {
     height: auto;

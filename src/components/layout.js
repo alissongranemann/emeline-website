@@ -22,9 +22,7 @@ const StyledHeader = styled(Header)`
 `
 
 const Main = styled.main`
-  margin: 0 auto;
   padding-top: 0;
-  max-width: 75vw;
 `
 
 const Layout = ({ children }) => {

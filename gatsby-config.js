@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Emeline Abreu`,
+    title: `Emeline Abreu - Nutricionista`,
     description: `Website da nutricionista Emeline Abreu.`,
     author: `@alissongranemann`,
   },
