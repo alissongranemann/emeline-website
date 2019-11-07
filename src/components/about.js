@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Picture from "./profile-picture"
 
 const ProfilePicture = styled(Picture)`
-  width: 45%;
+  width: 40%;
   height: auto;
   object-fit: cover;
   max-height: 700px;
@@ -13,7 +13,7 @@ const ProfilePicture = styled(Picture)`
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
@@ -21,13 +21,18 @@ const Container = styled.div`
 
 const TextContainer = styled.div`
   max-width: 45%;
+  font-size: 16px;
+`
+
+const Title = styled.h2`
+  text-transform: none !important;
 `
 
 const About = () => (
   <Container>
     <ProfilePicture />
     <TextContainer>
-      <h2>Sobre mim</h2>
+      <Title>Sobre mim</Title>
       <p>
         Sou formada em Nutrição pela Universidade Federal de Santa Catarina
         (UFSC), Pós graduada em Nutrição Clínica Funcional pelo Centro de

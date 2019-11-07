@@ -59,7 +59,9 @@ const Footer = () => (
       {` `}© desenvolvido por
       {` `}
       <strong>
-        <a href="https://github.com/alissongranemann">Alisson</a>
+        <a href="https://www.linkedin.com/in/alisson-granemann-abreu-820b9a90/">
+          Alisson
+        </a>
       </strong>
     </div>
   </StyledFooter>
