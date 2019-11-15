@@ -9,8 +9,6 @@ import Services from "../components/services"
 import Contact from "../components/contact"
 
 const Section = styled.section`
-  margin-bottom: 100px;
-
   h2 {
     font-weight: 900;
     font-size: 34px;

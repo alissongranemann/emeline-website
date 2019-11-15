@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import {
   FaRegGrin,
-  FaNotesMedical,
+  FaRegHospital,
   FaMask,
   FaStreetView,
   FaSyringe,
@@ -30,11 +30,13 @@ const ListItem = styled.li`
   justify-content: space-evenly;
   min-width: 155px;
   padding: 8px 0;
+  margin: 25px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   box-shadow: -1px 1px 2px 0px #b1b1b1;
   background-color: #fff;
+  border-radius: 3px;
 
   svg {
     width: 80px;
@@ -61,7 +63,7 @@ const ComportamentalIcon = styled(FaRegGrin)`
   background-color: #ffa000;
 `
 
-const MedicalIcon = styled(FaNotesMedical)`
+const MedicalIcon = styled(FaRegHospital)`
   background-color: #3949ab;
 `
 

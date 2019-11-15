@@ -17,6 +17,7 @@ const Container = styled.div`
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+  margin-bottom: 50px;
 `
 
 const TextContainer = styled.div`

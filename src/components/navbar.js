@@ -13,7 +13,7 @@ const StyledScrollSpy = styled(Scrollspy)`
 const Nav = styled.nav`
   position: fixed;
   top: 35%;
-  left: 5%;
+  left: 3%;
   padding: 15px 10px;
   border-radius: 25px;
   box-shadow: -1px 0px 5px 0px;
