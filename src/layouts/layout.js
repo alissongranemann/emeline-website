@@ -14,10 +14,10 @@ import { purple } from "@material-ui/core/colors"
 import "typeface-montserrat"
 import "typeface-lato"
 
-import Header from "./header"
+import Header from "../components/header"
 import NavBar from "../components/navbar"
 import "./layout.css"
-import Footer from "./footer"
+import Footer from "../components/footer"
 
 const StyledHeader = styled(Header)`
   padding-bottom: 50px;

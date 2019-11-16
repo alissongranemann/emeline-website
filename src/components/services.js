@@ -8,20 +8,22 @@ import {
 import styled from "styled-components"
 import { Zoom, Fade } from "react-reveal"
 
+import { device } from "../layouts/variables"
 import Background from "../images/services-background.jpg"
 
 const Container = styled.div`
   margin-bottom: 50px;
   padding: 50px 10%;
   color: white;
+  background-color: rgba(99, 0, 179, 0.95);
   background-image: linear-gradient(
       to right bottom,
-      rgba(182, 82, 240, 0.95) 0%,
-      rgba(99, 0, 179, 0.95) 100%
+      rgba(182, 82, 240, 0.95),
+      rgba(99, 0, 179, 0.95)
     ),
     url(${props => props.backgroundImg});
   background-size: cover;
-  background-position: center;
+  background-position: top;
   text-align: center;
 `
 
@@ -41,8 +43,8 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   width: 275px;
-  height: 390px;
-  margin: 15px;
+  height: 375px;
+  margin: 5px;
   padding: 30px 25px;
   border: 1px solid #e1e1e1;
   border-radius: 25px;
@@ -56,6 +58,10 @@ const ListItem = styled.li`
     height: 30px;
     margin-bottom: 10px;
     color: #671d93;
+  }
+
+  @media ${device.mobileL} {
+    margin: 15px;
   }
 `
 
@@ -80,9 +86,9 @@ const Services = () => (
           <FaNotesMedical />
           <Subtitle>Atendimento individualizado</Subtitle>
           <Text>
-            Um atendimento personalizado, em que é elaborado um plano
-            alimentar de acordo com as necessidades nutricionais individuais,
-            hábitos alimentares e objetivos pessoais do paciente.
+            Atendimento personalizado, onde é elaborado um plano alimentar de
+            acordo com as necessidades nutricionais individuais, hábitos
+            alimentares e objetivos pessoais do paciente.
           </Text>
         </ListItem>
         <ListItem>

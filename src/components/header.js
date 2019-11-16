@@ -8,6 +8,8 @@ import Welcome from "./welcome"
 import Background from "../images/background.jpg"
 
 const StyledHeader = styled.header`
+  padding: 0 10%;
+  background-color: rgba(106, 27, 154, 0.95);
   background-image: linear-gradient(
       to right bottom,
       rgba(49, 18, 49, 1),

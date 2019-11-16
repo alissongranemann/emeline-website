@@ -2,6 +2,7 @@ import React from "react"
 import Scrollspy from "react-scrollspy"
 import styled from "styled-components"
 import { FaHome, FaUser, FaListAlt, FaWrench, FaComments } from "react-icons/fa"
+import { device } from "../layouts/variables"
 
 import styles from "./navbar.module.css"
 
@@ -11,15 +12,20 @@ const StyledScrollSpy = styled(Scrollspy)`
 `
 
 const Nav = styled.nav`
+  display: none;
   position: fixed;
   top: 35%;
   left: 3%;
-  padding: 15px 10px;
+  padding: 8px 7px;
   border-radius: 25px;
   box-shadow: -1px 0px 5px 0px;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7);
   animation: fadein 1s;
+
+  @media ${device.tablet} {
+    display: block;
+  }
 
   @keyframes fadein {
     from {
@@ -44,7 +50,7 @@ const Link = styled.a`
   color: unset;
 
   svg {
-    width: 30px;
+    width: 15px;
     height: auto;
     color: #d8d8d8;
   }

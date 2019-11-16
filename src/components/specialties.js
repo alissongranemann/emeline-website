@@ -4,15 +4,17 @@ import { FaRegGrin, FaRegHospital } from "react-icons/fa"
 import { GiWeightLiftingUp, GiFemale } from "react-icons/gi"
 import Fade from "react-reveal/Fade"
 
+import { device } from "../layouts/variables"
+
 const Container = styled.div`
   text-align: center;
-  padding: 35px 8%;
+  padding: 35px 10%;
   background-color: #f1f1f1;
 `
 const Title = styled.h2`
   display: inline-block;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 `
 
 const List = styled.ul`
@@ -25,9 +27,17 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-  width: 500px;
-  margin: 25px;
+  width: 70vw;
+  margin: 0 15px 25px;
   text-align: left;
+
+  @media ${device.tablet} {
+    width: 50vw;
+  }
+
+  @media ${device.laptop} {
+    width: 30vw;
+  }
 
   div {
     display: flex;
@@ -79,7 +89,7 @@ const Specialties = () => (
             <Subtitle>Nutrição para praticantes de atividades físicas</Subtitle>
           </div>
           <Text>
-            Tratamento nutricional focado na Hipertrofia, definição muscular,
+            Tratamento nutricional focado na hipertrofia, definição muscular,
             ganho de peso, perda de peso, redução de percentual de gordura,
             adaptação alimentar adequada aos treinos praticados, melhora de
             disposição e rendimento.

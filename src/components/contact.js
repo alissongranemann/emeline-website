@@ -5,7 +5,12 @@ import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
 import { TextField, Button } from "@material-ui/core"
 import Fade from "react-reveal/Fade"
 
-const Container = styled.div``
+import { device } from "../layouts/variables"
+
+const Container = styled.div`
+  margin-bottom: 50px;
+  padding: 0 10%;
+`
 
 const Title = styled.h2`
   text-align: center;
@@ -16,20 +21,32 @@ const ContentContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 50px;
+  flex-direction: column;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
 `
 
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 35%;
-  margin-bottom: unset;
+  width: 80%;
+  margin-bottom: 50px;
+
+  @media ${device.laptop} {
+    width: 60%;
+    margin-bottom: unset;
+  }
 `
 
 const IconsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  text-align: center;
 
   svg {
     height: auto;
@@ -42,14 +59,25 @@ const IconsContainer = styled.div`
     align-items: center;
     text-decoration: none;
     color: unset;
+    margin-bottom: 25px;
 
     &:hover {
       color: #5a1a78;
     }
   }
 
-  a + a {
-    margin-top: 50px;
+  @media ${device.tablet} {
+    width: 50%;
+  }
+
+  @media ${device.laptop} {
+    width: 40%;
+    flex-direction: column;
+    margin-bottom: unset;
+
+    a + a {
+      margin-top: 25px;
+    }
   }
 `
 
