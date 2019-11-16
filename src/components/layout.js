@@ -8,8 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { createMuiTheme } from "@material-ui/core/styles"
+import { ThemeProvider } from "@material-ui/styles"
+import { purple } from "@material-ui/core/colors"
 import "typeface-montserrat"
-import "typeface-roboto"
 import "typeface-lato"
 
 import Header from "./header"
@@ -25,14 +27,20 @@ const Main = styled.main`
   padding-top: 0;
 `
 
+const theme = createMuiTheme({
+  palette: {
+    primary: purple,
+  },
+})
+
 const Layout = ({ children }) => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <StyledHeader />
       <NavBar />
       <Main>{children}</Main>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 

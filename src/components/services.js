@@ -6,12 +6,13 @@ import {
   FaRegCaretSquareRight,
 } from "react-icons/fa"
 import styled from "styled-components"
+import { Zoom, Fade } from "react-reveal"
 
 import Background from "../images/services-background.jpg"
 
 const Container = styled.div`
   margin-bottom: 50px;
-  padding: 50px;
+  padding: 50px 10%;
   color: white;
   background-image: linear-gradient(
       to right bottom,
@@ -23,16 +24,24 @@ const Container = styled.div`
   background-position: center;
   text-align: center;
 `
+
+const Title = styled.h2`
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+`
+
 const List = styled.ul`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   list-style: none;
+  margin: unset;
 `
 
 const ListItem = styled.li`
   width: 275px;
-  height: 340px;
+  height: 390px;
   margin: 15px;
   padding: 30px 25px;
   border: 1px solid #e1e1e1;
@@ -46,6 +55,7 @@ const ListItem = styled.li`
     width: 30px;
     height: 30px;
     margin-bottom: 10px;
+    color: #671d93;
   }
 `
 
@@ -54,48 +64,53 @@ const Subtitle = styled.h3`
 `
 
 const Text = styled.p`
-  font-family: Lato;
+  font-family: Montserrat;
   font-size: 15px;
   overflow-wrap: break-word;
 `
 
 const Services = () => (
   <Container backgroundImg={Background}>
+    <Fade delay={100}>
+      <Title>Serviços</Title>
+    </Fade>
     <List>
-      <ListItem>
-        <FaNotesMedical />
-        <Subtitle>Atendimento individualizado</Subtitle>
-        <Text>
-          Um atendimento personalizado, em que é elaborado um plano alimentar de
-          acordo com as necessidades nutricionais individuais, hábitos
-          alimentares e objetivos pessoais do paciente.
-        </Text>
-      </ListItem>
-      <ListItem>
-        <FaUtensils />
-        <Subtitle>Personal diet</Subtitle>
-        <Text>
-          O serviço oferecido no consultório feito em sua casa! O foco do
-          personal diet é trazer para quem busca o serviço as adequações e
-          adaptações práticas a rotina domiciliar.
-        </Text>
-      </ListItem>
-      <ListItem>
-        <FaShoppingCart />
-        <Subtitle>Orientações na prática</Subtitle>
-        <Text>
-          A nutricionista o acompanha durante o processo de compras, como
-          supermercados, feiras ou lojas de produtos naturais.
-        </Text>
-      </ListItem>
-      <ListItem>
-        <FaRegCaretSquareRight />
-        <Subtitle>Palestras e cursos</Subtitle>
-        <Text>
-          Um jeito dinâmico e efetivo de levar mais saúde e qualidade de vida às
-          pessoas por meio de rodas de conversa, cursos e palestras.
-        </Text>
-      </ListItem>
+      <Zoom duration={750}>
+        <ListItem>
+          <FaNotesMedical />
+          <Subtitle>Atendimento individualizado</Subtitle>
+          <Text>
+            Um atendimento personalizado, em que é elaborado um plano
+            alimentar de acordo com as necessidades nutricionais individuais,
+            hábitos alimentares e objetivos pessoais do paciente.
+          </Text>
+        </ListItem>
+        <ListItem>
+          <FaUtensils />
+          <Subtitle>Personal diet</Subtitle>
+          <Text>
+            O serviço oferecido no consultório feito em sua casa! O foco do
+            personal diet é trazer para quem busca o serviço as adequações e
+            adaptações práticas a rotina domiciliar.
+          </Text>
+        </ListItem>
+        <ListItem>
+          <FaRegCaretSquareRight />
+          <Subtitle>Palestras e cursos</Subtitle>
+          <Text>
+            Um jeito dinâmico e efetivo de levar mais saúde e qualidade de vida
+            às pessoas por meio de rodas de conversa, cursos e palestras.
+          </Text>
+        </ListItem>
+        <ListItem>
+          <FaShoppingCart />
+          <Subtitle>Orientações na prática</Subtitle>
+          <Text>
+            A nutricionista o acompanha durante o processo de compras, como
+            supermercados, feiras ou lojas de produtos naturais.
+          </Text>
+        </ListItem>
+      </Zoom>
     </List>
   </Container>
 )

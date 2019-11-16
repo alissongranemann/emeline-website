@@ -1,5 +1,5 @@
 import React from "react"
-
+import Fade from "react-reveal/Fade"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -26,8 +26,12 @@ const Subtitle = styled.p`
 
 const Welcome = () => (
   <Container id="welcome">
-    <Title>Nutrição sem neuras e complicações</Title>
-    <Subtitle>Vamos juntos nessa?</Subtitle>
+    <Fade top>
+      <Title>Nutrição sem neuras e complicações</Title>
+    </Fade>
+    <Fade bottom>
+      <Subtitle>Vamos juntos nessa?</Subtitle>
+    </Fade>
   </Container>
 )
 

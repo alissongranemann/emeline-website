@@ -19,6 +19,16 @@ const Nav = styled.nav`
   box-shadow: -1px 0px 5px 0px;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7);
+  animation: fadein 1s;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 const ListItem = styled.li`

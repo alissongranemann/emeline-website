@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import Fade from "react-reveal/Fade"
 
 import Logo from "./logo"
 import Welcome from "./welcome"
@@ -27,7 +28,9 @@ const Container = styled.div`
 const Header = ({ className }) => (
   <StyledHeader className={className} backgroundImg={Background}>
     <Container>
-      <Logo />
+      <Fade>
+        <Logo />
+      </Fade>
     </Container>
     <Welcome />
   </StyledHeader>
