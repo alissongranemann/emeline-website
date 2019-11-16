@@ -16,7 +16,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 35%;
   left: 3%;
-  padding: 8px 7px;
+  padding: 10px 5px;
   border-radius: 25px;
   box-shadow: -1px 0px 5px 0px;
   z-index: 100;
@@ -50,7 +50,7 @@ const Link = styled.a`
   color: unset;
 
   svg {
-    width: 15px;
+    width: 35px;
     height: auto;
     color: #d8d8d8;
   }
