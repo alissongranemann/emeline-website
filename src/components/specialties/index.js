@@ -4,7 +4,7 @@ import { FaRegGrin, FaRegHospital } from "react-icons/fa"
 import { GiWeightLiftingUp, GiFemale } from "react-icons/gi"
 import Fade from "react-reveal/Fade"
 
-import { device } from "../layouts/variables"
+import { device } from "../../layouts/variables"
 
 const Container = styled.div`
   text-align: center;

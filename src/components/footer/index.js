@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
 
-import FullLogo from "../images/full-logo.png"
-import { device } from "../layouts/variables"
+import FullLogo from "../../images/full-logo.png"
+import { device } from "../../layouts/variables"
 
 const StyledFooter = styled.footer`
   display: flex;

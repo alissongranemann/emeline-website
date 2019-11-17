@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 
-import Picture from "./profile-picture"
-import { device } from "../layouts/variables"
+import Picture from "../profile-picture"
+import { device } from "../../layouts/variables"
 
 const Container = styled.div`
   display: flex;

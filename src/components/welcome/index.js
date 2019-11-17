@@ -2,7 +2,7 @@ import React from "react"
 import Fade from "react-reveal/Fade"
 import styled from "styled-components"
 
-import { device } from "../layouts/variables"
+import { device } from "../../layouts/variables"
 
 const Container = styled.div`
   display: flex;

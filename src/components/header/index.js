@@ -3,9 +3,9 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import Fade from "react-reveal/Fade"
 
-import Logo from "./logo"
-import Welcome from "./welcome"
-import Background from "../images/background.jpg"
+import Logo from "../logo"
+import Welcome from "../welcome"
+import Background from "../../images/background.jpg"
 
 const StyledHeader = styled.header`
   padding: 0 10%;

@@ -6,8 +6,8 @@ import { TextField, Button } from "@material-ui/core"
 import Fade from "react-reveal/Fade"
 import emailjs from "emailjs-com"
 
-import Snackbar from "../components/snackbar"
-import { device } from "../layouts/variables"
+import Snackbar from "../snackbar"
+import { device } from "../../layouts/variables"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
 const USER_ID = "user_zGmx6Tx1inJRjufiwhbQv"

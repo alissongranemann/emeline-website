@@ -8,8 +8,8 @@ import {
 import styled from "styled-components"
 import { Zoom, Fade } from "react-reveal"
 
-import { device } from "../layouts/variables"
-import Background from "../images/services-background.jpg"
+import { device } from "../../layouts/variables"
+import Background from "../../images/services-background.jpg"
 
 const Container = styled.div`
   margin-bottom: 50px;

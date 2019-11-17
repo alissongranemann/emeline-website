@@ -2,7 +2,7 @@ import React from "react"
 import Scrollspy from "react-scrollspy"
 import styled from "styled-components"
 import { FaHome, FaUser, FaListAlt, FaWrench, FaComments } from "react-icons/fa"
-import { device } from "../layouts/variables"
+import { device } from "../../layouts/variables"
 
 import styles from "./navbar.module.css"
 
