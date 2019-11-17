@@ -19,6 +19,7 @@ const Image = ({ className }) => {
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
       className={className}
+      alt="Logo da Emeline Abreu"
     />
   )
 }

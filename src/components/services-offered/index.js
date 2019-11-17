@@ -5,7 +5,7 @@ import {
   FaShoppingCart,
   FaRegCaretSquareRight,
 } from "react-icons/fa"
-import { Zoom, Fade } from "react-reveal"
+import { Fade } from "react-reveal"
 
 import { Container, Title, List, ListItem, Subtitle, Text } from "./styles"
 
@@ -14,8 +14,8 @@ const Services = () => (
     <Fade delay={100}>
       <Title>Serviços</Title>
     </Fade>
-    <List>
-      <Zoom duration={750}>
+    <Fade>
+      <List>
         <ListItem>
           <FaNotesMedical />
           <Subtitle>Atendimento individualizado</Subtitle>
@@ -50,8 +50,8 @@ const Services = () => (
             supermercados, feiras ou lojas de produtos naturais.
           </Text>
         </ListItem>
-      </Zoom>
-    </List>
+      </List>
+    </Fade>
   </Container>
 )
 

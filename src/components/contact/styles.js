@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
+import InputLabel from "@material-ui/core/InputLabel"
 
 import { device } from "../../layouts/variables"
 
@@ -80,6 +81,11 @@ export const IconsContainer = styled.div`
 
 export const StyledTextField = styled(TextField)`
   margin-bottom: 25px !important;
+`
+
+export const StyledInputLabel = styled(InputLabel)`
+  color: #000 !important;
+  margin-bottom: 10px !important;
 `
 
 export const StyledButton = styled(Button)`

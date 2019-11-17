@@ -10,8 +10,8 @@ const Specialties = () => (
     <Fade delay={100}>
       <Title>Especialidades</Title>
     </Fade>
-    <List>
-      <Fade>
+    <Fade>
+      <List>
         <ListItem>
           <div>
             <FaRegHospital />
@@ -63,8 +63,8 @@ const Specialties = () => (
             puerpério.
           </Text>
         </ListItem>
-      </Fade>
-    </List>
+      </List>
+    </Fade>
   </Container>
 )
 

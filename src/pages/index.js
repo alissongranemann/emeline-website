@@ -18,7 +18,7 @@ const Section = styled.section`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Nutricionista" />
     <Section id="about">
       <About />
     </Section>

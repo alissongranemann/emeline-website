@@ -8,14 +8,14 @@ const Footer = () => (
   <StyledFooter>
     <IconsContainer>
       <a
-        href="www.facebook.com/emeline.abreu"
+        href="https://www.facebook.com/emeline.abreu"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaFacebook />
       </a>
       <a
-        href="http://www.instagram.com/emelineabreunutri"
+        href="https://www.instagram.com/emelineabreunutri"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -36,13 +36,13 @@ const Footer = () => (
         <FaWhatsapp />
       </a>
     </IconsContainer>
-    <Image src={FullLogo} />
+    <Image src={FullLogo} alt="Logo da Emeline Abreu" />
     <DevelopedBy>
       {new Date().getFullYear()}
       {` `}© desenvolvido por
       {` `}
       <strong>
-        <a href="https://www.linkedin.com/in/alisson-granemann-abreu-820b9a90/">
+        <a href="https://linkedin.com/in/alisson-granemann-abreu-820b9a90/">
           Alisson
         </a>
       </strong>

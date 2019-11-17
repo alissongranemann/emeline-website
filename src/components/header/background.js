@@ -28,6 +28,7 @@ const Background = ({ className, children }) => {
       Tag="section"
       className={className}
       fluid={backgroundFluidImageStack}
+      alt="Frutas sobre a mesa"
     >
       {children}
     </BackgroundImage>

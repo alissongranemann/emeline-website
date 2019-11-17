@@ -14,6 +14,7 @@ import {
   IconsContainer,
   StyledTextField,
   StyledButton,
+  StyledInputLabel,
 } from "./styles"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
@@ -66,11 +67,6 @@ const Contact = () => {
                 })
                 .catch(err => {
                   setSubmitting(false)
-
-                  console.error(
-                    "Oh well, you failed. Here some thoughts on the error that occured:",
-                    err
-                  )
                 })
             }}
           >
@@ -85,36 +81,46 @@ const Contact = () => {
               isValid,
             }) => (
               <StyledForm onSubmit={handleSubmit}>
+                <StyledInputLabel htmlFor="name">Nome *</StyledInputLabel>
                 <StyledTextField
+                  id="name"
                   name="name"
-                  label="Nome *"
+                  placeholder="João Silva"
                   error={touched.name && Boolean(errors.name)}
                   onBlur={handleBlur}
                   onChange={handleChange}
                   helperText={touched.name && errors.name}
                   value={values.name || ""}
                 />
+                <StyledInputLabel htmlFor="email">Email *</StyledInputLabel>
                 <StyledTextField
+                  id="email"
                   name="email"
-                  label="Email *"
+                  placeholder="email@gmail.com"
                   error={touched.email && Boolean(errors.email)}
                   onBlur={handleBlur}
                   onChange={handleChange}
                   helperText={touched.email && errors.email}
                   value={values.email || ""}
                 />
+                <StyledInputLabel htmlFor="phone">Telefone</StyledInputLabel>
                 <StyledTextField
+                  id="phone"
                   name="phone"
-                  label="Telefone"
+                  placeholder="48999998888"
                   error={touched.phone && Boolean(errors.phone)}
                   onBlur={handleBlur}
                   onChange={handleChange}
                   helperText={touched.phone && errors.phone}
                   value={values.phone || ""}
                 />
+                <StyledInputLabel htmlFor="message">
+                  Mensagem *
+                </StyledInputLabel>
                 <TextField
+                  id="message"
                   name="message"
-                  label="Mensagem *"
+                  placeholder="Digite sua mensage aqui"
                   multiline
                   rows={3}
                   variant="outlined"
@@ -136,7 +142,7 @@ const Contact = () => {
           </Formik>
           <IconsContainer>
             <a
-              href="http://www.facebook.com/emeline.abreu"
+              href="https://www.facebook.com/emeline.abreu"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -144,7 +150,7 @@ const Contact = () => {
               Emeline Abreu
             </a>
             <a
-              href="http://www.instagram.com/emelineabreunutri"
+              href="https://www.instagram.com/emelineabreunutri"
               target="_blank"
               rel="noopener noreferrer"
             >
