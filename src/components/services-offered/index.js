@@ -7,11 +7,10 @@ import {
 } from "react-icons/fa"
 import { Zoom, Fade } from "react-reveal"
 
-import Background from "../../images/services-background.jpg"
 import { Container, Title, List, ListItem, Subtitle, Text } from "./styles"
 
 const Services = () => (
-  <Container backgroundImg={Background}>
+  <Container>
     <Fade delay={100}>
       <Title>Serviços</Title>
     </Fade>

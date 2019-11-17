@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
-export const StyledHeader = styled.header`
+import Background from "./background"
+
+export const Header = styled.header`
+  margin-bottom: 50px;
+`
+
+export const CustomBackground = styled(Background)`
   padding: 0 10%;
-  background-color: rgba(106, 27, 154, 0.95);
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(49, 18, 49, 1),
-      rgba(106, 27, 154, 0.95)
-    ),
-    url(${props => props.backgroundImg});
+  background-color: purple;
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);

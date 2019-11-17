@@ -1,20 +1,12 @@
 import styled from "styled-components"
 
 import { device } from "../../layouts/variables"
+import Background from "./background"
 
-export const Container = styled.div`
+export const Container = styled(Background)`
   margin-bottom: 50px;
   padding: 50px 10%;
   color: white;
-  background-color: rgba(99, 0, 179, 0.95);
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(182, 82, 240, 0.95),
-      rgba(99, 0, 179, 0.95)
-    ),
-    url(${props => props.backgroundImg});
-  background-size: cover;
-  background-position: top;
   text-align: center;
 `
 
