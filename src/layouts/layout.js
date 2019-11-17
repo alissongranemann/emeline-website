@@ -11,7 +11,6 @@ import styled from "styled-components"
 import { createMuiTheme } from "@material-ui/core/styles"
 import { ThemeProvider } from "@material-ui/styles"
 import { purple } from "@material-ui/core/colors"
-import "typeface-montserrat"
 import "typeface-lato"
 
 import Header from "../components/header"

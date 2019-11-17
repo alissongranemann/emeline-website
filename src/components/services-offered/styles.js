@@ -53,7 +53,6 @@ export const Subtitle = styled.h3`
 `
 
 export const Text = styled.p`
-  font-family: Montserrat;
   font-size: 15px;
   overflow-wrap: break-word;
 `

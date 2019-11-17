@@ -17,7 +17,7 @@ import {
 } from "./styles"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
-const USER_ID = "user_zGmx6Tx1inJRjufiwhbQv"
+const USER_ID = process.env.GATSBY_EMAIL_JS_USER_ID
 
 const validateForm = values => {
   const errors = {}
@@ -58,7 +58,7 @@ const Contact = () => {
                 message: message,
               }
               emailjs
-                .send("gmail", EMAIL_TEMPLATE_ID, variables, USER_ID)
+                .send("sendgrid", EMAIL_TEMPLATE_ID, variables, USER_ID)
                 .then(res => {
                   setEmailSent(true)
                   setSubmitting(false)

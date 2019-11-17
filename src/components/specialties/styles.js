@@ -18,7 +18,6 @@ export const List = styled.ul`
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: unset;
-  font-family: Montserrat;
   list-style: none;
 `
 

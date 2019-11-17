@@ -27,8 +27,7 @@
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.0",
     "styled-components": "^4.4.1",
-    "typeface-lato": "^0.0.75",
-    "typeface-montserrat": "^0.0.75"
+    "typeface-lato": "^0.0.75"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
