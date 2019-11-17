@@ -25,9 +25,10 @@ export const ProfilePicture = styled(Picture)`
   max-height: 700px;
   border-radius: 100%;
   margin-bottom: 35px;
+  box-shadow: -2px 2px 10px 0px #5a5a5a;
 
   @media ${device.laptop} {
-    width: 40%;
+    width: 35%;
     margin-bottom: unset;
   }
 `

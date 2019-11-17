@@ -5,10 +5,10 @@ import { Container, Title, Subtitle } from "./styles"
 
 const Welcome = () => (
   <Container id="welcome">
-    <Fade top>
+    <Fade top delay={500}>
       <Title>Nutrição sem neuras e complicações</Title>
     </Fade>
-    <Fade bottom>
+    <Fade bottom delay={500}>
       <Subtitle>Vamos juntos nessa?</Subtitle>
     </Fade>
   </Container>
