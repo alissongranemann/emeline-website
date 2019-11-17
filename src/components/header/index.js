@@ -1,9 +1,13 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 
-import Logo from "./logo"
 import Welcome from "../welcome"
-import { Header as CustomHeader, Container, CustomBackground } from "./styles"
+import {
+  Header as CustomHeader,
+  Container,
+  CustomBackground,
+  CustomLogo as Logo,
+} from "./styles"
 
 const Header = () => (
   <CustomHeader>
