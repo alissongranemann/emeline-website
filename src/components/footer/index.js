@@ -1,71 +1,8 @@
 import React from "react"
-import styled from "styled-components"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
 
 import FullLogo from "../../images/full-logo.png"
-import { device } from "../../layouts/variables"
-
-const StyledFooter = styled.footer`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 5%;
-  background-color: #311231;
-  color: #fff;
-
-  a {
-    text-decoration: none;
-    color: unset;
-
-    &:hover {
-      color: #ff86f0;
-    }
-  }
-`
-
-const Image = styled.img`
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  margin: 10px 0;
-
-  @media ${device.laptop} {
-    max-width: 300px;
-  }
-`
-
-const IconsContainer = styled.div`
-  svg {
-    height: auto;
-    width: 15px;
-  }
-
-  a + a {
-    margin-left: 20px;
-  }
-
-  @media ${device.laptop} {
-    svg {
-      width: 25px;
-    }
-
-    a + a {
-      margin-left: 35px;
-    }
-  }
-`
-
-const DevelopedBy = styled.div`
-  font-size: 6px;
-  width: 100%;
-  text-align: center;
-
-  @media ${device.laptop} {
-    font-size: 12px;
-    width: auto;
-  }
-`
+import { StyledFooter, Image, IconsContainer, DevelopedBy } from "./styles"
 
 const Footer = () => (
   <StyledFooter>

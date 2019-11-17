@@ -5,7 +5,7 @@ import Layout from "../layouts/layout"
 import SEO from "../components/seo"
 import About from "../components/about"
 import Specialties from "../components/specialties"
-import Services from "../components/services"
+import Services from "../components/services-offered"
 import Contact from "../components/contact"
 
 const Section = styled.section`

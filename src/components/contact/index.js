@@ -1,104 +1,23 @@
 import React, { useState } from "react"
-import styled from "styled-components"
 import { Formik } from "formik"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
-import { TextField, Button } from "@material-ui/core"
+import TextField from "@material-ui/core/TextField"
 import Fade from "react-reveal/Fade"
 import emailjs from "emailjs-com"
 
 import Snackbar from "../snackbar"
-import { device } from "../../layouts/variables"
+import {
+  Container,
+  Title,
+  ContentContainer,
+  StyledForm,
+  IconsContainer,
+  StyledTextField,
+  StyledButton,
+} from "./styles"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
 const USER_ID = "user_zGmx6Tx1inJRjufiwhbQv"
-
-const Container = styled.div`
-  margin-bottom: 50px;
-  padding: 0 10%;
-`
-
-const Title = styled.h2`
-  text-align: center;
-  margin-bottom: 40px;
-`
-
-const ContentContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-
-  @media ${device.laptop} {
-    flex-direction: row;
-  }
-`
-
-const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-bottom: 50px;
-
-  @media ${device.laptop} {
-    width: 40%;
-    margin-bottom: unset;
-  }
-`
-
-const IconsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 80%;
-  text-align: center;
-
-  svg {
-    height: auto;
-    width: 30px;
-    margin-right: 10px;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: unset;
-    margin-bottom: 25px;
-
-    &:hover {
-      color: #5a1a78;
-    }
-  }
-
-  @media ${device.tablet} {
-    width: 50%;
-  }
-
-  @media ${device.laptop} {
-    width: 40%;
-    flex-direction: column;
-    margin-bottom: unset;
-
-    a + a {
-      margin-top: 25px;
-    }
-  }
-`
-
-const StyledTextField = styled(TextField)`
-  margin-bottom: 25px !important;
-`
-
-const StyledButton = styled(Button)`
-  color: #fff !important;
-  margin-top: 35px !important;
-  background-color: #5a1a78 !important;
-
-  &:disabled {
-    background-color: #949494 !important;
-  }
-`
 
 const validateForm = values => {
   const errors = {}
