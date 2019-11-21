@@ -75,5 +75,6 @@ module.exports = {
         pageTransitionDelay: 0,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }

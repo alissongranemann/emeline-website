@@ -1,12 +1,11 @@
 import styled from "styled-components"
 
-import { device } from "../../layouts/variables"
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 50px;
   height: 75vh;
   max-width: 75vw;
   text-align: center;
@@ -15,13 +14,8 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-  font-size: 40px;
   color: #fff;
   animation: moveInTop 1s;
-
-  @media ${device.tablet} {
-    font-size: 56px;
-  }
 
   @keyframes moveInTop {
     0% {
@@ -37,14 +31,11 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.p`
-  font-size: 18px;
+  font-size: 2.8rem;
   font-weight: 300;
   color: #fff;
+  margin-bottom: 5rem;
   animation: moveInBottom 1s;
-
-  @media ${device.tablet} {
-    font-size: 28px;
-  }
 
   @keyframes moveInBottom {
     0% {

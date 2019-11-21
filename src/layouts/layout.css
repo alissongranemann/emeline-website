@@ -182,9 +182,10 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  /* This defines what 1rem is */
+  font-size: 62.5%; /* 1 rem = 10px; 10px/16px = 62.5% */
 }
 * {
   box-sizing: inherit;
@@ -231,7 +232,7 @@ h1 {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 4.25rem;
   line-height: 1.1;
 }
 h2 {
@@ -246,9 +247,9 @@ h2 {
   color: inherit;
   font-family: -apple-system, Montserrat, Lato, BlinkMacSystemFont, Segoe UI,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-weight: 900;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 3.4rem;
   line-height: 1.1;
 }
 h3 {
@@ -265,7 +266,7 @@ h3 {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 2.15rem;
   line-height: 1.1;
 }
 h4 {
@@ -382,6 +383,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-size: 1.5rem;
 }
 figure {
   margin-left: 0;
@@ -612,8 +614,30 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 100%;
+    font-size: 50%; /*1 rem = 8px, 8/16 = 50% */
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 900px) {
+  html {
+    font-size: 56.25%; /* 1 rem = 9px, 9/16 = 50% */
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  html {
+    font-size: 62%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 75%; /*1rem = 12, 12/16 */
+  }
+  h1 {
+    font-size: 4.5rem;
   }
 }

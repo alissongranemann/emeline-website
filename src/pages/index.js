@@ -10,8 +10,6 @@ import Contact from "../components/contact"
 
 const Section = styled.section`
   h2 {
-    font-weight: 900;
-    font-size: 34px;
     text-transform: uppercase;
   }
 `

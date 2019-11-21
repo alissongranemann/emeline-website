@@ -36,6 +36,14 @@ export const StyledForm = styled.form`
     width: 40%;
     margin-bottom: unset;
   }
+
+  input,
+  p,
+  label,
+  button,
+  textarea {
+    font-size: 1.75rem !important;
+  }
 `
 
 export const IconsContainer = styled.div`
@@ -58,6 +66,7 @@ export const IconsContainer = styled.div`
     text-decoration: none;
     color: unset;
     margin-bottom: 25px;
+    font-size: 2rem;
 
     &:hover {
       color: #5a1a78;

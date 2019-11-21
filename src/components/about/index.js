@@ -22,7 +22,7 @@ const About = () => (
           Experiência em atendimentos clínicos nutricionais em adultos,
           gestantes e idosos, com foco em reeducação alimentar, emagrecimento,
           procedimentos estéticos, orientações para cirurgia bariátrica, doenças
-          crônicas não transmissíveis , alergias e intolerâncias alimentantes,
+          crônicas não transmissíveis, alergias e intolerâncias alimentantes,
           saúde da mulher e praticantes de atividades físicas com foco em
           hipertrofia.
         </p>

@@ -14,8 +14,8 @@ const Services = () => (
     <Fade delay={100}>
       <Title>Serviços</Title>
     </Fade>
-    <Fade>
-      <List>
+    <List>
+      <Fade>
         <ListItem>
           <FaNotesMedical />
           <Subtitle>Atendimento individualizado</Subtitle>
@@ -25,6 +25,8 @@ const Services = () => (
             alimentares e objetivos pessoais do paciente.
           </Text>
         </ListItem>
+      </Fade>
+      <Fade>
         <ListItem>
           <FaUtensils />
           <Subtitle>Personal diet</Subtitle>
@@ -34,6 +36,8 @@ const Services = () => (
             adaptações práticas a rotina domiciliar.
           </Text>
         </ListItem>
+      </Fade>
+      <Fade>
         <ListItem>
           <FaRegCaretSquareRight />
           <Subtitle>Palestras e cursos</Subtitle>
@@ -42,6 +46,8 @@ const Services = () => (
             às pessoas por meio de rodas de conversa, cursos e palestras.
           </Text>
         </ListItem>
+      </Fade>
+      <Fade>
         <ListItem>
           <FaShoppingCart />
           <Subtitle>Orientações na prática</Subtitle>
@@ -50,8 +56,8 @@ const Services = () => (
             supermercados, feiras ou lojas de produtos naturais.
           </Text>
         </ListItem>
-      </List>
-    </Fade>
+      </Fade>
+    </List>
   </Container>
 )
 

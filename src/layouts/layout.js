@@ -30,6 +30,9 @@ const theme = createMuiTheme({
   palette: {
     primary: purple,
   },
+  typography: {
+    fontSize: 16,
+  },
 })
 
 const Layout = ({ children }) => {

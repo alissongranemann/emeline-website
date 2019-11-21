@@ -54,12 +54,11 @@ export const IconsContainer = styled.div`
 `
 
 export const DevelopedBy = styled.div`
-  font-size: 6px;
+  font-size: 0.8rem;
   width: 100%;
   text-align: center;
 
   @media ${device.laptop} {
-    font-size: 12px;
     width: auto;
   }
 `

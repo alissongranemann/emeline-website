@@ -47,8 +47,9 @@ export const Link = styled.a`
   color: unset;
 
   svg {
-    width: 35px;
+    width: 25px;
     height: auto;
+    font-size: 1.75rem;
     color: #d8d8d8;
   }
 `

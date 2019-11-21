@@ -25,34 +25,36 @@ export const List = styled.ul`
 `
 
 export const ListItem = styled.li`
-  width: 275px;
-  height: 375px;
+  width: 32rem;
+  height: 35rem;
   margin: 5px;
-  padding: 30px 25px;
+  padding: 3rem 2.5rem;
   border: 1px solid #e1e1e1;
   border-radius: 25px;
   box-shadow: -2px 2px 5px 0px #4c4c4c;
-  font-size: 22px;
   background-color: rgba(255, 255, 255, 0.65);
   color: #000;
 
   svg {
     width: 30px;
     height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     color: #671d93;
   }
 
   @media ${device.mobileL} {
     margin: 15px;
+    width: 27.5rem;
+    height: 37.5rem;
   }
 `
 
 export const Subtitle = styled.h3`
-  font-size: 22px;
+  font-size: 2.25rem;
 `
 
 export const Text = styled.p`
-  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   overflow-wrap: break-word;
 `

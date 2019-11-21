@@ -22,5 +22,5 @@ export const Container = styled.div`
 `
 
 export const CustomLogo = styled(Logo)`
-  width: 100px;
+  width: 10rem;
 `

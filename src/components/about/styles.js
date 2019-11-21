@@ -20,6 +20,7 @@ export const Container = styled.div`
 
 export const ProfilePicture = styled(Picture)`
   width: 90%;
+  max-width: 600px;
   height: auto;
   object-fit: cover;
   max-height: 700px;
@@ -35,7 +36,8 @@ export const ProfilePicture = styled(Picture)`
 
 export const TextContainer = styled.div`
   max-width: 90%;
-  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
 
   @media ${device.laptop} {
     width: 40%;

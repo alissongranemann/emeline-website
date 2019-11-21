@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Title = styled.h2`
   display: inline-block;
   margin: 0 auto;
-  margin-bottom: 75px;
+  margin-bottom: 7.5rem;
 `
 
 export const List = styled.ul`
@@ -47,11 +47,6 @@ export const ListItem = styled.li`
     color: #5a187c;
   }
 `
-
-export const Subtitle = styled.h3`
-  font-size: 20px;
-`
-
 export const Text = styled.p`
-  font-size: 14px;
+  line-height: 1.75;
 `
