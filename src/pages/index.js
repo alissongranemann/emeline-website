@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../layouts/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 import About from "../components/about"
 import Specialties from "../components/specialties"
 import Services from "../components/services-offered"
 import Contact from "../components/contact"
+import NavBar from "../components/navbar"
+import Header from "../components/header"
 
 const Section = styled.section`
   h2 {
@@ -14,9 +16,15 @@ const Section = styled.section`
   }
 `
 
+const StyledHeader = styled(Header)`
+  padding-bottom: 50px;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Nutricionista" />
+    <StyledHeader />
+    <NavBar />
     <Section id="about">
       <About />
     </Section>

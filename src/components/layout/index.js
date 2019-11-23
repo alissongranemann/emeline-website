@@ -12,14 +12,8 @@ import { createMuiTheme } from "@material-ui/core/styles"
 import { ThemeProvider } from "@material-ui/styles"
 import { purple } from "@material-ui/core/colors"
 
-import Header from "../components/header"
-import NavBar from "../components/navbar"
 import "./layout.css"
-import Footer from "../components/footer"
-
-const StyledHeader = styled(Header)`
-  padding-bottom: 50px;
-`
+import Footer from "../footer"
 
 const Main = styled.main`
   padding-top: 0;
@@ -37,8 +31,6 @@ const theme = createMuiTheme({
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <StyledHeader />
-      <NavBar />
       <Main>{children}</Main>
       <Footer />
     </ThemeProvider>

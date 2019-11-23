@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 import Picture from "./profile-picture"
-import { device } from "../../layouts/variables"
+import { device } from "../../config/variables"
 
 export const Container = styled.div`
   display: flex;

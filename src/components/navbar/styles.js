@@ -1,7 +1,7 @@
 import Scrollspy from "react-scrollspy"
 import styled from "styled-components"
 
-import { device } from "../../layouts/variables"
+import { device } from "../../config/variables"
 
 export const StyledScrollSpy = styled(Scrollspy)`
   margin: unset;

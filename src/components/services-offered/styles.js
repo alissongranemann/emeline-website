@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { device } from "../../layouts/variables"
+import { device } from "../../config/variables"
 import Background from "./background"
 
 export const Container = styled(Background)`

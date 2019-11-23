@@ -19,5 +19,5 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Tags", name: "tags", widget: "list" }
+      # - { label: "Featured Image", name: "featuredimage", widget: image }
+      # - { label: "Tags", name: "tags", widget: "list" }

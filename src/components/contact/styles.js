@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
 import InputLabel from "@material-ui/core/InputLabel"
 
-import { device } from "../../layouts/variables"
+import { device } from "../../config/variables"
 
 export const Container = styled.div`
   margin-bottom: 50px;
