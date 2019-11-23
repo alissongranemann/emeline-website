@@ -21,7 +21,11 @@
     "gatsby-plugin-sharp": "^2.3.0",
     "gatsby-plugin-sitemap": "^2.2.21",
     "gatsby-plugin-styled-components": "^3.1.11",
+    "gatsby-remark-copy-linked-files": "^2.1.30",
+    "gatsby-remark-images": "^3.1.33",
+    "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-remark": "^2.6.37",
     "gatsby-transformer-sharp": "^2.3.5",
     "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
@@ -32,7 +36,8 @@
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.0",
     "styled-components": "^4.4.1",
-    "typeface-lato": "^0.0.75"
+    "typeface-lato": "^0.0.75",
+    "typeface-montserrat": "^0.0.75"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
