@@ -3,6 +3,7 @@ const {
   URL: NETLIFY_SITE_URL = "https://www.emelineabreunutri.com.br",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
+  GATSBY_GA_TRACKING_ID: GA_TRACKING_ID,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === "production"
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
@@ -70,11 +71,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-66179108-5",
+        trackingId: GA_TRACKING_ID,
         head: true,
         pageTransitionDelay: 0,
       },
     },
-    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-sitemap",
   ],
 }
