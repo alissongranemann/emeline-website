@@ -1,26 +1,35 @@
 import styled from "styled-components"
 
-import Background from "./background"
 import Logo from "./logo"
 
 export const Header = styled.header`
-  margin-bottom: 50px;
-`
-
-export const CustomBackground = styled(Background)`
-  padding: 0 10%;
-  background-color: purple;
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
-`
-
-export const Container = styled.div`
-  max-width: 70px;
-  padding: 5px 0;
-  margin: 0 auto;
+  background-color: #311231;
+  padding: 10px 7.5rem;
+  display: flex;
+  justify-content: space-between;
 `
 
 export const CustomLogo = styled(Logo)`
-  width: 10rem;
+  max-width: 70px;
+  width: 4.5rem;
+`
+export const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    & + a {
+      margin-left: 30px;
+    }
+
+    &:hover {
+      color: #ff86f0;
+    }
+  }
 `

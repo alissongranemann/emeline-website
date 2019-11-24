@@ -8,23 +8,18 @@ import Specialties from "../components/specialties"
 import Services from "../components/services-offered"
 import Contact from "../components/contact"
 import NavBar from "../components/navbar"
-import Header from "../components/header"
+import Welcome from "../components/welcome"
 
 const Section = styled.section`
   h2 {
     text-transform: uppercase;
   }
 `
-
-const StyledHeader = styled(Header)`
-  padding-bottom: 50px;
-`
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Nutricionista" />
-    <StyledHeader />
     <NavBar />
+    <Welcome />
     <Section id="about">
       <About />
     </Section>

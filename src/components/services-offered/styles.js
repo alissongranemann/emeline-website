@@ -25,8 +25,8 @@ export const List = styled.ul`
 `
 
 export const ListItem = styled.li`
-  width: 32rem;
-  height: 35rem;
+  width: 30rem;
+  height: 34rem;
   margin: 5px;
   padding: 3rem 2.5rem;
   border: 1px solid #e1e1e1;
@@ -45,7 +45,7 @@ export const ListItem = styled.li`
   @media ${device.mobileL} {
     margin: 15px;
     width: 27.5rem;
-    height: 37.5rem;
+    height: 35rem;
   }
 `
 
@@ -54,7 +54,6 @@ export const Subtitle = styled.h3`
 `
 
 export const Text = styled.p`
-  font-size: 1.5rem;
   line-height: 2.25rem;
   overflow-wrap: break-word;
 `

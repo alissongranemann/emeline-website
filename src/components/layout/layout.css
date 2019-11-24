@@ -187,6 +187,27 @@ html {
   /* This defines what 1rem is */
   font-size: 62.5%; /* 1 rem = 10px; 10px/16px = 62.5% */
 }
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 50%; /*1 rem = 8px, 8/16 = 50% */
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 900px) {
+  html {
+    font-size: 56.25%; /* 1 rem = 9px, 9/16 = 50% */
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%; /*1rem = 12, 12/16 */
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
 * {
   box-sizing: inherit;
 }
@@ -383,7 +404,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 figure {
   margin-left: 0;
@@ -613,31 +634,4 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
-}
-
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 50%; /*1 rem = 8px, 8/16 = 50% */
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 900px) {
-  html {
-    font-size: 56.25%; /* 1 rem = 9px, 9/16 = 50% */
-  }
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1200px) {
-  html {
-    font-size: 62%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 75%; /*1rem = 12, 12/16 */
-  }
-  h1 {
-    font-size: 4.5rem;
-  }
 }

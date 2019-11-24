@@ -1,24 +1,18 @@
 import React from "react"
+import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 
-import Welcome from "../welcome"
-import {
-  Header as CustomHeader,
-  Container,
-  CustomBackground,
-  CustomLogo as Logo,
-} from "./styles"
+import { CustomLogo as Logo, Header as CustomHeader, Menu } from "./styles"
 
 const Header = () => (
   <CustomHeader>
-    <CustomBackground>
-      <Container>
-        <Fade>
-          <Logo />
-        </Fade>
-      </Container>
-      <Welcome />
-    </CustomBackground>
+    <Fade>
+      <Logo />
+    </Fade>
+    <Menu>
+      <Link to="/">Início</Link>
+      <Link to="/blog">Blog</Link>
+    </Menu>
   </CustomHeader>
 )
 

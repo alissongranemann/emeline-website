@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Background from "./background"
 
 export const Container = styled.div`
   display: flex;
@@ -6,11 +7,20 @@ export const Container = styled.div`
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 50px;
+  margin-top: -1px;
   height: 75vh;
   max-width: 75vw;
   text-align: center;
   word-break: keep-all;
   overflow-wrap: normal;
+`
+
+export const CustomBackground = styled(Background)`
+  padding: 0 10%;
+  background-color: purple;
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
 `
 
 export const Title = styled.h1`
@@ -31,7 +41,7 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.p`
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 300;
   color: #fff;
   margin-bottom: 5rem;
