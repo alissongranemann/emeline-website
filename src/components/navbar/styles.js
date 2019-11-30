@@ -6,6 +6,10 @@ import { device } from "../../config/variables"
 export const StyledScrollSpy = styled(Scrollspy)`
   margin: unset;
   list-style: none;
+
+  .active svg {
+    color: #ff86f0;
+  }
 `
 
 export const Nav = styled.nav`

@@ -3,7 +3,6 @@ import React from "react"
 import { FaHome, FaUser, FaListAlt, FaWrench, FaComments } from "react-icons/fa"
 
 import { StyledScrollSpy, Nav, ListItem, Link } from "./styles"
-import styles from "./navbar.module.css"
 
 const NavBar = () => (
   <Nav>
