@@ -4,6 +4,7 @@ date: 2019-09-17T20:31:41.030Z
 description: >-
   A nutricionista destaca os benefícios do consumo de chás e os cuidados para o
   melhor aproveitamento das ervas utilizadas.
+featuredimage: /assets/tea.jpg
 ---
 Os chás podem ser consumidos quentes ou frios, como coadjuvantes nos processos de reeducação alimentar. Serve também para melhorar a hidratação e como um auxílio para tratamentos de doenças digestivas, como: gastrite, úlcera, azia, refluxo, constipação e diarreia; e cardiovasculares: hipertensão, redução do colesterol e triglicerídeos. Além disso, ajuda reduzir os desconfortos causados pelos inchaços do período de tensão pré-menstrual e são excelentes no trato aos distúrbios do sono, agindo como calmante. 
 
