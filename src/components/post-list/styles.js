@@ -1,6 +1,7 @@
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import PreviewImage from "../preview-compatible-image"
+import { device } from "../../config/variables"
 
 export const Title = styled.h1`
   text-transform: uppercase;
@@ -9,12 +10,17 @@ export const Title = styled.h1`
 
 export const Item = styled.article`
   position: relative;
-  width: 45rem;
-  height: 30rem;
+  width: 100%;
+  height: 45rem;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   overflow: hidden;
   text-align: left;
+
+  @media ${device.laptop} {
+    width: 45%;
+    height: 30rem;
+  }
 
   &:before {
     content: "";
