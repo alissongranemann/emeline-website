@@ -8,13 +8,14 @@ import { Title } from "./styles"
 const Container = styled.article`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 `
 
 const PostList = ({ title, children }) => (
-  <Container>
+  <>
     <Title>{title}</Title>
-    {children}
-  </Container>
+    <Container>{children}</Container>
+  </>
 )
 
 PostList.Item = PostItem
