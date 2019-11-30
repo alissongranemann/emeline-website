@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import PostList from "../components/post-list"
 
 export const Container = styled.div`
+  min-height: 75vh;
   margin-bottom: 50px;
   padding: 50px 10%;
   text-align: center;

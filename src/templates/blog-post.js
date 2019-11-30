@@ -1,26 +1,58 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const { previous, next } = this.props.pageContext
+import PreviewImage from "../components/preview-compatible-image"
 
-    return (
-      <Layout>
+export const Container = styled.div`
+  min-height: 75vh;
+  margin-bottom: 50px;
+  padding: 50px 10%;
+
+  h1 {
+    margin-bottom: 0.25rem;
+  }
+
+  small {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+  }
+`
+
+export const Image = styled(PreviewImage)`
+  width: 100%;
+  max-height: 25rem;
+  margin-bottom: 5rem;
+`
+const BlogPostTemplate = ({ data, pageContext }) => {
+  const post = data.markdownRemark
+  const { frontmatter, html } = post
+  const { previous, next } = pageContext
+
+  return (
+    <Layout>
+      <Container>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={frontmatter.title}
+          description={frontmatter.description || post.excerpt}
         />
         <article>
           <header>
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
+            {frontmatter.featuredimage && (
+              <Image
+                imageInfo={{
+                  image: frontmatter.featuredimage,
+                  alt: `featured image thumbnail for post ${frontmatter.title}`,
+                }}
+              />
+            )}
+            <h1>{frontmatter.title}</h1>
+            <small>{frontmatter.date}</small>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: html }} />
           <hr />
         </article>
 
@@ -50,9 +82,9 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
-      </Layout>
-    )
-  }
+      </Container>
+    </Layout>
+  )
 }
 
 export default BlogPostTemplate
@@ -70,8 +102,15 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD/MM/YYYY")
         description
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 1080, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

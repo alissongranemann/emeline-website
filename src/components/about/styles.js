@@ -36,7 +36,6 @@ export const ProfilePicture = styled(Picture)`
 
 export const TextContainer = styled.div`
   max-width: 90%;
-  font-size: 1.6rem;
   line-height: 1.5;
 
   @media ${device.laptop} {

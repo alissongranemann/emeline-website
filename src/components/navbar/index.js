@@ -8,7 +8,7 @@ const NavBar = () => (
   <Nav>
     <StyledScrollSpy
       items={["welcome", "about", "specialties", "services", "contact"]}
-      currentClassName={styles.active}
+      currentClassName="active"
       offset={-300}
     >
       <ListItem>

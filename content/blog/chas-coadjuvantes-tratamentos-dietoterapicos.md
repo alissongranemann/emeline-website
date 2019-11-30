@@ -11,7 +11,7 @@ Os chás podem ser consumidos quentes ou frios, como coadjuvantes nos processos 
 
 No entanto, alguns cuidados são valiosos para o melhor aproveitamento das ervas utilizadas e para que possamos evitar possíveis efeitos colaterais. Cada planta tem sua composição e seu efeito terapêutico pode não ser bom para todos os casos.
 
-## Dicas
+### Dicas
 
 - A quantidade recomendada é de em média 500 ml ao dia, sempre variando as ervas utilizadas;
 - Evite exagerar, pois isso pode acarretar em problemas para sua saúde;

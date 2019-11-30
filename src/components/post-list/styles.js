@@ -1,8 +1,8 @@
 import { Link as GatsbyLink } from "gatsby"
-import GatsbyImage from "gatsby-image"
 import styled from "styled-components"
+import PreviewImage from "../preview-compatible-image"
 
-export const Title = styled.h2`
+export const Title = styled.h1`
   text-transform: uppercase;
   margin-bottom: 5rem;
 `
@@ -12,7 +12,7 @@ export const Item = styled.article`
   width: 45rem;
   height: 30rem;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   text-align: left;
 
@@ -28,6 +28,12 @@ export const Item = styled.article`
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
   }
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(-5px);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.9);
+  }
 `
 
 export const Link = styled(GatsbyLink)`
@@ -35,11 +41,10 @@ export const Link = styled(GatsbyLink)`
   color: unset;
 `
 
-export const Image = styled(GatsbyImage)`
+export const Image = styled(PreviewImage)`
   position: absolute !important;
   width: 100%;
   height: 100%;
-  border-radius: unset !important;
   object-fit: cover;
 `
 
@@ -49,7 +54,7 @@ export const ContentContainer = styled.section`
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  padding: 1.5rem;
+  padding: 1rem 2rem;
   z-index: 3;
   color: #fff;
 
