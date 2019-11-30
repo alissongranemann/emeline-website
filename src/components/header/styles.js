@@ -13,7 +13,7 @@ export const CustomLogo = styled(Logo)`
   max-width: 70px;
   width: 4.5rem;
 `
-export const Menu = styled.div`
+export const Menu = styled.nav`
   display: flex;
   align-items: center;
   font-size: 1.3rem;
