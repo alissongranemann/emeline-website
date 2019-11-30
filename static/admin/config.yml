@@ -1,10 +1,5 @@
 backend:
-  name: github
-  repo: alissongranemann/emeline-website
-  commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+  name: git-gateway
 media_folder: static/assets
 public_folder: assets
 collections:
