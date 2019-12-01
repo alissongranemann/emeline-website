@@ -9,6 +9,7 @@ import Services from "../components/services-offered"
 import Contact from "../components/contact"
 import NavBar from "../components/navbar"
 import Welcome from "../components/welcome"
+import FullLogo from "../images/full-logo.png"
 
 const Section = styled.section`
   h2 {
@@ -17,7 +18,7 @@ const Section = styled.section`
 `
 const IndexPage = () => (
   <Layout>
-    <SEO title="Nutricionista" />
+    <SEO title="Nutricionista Florianópolis e Lages" image={FullLogo} />
     <NavBar />
     <Welcome />
     <Section id="about">

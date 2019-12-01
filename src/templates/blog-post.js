@@ -49,6 +49,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <SEO
         title={frontmatter.title}
         description={frontmatter.description || post.excerpt}
+        image={frontmatter.featuredimage}
       />
       <article>
         {frontmatter.featuredimage && (

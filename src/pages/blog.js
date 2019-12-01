@@ -23,7 +23,10 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
-          <SEO title="Blog" />
+          <SEO
+            title="Blog posts"
+            description="Artigos postados pela nutricionista Emeline Abreu."
+          />
           <Fade>
             <PostList title="Blog">
               {posts.map(({ node }) => {
