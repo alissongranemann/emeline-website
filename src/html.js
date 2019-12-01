@@ -12,6 +12,15 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap"
+          rel="preload"
+          as="font"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap"
+          rel="stylesheet"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
