@@ -7,19 +7,31 @@ import SEO from "../components/seo"
 
 import PreviewImage from "../components/preview-compatible-image"
 
+export const StyledLayout = styled(Layout)`
+  min-height: 100vh;
+`
+
 export const Container = styled.div`
-  min-height: 75vh;
-  margin-bottom: 50px;
-  padding: 50px 10%;
+  padding: 0 10%;
 
   h1 {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   small {
     display: inline-block;
+    margin-bottom: 2.75rem;
+  }
+
+  p {
     margin-bottom: 2.5rem;
   }
+`
+
+export const Small = styled.p`
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  text-align: right;
 `
 
 export const Image = styled(PreviewImage)`
@@ -33,29 +45,30 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   const { previous, next } = pageContext
 
   return (
-    <Layout>
-      <Container>
-        <SEO
-          title={frontmatter.title}
-          description={frontmatter.description || post.excerpt}
-        />
-        <article>
-          <header>
-            {frontmatter.featuredimage && (
-              <Image
-                imageInfo={{
-                  image: frontmatter.featuredimage,
-                  alt: `featured image thumbnail for post ${frontmatter.title}`,
-                }}
-              />
-            )}
-            <h1>{frontmatter.title}</h1>
-            <small>{frontmatter.date}</small>
-          </header>
+    <StyledLayout>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description || post.excerpt}
+      />
+      <article>
+        {frontmatter.featuredimage && (
+          <Image
+            imageInfo={{
+              image: frontmatter.featuredimage,
+              alt: `featured image thumbnail for post ${frontmatter.title}`,
+            }}
+          />
+        )}
+        <Container>
+          <h1>{frontmatter.title}</h1>
+          <small>{frontmatter.date}</small>
+
           <section dangerouslySetInnerHTML={{ __html: html }} />
           <hr />
-        </article>
-
+          <Small>Emeline Abreu, Nutricionista (CRN 10 4569)</Small>
+        </Container>
+      </article>
+      <Container>
         <nav>
           <ul
             style={{
@@ -64,6 +77,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               justifyContent: `space-between`,
               listStyle: `none`,
               padding: 0,
+              marginBottom: "50px",
             }}
           >
             <li>
@@ -83,7 +97,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </ul>
         </nav>
       </Container>
-    </Layout>
+    </StyledLayout>
   )
 }
 

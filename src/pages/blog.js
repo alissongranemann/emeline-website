@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,21 +24,23 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
           <SEO title="Blog" />
-          <PostList title="Blog">
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              const description = node.frontmatter.description || node.excerpt
-              return (
-                <PostList.Item
-                  title={title}
-                  slug={node.fields.slug}
-                  date={node.frontmatter.date}
-                  description={description}
-                  image={node.frontmatter.featuredimage}
-                />
-              )
-            })}
-          </PostList>
+          <Fade>
+            <PostList title="Blog">
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                const description = node.frontmatter.description || node.excerpt
+                return (
+                  <PostList.Item
+                    title={title}
+                    slug={node.fields.slug}
+                    date={node.frontmatter.date}
+                    description={description}
+                    image={node.frontmatter.featuredimage}
+                  />
+                )
+              })}
+            </PostList>
+          </Fade>
         </Container>
       </Layout>
     )
