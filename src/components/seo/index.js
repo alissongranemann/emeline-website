@@ -26,7 +26,7 @@ function SEO({ description, lang, meta, title, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const { URL = "https://www.emelineabreunutri.com.br" } = process.env
   return (
     <Helmet
       htmlAttributes={{
@@ -41,7 +41,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `image`,
-          content: image,
+          content: `${URL}${image}`,
         },
         {
           property: `og:title`,
@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: `${URL}${image}`,
         },
         {
           property: `og:type`,
