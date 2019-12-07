@@ -16,7 +16,9 @@ category: Massas
 * 30 ml de água gelada 
 * Recheio: frango desfiado 
 
-**Modo de preparo**: Em uma vasilha misture primeiro os ovos e o azeite (que poderia ser óleo de coco ou manteiga derretida). Depois aos poucos vá acrescentando os ingredientes secos, até formar um massa bastante densa. Acrescente a água, de forma a desgrudar da vasilha e deixar a massa um pouco mais homogênea. Deixe em repouso por 20 minutos. 
+**Modo de preparo**: 
+
+Em uma vasilha misture primeiro os ovos e o azeite (que poderia ser óleo de coco ou manteiga derretida). Depois aos poucos vá acrescentando os ingredientes secos, até formar um massa bastante densa. Acrescente a água, de forma a desgrudar da vasilha e deixar a massa um pouco mais homogênea. Deixe em repouso por 20 minutos. 
 
 Pre aqueça o forno a 160 graus. 
 
