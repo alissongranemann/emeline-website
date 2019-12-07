@@ -16,6 +16,6 @@ Aí vai a receita!
 
 Opcionais: noz moscada, cravo da índia em pó, essência de baunilha.
 
-**Modo de preparo**: bater todos os ingredientes (batedeira ou á mão), com exceção do chocolate. Unte uma forma e asse em forno médio (190-200°) por 40-50 minutos. Cubra o bolo com o chocolate derretido (banho maria ou micro-ondas). Leve a geladeira para endurecer o chocolate em torno de 20 minutos. 😍❣😘
+**Modo de preparo**: bater todos os ingredientes (batedeira ou á mão), com exceção do chocolate. Unte uma forma e asse em forno médio (190-200°) por 40-50 minutos. Cubra o bolo com o chocolate derretido (banho maria ou micro-ondas). Leve a geladeira para endurecer o chocolate em torno de 20 minutos.
 
 E tá pronto!
