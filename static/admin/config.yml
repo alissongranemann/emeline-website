@@ -54,5 +54,4 @@ collections:
               "Lanches",
             ],
         }
-      - { label: "Ingredientes", name: "ingredients", widget: "list" }
-      - { label: "Modo de preparo", name: "preparation", widget: "markdown" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
