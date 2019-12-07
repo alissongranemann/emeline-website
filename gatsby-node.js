@@ -2,16 +2,17 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
-exports.createPages = async ({ graphql, actions }) => {
+const createBlogPosts = async (graphql, actions) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/templates/post.js`)
   const result = await graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
+          filter: { fileAbsolutePath: { regex: "/blog/" } }
         ) {
           edges {
             node {
@@ -49,6 +50,61 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+}
+
+const createRecipePosts = async (graphql, actions) => {
+  const { createPage } = actions
+
+  const blogPost = path.resolve(`./src/templates/post.js`)
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: { fileAbsolutePath: { regex: "/recipes/" } }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  if (result.errors) {
+    throw result.errors
+  }
+
+  // Create blog posts pages.
+  const posts = result.data.allMarkdownRemark.edges
+
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
+    createPage({
+      path: post.node.fields.slug,
+      component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        previous,
+        next,
+      },
+    })
+  })
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  createBlogPosts(graphql, actions)
+  createRecipePosts(graphql, actions)
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostList from "../components/blog-posts"
+import PostList from "../components/recipe-posts"
 
 export const Container = styled.div`
   min-height: 75vh;
@@ -14,30 +14,30 @@ export const Container = styled.div`
   text-align: center;
 `
 
-class BlogIndex extends React.Component {
+class RecipesIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const recipes = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
           <SEO
-            title="Blog posts"
-            description="Artigos postados pela nutricionista Emeline Abreu."
+            title="Receitas"
+            description="Receitas postadas pela nutricionista Emeline Abreu."
           />
           <Fade>
-            <PostList title="Blog">
-              {posts.map(({ node }) => {
+            <PostList title="Receitas">
+              {recipes.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
-                const description = node.frontmatter.description || node.excerpt
+                const category = node.frontmatter.category || node.excerpt
                 return (
                   <PostList.Item
                     title={title}
                     slug={node.fields.slug}
                     date={node.frontmatter.date}
-                    description={description}
+                    category={category}
                     image={node.frontmatter.featuredimage}
                   />
                 )
@@ -50,7 +50,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default RecipesIndex
 
 export const pageQuery = graphql`
   query {
@@ -61,7 +61,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/recipes/" } }
     ) {
       edges {
         node {
@@ -72,7 +72,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD/MM/YYYY")
             title
-            description
+            category
             featuredimage {
               childImageSharp {
                 fluid(maxWidth: 400, quality: 100) {

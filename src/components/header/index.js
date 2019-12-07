@@ -14,6 +14,7 @@ const Header = () => (
     <Menu>
       <Link to="/">Início</Link>
       <Link to="/blog">Blog</Link>
+      <Link to="/receitas">Receitas</Link>
     </Menu>
   </CustomHeader>
 )

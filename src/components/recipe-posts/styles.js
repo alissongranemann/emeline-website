@@ -3,7 +3,13 @@ import styled from "styled-components"
 import PreviewImage from "../preview-compatible-image"
 import { device } from "../../config/variables"
 
-export const Title = styled.h1`
+export const Container = styled.article`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`
+
+export const Title = styled.h2`
   text-transform: uppercase;
   margin-bottom: 5rem;
 `
@@ -66,12 +72,13 @@ export const ContentContainer = styled.section`
   color: #fff;
 
   > h3 {
-    font-size: 2.35rem;
+    font-size: 2.5rem;
+    margin: 0.75rem 0;
   }
 
   > small {
     display: inline-block;
-    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
   }
 `
 

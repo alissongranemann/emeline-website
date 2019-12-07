@@ -16,7 +16,7 @@ export const CustomLogo = styled(Logo)`
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: bold;
 
   a {
