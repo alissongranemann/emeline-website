@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import { device } from "../../config/variables"
+import Logo from "./logo"
 
 export const StyledFooter = styled.footer`
   display: flex;
@@ -32,29 +33,28 @@ export const Image = styled.img`
   }
 `
 
-export const IconsContainer = styled.div`
+export const CustomLogo = styled(Logo)`
+  width: 5rem;
+  margin-right: 5rem;
+`
+
+export const LeftContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+
   svg {
     height: auto;
-    width: 15px;
+    width: 2.2rem;
   }
 
   a + a {
-    margin-left: 20px;
-  }
-
-  @media ${device.laptop} {
-    svg {
-      width: 25px;
-    }
-
-    a + a {
-      margin-left: 35px;
-    }
+    margin-left: 3.5rem;
   }
 `
 
 export const DevelopedBy = styled.div`
-  font-size: 0.8rem;
+  font-size: 1rem;
   width: 100%;
   text-align: center;
 

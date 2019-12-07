@@ -42,7 +42,7 @@ export const StyledForm = styled.form`
   label,
   button,
   textarea {
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
   }
 `
 
@@ -56,7 +56,7 @@ export const IconsContainer = styled.div`
 
   svg {
     height: auto;
-    width: 30px;
+    width: 2.75rem;
     margin-right: 10px;
   }
 
@@ -66,7 +66,7 @@ export const IconsContainer = styled.div`
     text-decoration: none;
     color: unset;
     margin-bottom: 25px;
-    font-size: 2rem;
+    font-size: 1.7rem;
 
     &:hover {
       color: #5a1a78;

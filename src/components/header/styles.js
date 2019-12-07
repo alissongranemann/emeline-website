@@ -10,9 +10,9 @@ export const Header = styled.header`
 `
 
 export const CustomLogo = styled(Logo)`
-  max-width: 70px;
-  width: 4.5rem;
+  width: 25rem;
 `
+
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
