@@ -4,7 +4,17 @@ date: 2019-10-31T16:00:28.319Z
 featuredimage: /img/empadao.jpg
 category: Massas
 ---
-**Ingredientes**: 2 ovos, 1/3 de xícara de azeite de oliva, 1 colher de chá de fermento, 1 pitada de sal, 1 xícara de farinha de grão de bico, 1 xícara de polvilho doce, 1/2 xícara de farinha de arroz, 30 ml de água gelada. Recheio: frango desfiado. 
+**Ingredientes**: 
+
+* 2 ovos
+* 1/3 de xícara de azeite de oliva
+* 1 colher de chá de fermento
+* 1 pitada de sal
+* 1 xícara de farinha de grão de bico
+* 1 xícara de polvilho doce
+* 1/2 xícara de farinha de arroz
+* 30 ml de água gelada 
+* Recheio: frango desfiado 
 
 **Modo de preparo**: Em uma vasilha misture primeiro os ovos e o azeite (que poderia ser óleo de coco ou manteiga derretida). Depois aos poucos vá acrescentando os ingredientes secos, até formar um massa bastante densa. Acrescente a água, de forma a desgrudar da vasilha e deixar a massa um pouco mais homogênea. Deixe em repouso por 20 minutos. 
 
