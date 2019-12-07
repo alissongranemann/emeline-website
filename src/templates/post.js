@@ -48,7 +48,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     <StyledLayout>
       <SEO
         title={frontmatter.title}
-        description={frontmatter.description || post.excerpt}
+        description={
+          frontmatter.description || frontmatter.category || post.excerpt
+        }
         image={frontmatter.featuredimage}
       />
       <article>

@@ -14,9 +14,8 @@ const PostItem = ({ title, slug, category, date, image }) => (
         />
       )}
       <ContentContainer>
-        {category}
+        <small>{category}</small>
         <h3>{title}</h3>
-        <small>{date}</small>
       </ContentContainer>
     </Link>
   </Item>

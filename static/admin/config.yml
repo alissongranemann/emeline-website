@@ -18,11 +18,17 @@ collections:
       preview: false
     fields:
       #   - { name: path, label: Path }
-      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Título",
+          name: "title",
+          widget: "string",
+          pattern: [".{24,}", "Must have at least 24 characters"],
+        }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
       - { label: "Imagem", name: "featuredimage", widget: image }
       - { label: "Descrição", name: "description", widget: "string" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+
       # - { label: "Tags", name: "tags", widget: "list" }
   - name: receitas
     label: Receitas
