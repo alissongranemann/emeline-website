@@ -14,4 +14,8 @@ Em uma forma já untada, de tamanho médio distribua metade do volume da massa -
 
 Após espalhar o recheio acrescente o restante da massa, espalhando por cima do recheio (essa é a parte que da um pouco mais de trabalho).
 
-Leve ao forno por mais 15 minutos, ou até perceber que a massa está com aspecto quebradiço (sinal de que está assado). Rende de 6 a 8 porções, depende do tamanho do pedaço! \*dica: cuidado para não deixar muito tempo no forno e a massa debaixo ressecar demais. \*se quiser um recheio mais cremoso, acrescente um pouco de creme de ricota ao frango.
+Leve ao forno por mais 15 minutos, ou até perceber que a massa está com aspecto quebradiço (sinal de que está assado). Rende de 6 a 8 porções, depende do tamanho do pedaço! 
+
+\*dica: cuidado para não deixar muito tempo no forno e a massa debaixo ressecar demais. 
+
+\*se quiser um recheio mais cremoso, acrescente um pouco de creme de ricota ao frango.
