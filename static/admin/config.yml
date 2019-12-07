@@ -1,5 +1,12 @@
 backend:
   name: git-gateway
+  commit_messages:
+    create: "add {{collection}} “{{slug}}”"
+    update: "update {{collection}} “{{slug}}”"
+    delete: "delete {{collection}} “{{slug}}”"
+    uploadMedia: "upload “{{path}}”"
+    deleteMedia: "delete “{{path}}”"
+
 media_folder: static/img
 public_folder: img
 collections:
@@ -7,6 +14,8 @@ collections:
     label: Blog
     folder: "content/blog"
     create: true
+    editor:
+      preview: false
     fields:
       #   - { name: path, label: Path }
       - { label: "Título", name: "title", widget: "string" }
@@ -19,10 +28,12 @@ collections:
     label: Receitas
     folder: "content/recipes"
     create: true
+    editor:
+      preview: false
     fields:
       #   - { name: path, label: Path }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
       - { label: "Imagem", name: "featuredimage", widget: image }
-      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Categoria", name: "category", widget: "string" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
