@@ -9,9 +9,20 @@ collections:
     create: true
     fields:
       #   - { name: path, label: Path }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
+      - { label: "Imagem", name: "featuredimage", widget: image }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
       # - { label: "Tags", name: "tags", widget: "list" }
+  - name: receitas
+    label: Receitas
+    folder: "content/recipes"
+    create: true
+    fields:
+      #   - { name: path, label: Path }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
+      - { label: "Imagem", name: "featuredimage", widget: image }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
