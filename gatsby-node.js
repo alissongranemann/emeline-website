@@ -5,7 +5,7 @@ const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 const createBlogPosts = async (graphql, actions) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/post.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const result = await graphql(
     `
       {
@@ -55,7 +55,7 @@ const createBlogPosts = async (graphql, actions) => {
 const createRecipePosts = async (graphql, actions) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/post.js`)
+  const recipePost = path.resolve(`./src/templates/recipe-post.js`)
   const result = await graphql(
     `
       {
@@ -92,7 +92,7 @@ const createRecipePosts = async (graphql, actions) => {
 
     createPage({
       path: post.node.fields.slug,
-      component: blogPost,
+      component: recipePost,
       context: {
         slug: post.node.fields.slug,
         previous,

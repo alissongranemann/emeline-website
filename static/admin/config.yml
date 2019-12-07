@@ -17,7 +17,6 @@ collections:
     editor:
       preview: false
     fields:
-      #   - { name: path, label: Path }
       - {
           label: "Título",
           name: "title",
@@ -29,7 +28,6 @@ collections:
       - { label: "Descrição", name: "description", widget: "string" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
-      # - { label: "Tags", name: "tags", widget: "list" }
   - name: receitas
     label: Receitas
     folder: "content/recipes"
@@ -37,9 +35,24 @@ collections:
     editor:
       preview: false
     fields:
-      #   - { name: path, label: Path }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Data de publicação", name: "date", widget: "datetime" }
       - { label: "Imagem", name: "featuredimage", widget: image }
-      - { label: "Categoria", name: "category", widget: "string" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - {
+          label: "Categoria",
+          name: "category",
+          widget: "select",
+          options:
+            [
+              "Bolos e tortas",
+              "Carnes",
+              "Peixes e frutos do mar",
+              "Saladas e molhos",
+              "Sopas",
+              "Massas",
+              "Bebidas",
+              "Sobremesas",
+              "Lanches",
+            ],
+        }
+      - { label: "Ingredientes", name: "ingredients", widget: "list" }
+      - { label: "Modo de preparo", name: "preparation", widget: "markdown" }
