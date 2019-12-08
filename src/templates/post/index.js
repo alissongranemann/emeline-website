@@ -10,7 +10,7 @@ const PostTemplate = ({ title, description, image, date, slug, children }) => {
       <SEO
         title={title}
         description={description}
-        image={image}
+        image={image.childImageSharp.fluid.src}
         path={slug}
         isPost
         date={date}

@@ -15,7 +15,7 @@ const RecipePostTemplate = ({ data }) => {
     <Post
       title={frontmatter.title}
       description={frontmatter.category || post.excerpt}
-      image={frontmatter.featuredimage.src}
+      image={frontmatter.featuredimage}
       date={frontmatter.date}
       slug={slug}
     >

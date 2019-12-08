@@ -10,9 +10,9 @@ const Specialties = () => (
     <Fade delay={100}>
       <Title>Especialidades</Title>
     </Fade>
-    <List>
-      <ListItem>
-        <Fade>
+    <Fade cascade>
+      <List>
+        <ListItem>
           <div>
             <FaRegHospital />
             <h3>
@@ -26,10 +26,8 @@ const Specialties = () => (
             intolerâncias e alergias alimentares, anemia e outras deficiências
             vitamínicas e minerais.
           </Text>
-        </Fade>
-      </ListItem>
-      <ListItem>
-        <Fade>
+        </ListItem>
+        <ListItem>
           <div>
             <GiWeightLiftingUp />
             <h3>Nutrição para praticantes de atividades físicas</h3>
@@ -40,10 +38,8 @@ const Specialties = () => (
             adaptação alimentar adequada aos treinos praticados, melhora de
             disposição e rendimento.
           </Text>
-        </Fade>
-      </ListItem>
-      <ListItem>
-        <Fade>
+        </ListItem>
+        <ListItem>
           <div>
             <FaRegGrin />
             <h3>Nutrição e estética</h3>
@@ -54,10 +50,8 @@ const Specialties = () => (
             adequação alimentar para períodos pré e pós cirúrgicos, para
             tratamento capilares e de estética facial.
           </Text>
-        </Fade>
-      </ListItem>
-      <ListItem>
-        <Fade>
+        </ListItem>
+        <ListItem>
           <div>
             <GiFemale />
             <h3>Nutrição na saúde da mulher</h3>
@@ -68,9 +62,9 @@ const Specialties = () => (
             adaptações alimentares na fase pré-gestacional, gestacional e
             puerpério.
           </Text>
-        </Fade>
-      </ListItem>
-    </List>
+        </ListItem>
+      </List>
+    </Fade>
   </Container>
 )
 

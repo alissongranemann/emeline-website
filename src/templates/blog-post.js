@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data }) => {
     <Post
       title={frontmatter.title}
       description={frontmatter.description || post.excerpt}
-      image={frontmatter.featuredimage.childImageSharp.fluid.src}
+      image={frontmatter.featuredimage}
       date={frontmatter.date}
       slug={slug}
     >

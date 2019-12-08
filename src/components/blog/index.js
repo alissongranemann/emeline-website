@@ -1,5 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Zoom from "react-reveal/Zoom"
+import Fade from "react-reveal/Fade"
 
 import PostList from "../blog-posts"
 import { Container, StyledLink as Link } from "./styles"
@@ -45,22 +47,26 @@ const Blog = () => {
 
   return (
     <Container>
-      <PostList title="Blog">
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          const description = node.frontmatter.description || node.excerpt
-          return (
-            <PostList.Item
-              title={title}
-              slug={node.fields.slug}
-              date={node.frontmatter.date}
-              description={description}
-              image={node.frontmatter.featuredimage}
-            />
-          )
-        })}
-      </PostList>
-      <Link to="/blog">Leia mais >></Link>
+      <Fade>
+        <PostList title="Blog">
+          <Zoom>
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              const description = node.frontmatter.description || node.excerpt
+              return (
+                <PostList.Item
+                  title={title}
+                  slug={node.fields.slug}
+                  date={node.frontmatter.date}
+                  description={description}
+                  image={node.frontmatter.featuredimage}
+                />
+              )
+            })}
+          </Zoom>
+        </PostList>
+        <Link to="/blog">Leia mais >></Link>
+      </Fade>
     </Container>
   )
 }

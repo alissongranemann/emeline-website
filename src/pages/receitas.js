@@ -22,12 +22,12 @@ class RecipesIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Container>
-          <SEO
-            title="Receitas"
-            description="Receitas postadas pela nutricionista Emeline Abreu."
-          />
-          <Fade>
+        <Fade>
+          <Container>
+            <SEO
+              title="Receitas"
+              description="Receitas postadas pela nutricionista Emeline Abreu."
+            />
             <PostList title="Receitas">
               {recipes.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
@@ -43,8 +43,8 @@ class RecipesIndex extends React.Component {
                 )
               })}
             </PostList>
-          </Fade>
-        </Container>
+          </Container>
+        </Fade>
       </Layout>
     )
   }
