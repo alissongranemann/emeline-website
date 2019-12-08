@@ -120,5 +120,24 @@ module.exports = {
     },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-netlify-cms",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Nutricionista Emeline Abreu`,
+        short_name: `Emeline Abreu`,
+        start_url: `/`,
+        background_color: `#311231`,
+        theme_color: `#311231`,
+        display: `standalone`,
+        icon: `src/images/logo.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/blog/`, `/recipes/`],
+      },
+    },
+    "gatsby-plugin-netlify-cache",
   ],
 }
