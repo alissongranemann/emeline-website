@@ -7,6 +7,7 @@ import {
   FaWrench,
   FaComments,
   FaBlog,
+  FaBlender,
 } from "react-icons/fa"
 
 import { StyledScrollSpy, Nav, ListItem, Link } from "./styles"
@@ -14,7 +15,15 @@ import { StyledScrollSpy, Nav, ListItem, Link } from "./styles"
 const NavBar = () => (
   <Nav>
     <StyledScrollSpy
-      items={["welcome", "about", "specialties", "services", "blog", "contact"]}
+      items={[
+        "welcome",
+        "about",
+        "specialties",
+        "services",
+        "blog",
+        "recipes",
+        "contact",
+      ]}
       currentClassName="active"
       offset={-200}
     >
@@ -41,6 +50,11 @@ const NavBar = () => (
       <ListItem>
         <Link href="#blog">
           <FaBlog />
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link href="#recipes">
+          <FaBlender />
         </Link>
       </ListItem>
       <ListItem>

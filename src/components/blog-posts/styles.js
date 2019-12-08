@@ -24,7 +24,6 @@ export const Title = styled.h2`
 export const Item = styled.article`
   position: relative;
   height: 45rem;
-  margin-bottom: 2.5rem;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   overflow: hidden;

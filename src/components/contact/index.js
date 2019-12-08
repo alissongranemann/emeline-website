@@ -91,6 +91,7 @@ const Contact = () => {
                   onChange={handleChange}
                   helperText={touched.name && errors.name}
                   value={values.name || ""}
+                  variant="outlined"
                 />
                 <StyledInputLabel htmlFor="email">Email *</StyledInputLabel>
                 <StyledTextField
@@ -102,6 +103,7 @@ const Contact = () => {
                   onChange={handleChange}
                   helperText={touched.email && errors.email}
                   value={values.email || ""}
+                  variant="outlined"
                 />
                 <StyledInputLabel htmlFor="phone">Telefone</StyledInputLabel>
                 <StyledTextField
@@ -113,6 +115,7 @@ const Contact = () => {
                   onChange={handleChange}
                   helperText={touched.phone && errors.phone}
                   value={values.phone || ""}
+                  variant="outlined"
                 />
                 <StyledInputLabel htmlFor="message">
                   Mensagem *
@@ -120,7 +123,7 @@ const Contact = () => {
                 <TextField
                   id="message"
                   name="message"
-                  placeholder="Digite sua mensage aqui"
+                  placeholder="Digite sua mensagem aqui"
                   multiline
                   rows={3}
                   variant="outlined"

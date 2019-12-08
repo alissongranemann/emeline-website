@@ -11,6 +11,7 @@ import NavBar from "../components/navbar"
 import Welcome from "../components/welcome"
 import FullLogo from "../images/full-logo.png"
 import Blog from "../components/blog"
+import Recipes from "../components/recipes"
 
 const Section = styled.section`
   h2 {
@@ -33,6 +34,9 @@ const IndexPage = () => (
     </Section>
     <Section id="blog">
       <Blog />
+    </Section>
+    <Section id="recipes">
+      <Recipes />
     </Section>
     <Section id="contact">
       <Contact />

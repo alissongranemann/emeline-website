@@ -31,7 +31,7 @@ class RecipesIndex extends React.Component {
             <PostList title="Receitas">
               {recipes.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
-                const category = node.frontmatter.category || node.excerpt
+                const category = node.frontmatter.category
                 return (
                   <PostList.Item
                     title={title}

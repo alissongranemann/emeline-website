@@ -6,8 +6,8 @@ import InputLabel from "@material-ui/core/InputLabel"
 import { device } from "../../config/variables"
 
 export const Container = styled.div`
-  margin-bottom: 50px;
-  padding: 0 10%;
+  padding: 50px 10%;
+  background-color: #f1f1f1;
 `
 
 export const Title = styled.h2`
@@ -37,12 +37,18 @@ export const StyledForm = styled.form`
     margin-bottom: unset;
   }
 
-  input,
-  p,
-  label,
-  button,
-  textarea {
-    font-size: 1.5rem !important;
+  .MuiInputLabel-root,
+  .MuiOutlinedInput-root,
+  .MuiButton-root {
+    font-size: 1.5rem;
+  }
+
+  .MuiFormHelperText-root {
+    font-size: 1.1rem;
+  }
+
+  .MuiOutlinedInput-root {
+    background-color: #fff;
   }
 `
 
