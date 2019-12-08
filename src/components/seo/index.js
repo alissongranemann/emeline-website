@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { FACEBOOK_URL, INSTAGRAM_URL } from "../../config/variables"
 
 const getSchemaOrgJSONLD = ({
   isPost,
@@ -29,10 +30,7 @@ const getSchemaOrgJSONLD = ({
       author: {
         "@type": "Person",
         name: "Emeline Abreu",
-        sameAs: [
-          "https://www.facebook.com/emeline.abreu",
-          "https://www.instagram.com/emelineabreunutri",
-        ],
+        sameAs: [FACEBOOK_URL, INSTAGRAM_URL],
       },
     },
   ]
@@ -70,10 +68,7 @@ const getSchemaOrgJSONLD = ({
           author: {
             "@type": "Person",
             name: "Emeline Abreu",
-            sameAs: [
-              "https://www.facebook.com/emeline.abreu",
-              "https://www.instagram.com/emelineabreunutri",
-            ],
+            sameAs: [FACEBOOK_URL, INSTAGRAM_URL],
           },
           publisher: {
             "@type": "Organization",

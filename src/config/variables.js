@@ -19,3 +19,14 @@ export const device = {
   desktop: `(min-width: ${size.desktop})`,
   desktopL: `(min-width: ${size.desktopL})`,
 }
+
+export const FACEBOOK_URL = "https://www.facebook.com/emeline.abreu"
+export const INSTAGRAM_URL = "https://www.instagram.com/emelineabreunutri"
+
+export const HOME_SECTION = "welcome"
+export const ABOUT_SECTION = "about"
+export const SPECIALTIES_SECTION = "specialties"
+export const SERVICES_SECTION = "services"
+export const BLOG_SECTION = "blog"
+export const RECIPES_SECTION = "recipes"
+export const CONTACT_SECTION = "contact"

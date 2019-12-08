@@ -16,6 +16,7 @@ import {
   StyledButton,
   StyledInputLabel,
 } from "./styles"
+import { FACEBOOK_URL, INSTAGRAM_URL } from "../../config/variables"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
 const USER_ID = process.env.GATSBY_EMAIL_JS_USER_ID
@@ -144,19 +145,11 @@ const Contact = () => {
             )}
           </Formik>
           <IconsContainer>
-            <a
-              href="https://www.facebook.com/emeline.abreu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
               <FaFacebook />
               Emeline Abreu
             </a>
-            <a
-              href="https://www.instagram.com/emelineabreunutri"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
               <FaInstagram />
               Emeline Abreu
             </a>

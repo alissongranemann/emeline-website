@@ -7,8 +7,14 @@ export const StyledScrollSpy = styled(Scrollspy)`
   margin: unset;
   list-style: none;
 
-  .active svg {
-    color: #ff86f0;
+  .active {
+    svg {
+      color: #ff86f0;
+    }
+
+    span {
+      visibility: visible;
+    }
   }
 `
 
@@ -55,5 +61,36 @@ export const Link = styled.a`
     height: auto;
     font-size: 1.5rem;
     color: #d8d8d8;
+  }
+`
+
+export const Tooltip = styled.div`
+  position: relative;
+  display: inline-block;
+
+  span {
+    position: absolute;
+    z-index: 1;
+    top: -1.75rem;
+    left: 1.1rem;
+    visibility: hidden;
+    /* width: 8rem; */
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ff86f0;
+    font-size: 0.8rem;
+    text-align: center;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      right: 100%; /* To the left of the tooltip */
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
+    }
   }
 `

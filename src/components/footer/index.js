@@ -2,23 +2,16 @@ import React from "react"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
 
 import { StyledFooter, IconContainer, DevelopedBy, CustomLogo } from "./styles"
+import { FACEBOOK_URL, INSTAGRAM_URL } from "../../config/variables"
 
 const Footer = () => (
   <StyledFooter>
     <CustomLogo />
     <IconContainer>
-      <a
-        href="https://www.facebook.com/emeline.abreu"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
         <FaFacebook />
       </a>
-      <a
-        href="https://www.instagram.com/emelineabreunutri"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
         <FaInstagram />
       </a>{" "}
       <a

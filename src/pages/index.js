@@ -13,6 +13,16 @@ import Welcome from "../components/welcome"
 import Blog from "../components/blog"
 import Recipes from "../components/recipes"
 
+import {
+  HOME_SECTION,
+  ABOUT_SECTION,
+  SPECIALTIES_SECTION,
+  SERVICES_SECTION,
+  BLOG_SECTION,
+  RECIPES_SECTION,
+  CONTACT_SECTION,
+} from "../config/variables"
+
 const Section = styled.section`
   h2 {
     text-transform: uppercase;
@@ -38,23 +48,23 @@ const IndexPage = () => {
         image={data.placeholderImage.childImageSharp.fixed.src}
       />
       <NavBar />
-      <Welcome />
-      <Section id="about">
+      <Welcome id={HOME_SECTION} />
+      <Section id={ABOUT_SECTION}>
         <About />
       </Section>
-      <Section id="specialties">
+      <Section id={SPECIALTIES_SECTION}>
         <Specialties />
       </Section>
-      <Section id="services">
+      <Section id={SERVICES_SECTION}>
         <Services />
       </Section>
-      <Section id="blog">
+      <Section id={BLOG_SECTION}>
         <Blog />
       </Section>
-      <Section id="recipes">
+      <Section id={RECIPES_SECTION}>
         <Recipes />
       </Section>
-      <Section id="contact">
+      <Section id={CONTACT_SECTION}>
         <Contact />
       </Section>
     </Layout>
