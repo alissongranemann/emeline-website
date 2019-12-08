@@ -22,16 +22,8 @@ export const Title = styled.h2`
 `
 
 export const Item = styled.article`
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
   overflow: hidden;
   text-align: left;
-
-  &:hover {
-    transition: all 0.2s ease-out;
-    transform: scale(1.02, 1.02);
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.9);
-  }
 `
 
 export const Link = styled(GatsbyLink)`

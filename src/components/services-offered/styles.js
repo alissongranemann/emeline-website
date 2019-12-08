@@ -21,16 +21,17 @@ export const List = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   margin: unset;
+
+  > div {
+    margin-bottom: 5rem;
+  }
 `
 
 export const ListItem = styled.li`
   width: 30rem;
   height: 34rem;
-  margin: 5px;
+  margin: unset;
   padding: 3rem 2.5rem;
-  border: 1px solid #e1e1e1;
-  border-radius: 25px;
-  box-shadow: -2px 2px 5px 0px #4c4c4c;
   background-color: rgba(255, 255, 255, 0.65);
   color: #000;
 
@@ -42,7 +43,6 @@ export const ListItem = styled.li`
   }
 
   @media ${device.mobileL} {
-    margin: 15px;
     width: 27.5rem;
     height: 35rem;
   }

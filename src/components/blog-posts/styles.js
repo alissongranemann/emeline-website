@@ -24,8 +24,6 @@ export const Title = styled.h2`
 export const Item = styled.article`
   position: relative;
   height: 45rem;
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
   overflow: hidden;
   text-align: left;
 
@@ -44,12 +42,6 @@ export const Item = styled.article`
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
-  }
-
-  &:hover {
-    transition: all 0.2s ease-out;
-    transform: scale(1.02, 1.02);
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.9);
   }
 `
 
