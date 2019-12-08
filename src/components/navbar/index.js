@@ -1,15 +1,22 @@
 import React from "react"
 
-import { FaHome, FaUser, FaListAlt, FaWrench, FaComments } from "react-icons/fa"
+import {
+  FaHome,
+  FaUser,
+  FaListAlt,
+  FaWrench,
+  FaComments,
+  FaBlog,
+} from "react-icons/fa"
 
 import { StyledScrollSpy, Nav, ListItem, Link } from "./styles"
 
 const NavBar = () => (
   <Nav>
     <StyledScrollSpy
-      items={["welcome", "about", "specialties", "services", "contact"]}
+      items={["welcome", "about", "specialties", "services", "blog", "contact"]}
       currentClassName="active"
-      offset={-300}
+      offset={-200}
     >
       <ListItem>
         <Link href="#welcome">
@@ -29,6 +36,11 @@ const NavBar = () => (
       <ListItem>
         <Link href="#services">
           <FaWrench />
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link href="#blog">
+          <FaBlog />
         </Link>
       </ListItem>
       <ListItem>

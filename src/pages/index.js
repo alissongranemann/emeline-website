@@ -10,6 +10,7 @@ import Contact from "../components/contact"
 import NavBar from "../components/navbar"
 import Welcome from "../components/welcome"
 import FullLogo from "../images/full-logo.png"
+import Blog from "../components/blog"
 
 const Section = styled.section`
   h2 {
@@ -29,6 +30,9 @@ const IndexPage = () => (
     </Section>
     <Section id="services">
       <Services />
+    </Section>
+    <Section id="blog">
+      <Blog />
     </Section>
     <Section id="contact">
       <Contact />

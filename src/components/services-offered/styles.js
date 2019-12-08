@@ -4,7 +4,6 @@ import { device } from "../../config/variables"
 import Background from "./background"
 
 export const Container = styled(Background)`
-  margin-bottom: 50px;
   padding: 50px 10%;
   color: white;
   text-align: center;
