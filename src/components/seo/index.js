@@ -26,10 +26,14 @@ const getSchemaOrgJSONLD = ({
       url,
       name: title,
       alternateName: siteMetadata.title,
-      sameAs: [
-        "https://www.facebook.com/emeline.abreu",
-        "https://www.instagram.com/emelineabreunutri",
-      ],
+      author: {
+        "@type": "Person",
+        name: "Emeline Abreu",
+        sameAs: [
+          "https://www.facebook.com/emeline.abreu",
+          "https://www.instagram.com/emelineabreunutri",
+        ],
+      },
     },
   ]
 
@@ -66,6 +70,10 @@ const getSchemaOrgJSONLD = ({
           author: {
             "@type": "Person",
             name: "Emeline Abreu",
+            sameAs: [
+              "https://www.facebook.com/emeline.abreu",
+              "https://www.instagram.com/emelineabreunutri",
+            ],
           },
           publisher: {
             "@type": "Organization",
