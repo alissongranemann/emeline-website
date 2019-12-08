@@ -10,38 +10,25 @@ const SPECIALTIES = [
     title: "Nutrição clínica como coadjuvante na melhora de condições de saúde",
     icon: <FaRegHospital />,
     text:
-      "Tratamento nutricional focado nos diagnósticos apresentados como: \
-            diabetes, hipertensão, alterações de colesterol e triglicerídeos, \
-            doenças gástricas, doenças intestinais, doenças tireoidianas, \
-            intolerâncias e alergias alimentares, anemia e outras deficiências \
-            vitamínicas e minerais.",
+      "Tratamento nutricional focado nos diagnósticos apresentados como: diabetes, hipertensão, alterações de colesterol e triglicerídeos, doenças gástricas, doenças intestinais, doenças tireoidianas, intolerâncias e alergias alimentares, anemia e outras deficiências vitamínicas e minerais.",
   },
   {
     title: "Nutrição para praticantes de atividades físicas",
     icon: <GiWeightLiftingUp />,
     text:
-      "Tratamento nutricional focado na hipertrofia, definição muscular, \
-            ganho de peso, perda de peso, redução de percentual de gordura, \
-            adaptação alimentar adequada aos treinos praticados, melhora de \
-            disposição e rendimento.",
+      "Tratamento nutricional focado na hipertrofia, definição muscular, ganho de peso, perda de peso, redução de percentual de gordura, adaptação alimentar adequada aos treinos praticados, melhora de disposição e rendimento.",
   },
   {
     title: "Nutrição e estética",
     icon: <FaRegGrin />,
     text:
-      "Tratamento nutricional focado no emagrecimento, nutrição aliada aos \
-            tratamentos para redução de gordura localizada, celulite e estrias, \
-            adequação alimentar para períodos pré e pós cirúrgicos, para \
-            tratamento capilares e de estética facial.",
+      "Tratamento nutricional focado no emagrecimento, nutrição aliada aos tratamentos para redução de gordura localizada, celulite e estrias, adequação alimentar para períodos pré e pós cirúrgicos, para tratamento capilares e de estética facial.",
   },
   {
     title: "Nutrição na saúde da mulher",
     icon: <GiFemale />,
     text:
-      "Tratamento nutricional focado nas alterações hormonais como a tensão \
-            pré-menstrual, síndrome do ovário policístico e menopausa, \
-            adaptações alimentares na fase pré-gestacional, gestacional e \
-            puerpério.",
+      "Tratamento nutricional focado nas alterações hormonais como a tensão pré-menstrual, síndrome do ovário policístico e menopausa, adaptações alimentares na fase pré-gestacional, gestacional e puerpério.",
   },
 ]
 

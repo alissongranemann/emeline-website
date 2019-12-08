@@ -10,8 +10,8 @@ import Services from "../components/services-offered"
 import Contact from "../components/contact"
 import NavBar from "../components/navbar"
 import Welcome from "../components/welcome"
-import Blog from "../components/blog"
-import Recipes from "../components/recipes"
+import Blog from "../components/blog-section"
+import Recipes from "../components/recipe-section"
 
 import {
   HOME_SECTION,

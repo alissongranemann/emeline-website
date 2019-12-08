@@ -1,32 +1,23 @@
 import React from "react"
 
-import Card from "../common/card"
-import { Item, Image, Link, ContentContainer } from "./styles"
+import ImageCard from "../common/image-card"
 
 const PostItem = ({ title, slug, description, date, image }) => (
-  <Card>
-    <Item>
-      <Link to={slug}>
-        {image && (
-          <Image
-            imageInfo={{
-              image: image,
-              alt: `featured image thumbnail for post ${title}`,
-            }}
-          />
-        )}
-        <ContentContainer>
-          <small>{date}</small>
-          <h3>{title}</h3>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: description,
-            }}
-          />
-        </ContentContainer>
-      </Link>
-    </Item>
-  </Card>
+  <article>
+    <ImageCard
+      slug={slug}
+      image={image}
+      alt={`featured image thumbnail for post ${title}`}
+    >
+      <small>{date}</small>
+      <h3>{title}</h3>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
+    </ImageCard>
+  </article>
 )
 
 export default PostItem
