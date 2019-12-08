@@ -1,12 +1,12 @@
 import React from "react"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
 
-import { StyledFooter, LeftContainer, DevelopedBy, CustomLogo } from "./styles"
+import { StyledFooter, IconContainer, DevelopedBy, CustomLogo } from "./styles"
 
 const Footer = () => (
   <StyledFooter>
-    <LeftContainer>
-      <CustomLogo />
+    <CustomLogo />
+    <IconContainer>
       <a
         href="https://www.facebook.com/emeline.abreu"
         target="_blank"
@@ -35,7 +35,7 @@ const Footer = () => (
       >
         <FaWhatsapp />
       </a>
-    </LeftContainer>
+    </IconContainer>
     <DevelopedBy>
       {new Date().getFullYear()}
       {` `}© desenvolvido por

@@ -1,13 +1,10 @@
 import styled from "styled-components"
 
-import { device } from "../../config/variables"
 import Logo from "./logo"
 
 export const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 0 5%;
   background-color: #311231;
   color: #fff;
@@ -22,26 +19,16 @@ export const StyledFooter = styled.footer`
   }
 `
 
-export const Image = styled.img`
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  margin: 10px 0;
-
-  @media ${device.laptop} {
-    max-width: 300px;
-  }
-`
-
 export const CustomLogo = styled(Logo)`
   width: 5rem;
   margin-right: 5rem;
+  margin: 0.75rem 0;
 `
 
-export const LeftContainer = styled.div`
+export const IconContainer = styled.div`
   display: flex;
-  align-items: center;
-  margin: 0.75rem 0;
+  margin: 0 3.5rem;
+  flex-grow: 1;
 
   svg {
     height: auto;
@@ -55,10 +42,5 @@ export const LeftContainer = styled.div`
 
 export const DevelopedBy = styled.div`
   font-size: 1rem;
-  width: 100%;
   text-align: center;
-
-  @media ${device.laptop} {
-    width: auto;
-  }
 `
