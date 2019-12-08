@@ -5,13 +5,19 @@ import Post from "./post"
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
-  const { frontmatter, html } = post
+  const {
+    frontmatter,
+    fields: { slug },
+    html,
+  } = post
 
   return (
     <Post
       title={frontmatter.title}
       description={frontmatter.description || post.excerpt}
-      image={frontmatter.featuredimage}
+      image={frontmatter.featuredimage.childImageSharp.fluid.src}
+      date={frontmatter.date}
+      slug={slug}
     >
       <small style={{ display: "inline-block", marginBottom: "1.2rem" }}>
         {frontmatter.date}
@@ -34,6 +40,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY")

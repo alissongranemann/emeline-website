@@ -5,13 +5,19 @@ import Post from "./post"
 
 const RecipePostTemplate = ({ data }) => {
   const post = data.markdownRemark
-  const { frontmatter, html } = post
+  const {
+    frontmatter,
+    html,
+    fields: { slug },
+  } = post
 
   return (
     <Post
       title={frontmatter.title}
       description={frontmatter.category || post.excerpt}
-      image={frontmatter.featuredimage}
+      image={frontmatter.featuredimage.src}
+      date={frontmatter.date}
+      slug={slug}
     >
       <section dangerouslySetInnerHTML={{ __html: html }} />
     </Post>
@@ -31,6 +37,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY")

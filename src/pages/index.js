@@ -9,7 +9,7 @@ import Services from "../components/services-offered"
 import Contact from "../components/contact"
 import NavBar from "../components/navbar"
 import Welcome from "../components/welcome"
-import FullLogo from "../images/full-logo.png"
+import FullLogo from "../components/header/logo"
 import Blog from "../components/blog"
 import Recipes from "../components/recipes"
 

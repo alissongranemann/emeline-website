@@ -10,7 +10,89 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, image }) {
+const getSchemaOrgJSONLD = ({
+  isPost,
+  url,
+  title,
+  image,
+  description,
+  date,
+  siteMetadata,
+}) => {
+  const schemaOrgJSONLD = [
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      url,
+      name: title,
+      alternateName: siteMetadata.title,
+      sameAs: [
+        "https://www.facebook.com/emeline.abreu",
+        "https://www.instagram.com/emelineabreunutri",
+      ],
+    },
+  ]
+
+  return isPost
+    ? [
+        ...schemaOrgJSONLD,
+        {
+          "@context": "https://emelineabreunutri.com.br",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              item: {
+                "@id": url,
+                name: title,
+                image,
+              },
+            },
+          ],
+        },
+        {
+          "@context": "https://emelineabreunutri.com.br",
+          "@type": "BlogPosting",
+          url,
+          name: title,
+          alternateName: siteMetadata.title,
+          headline: title,
+          image: {
+            "@type": "ImageObject",
+            url: image,
+          },
+          description,
+          author: {
+            "@type": "Person",
+            name: "Emeline Abreu",
+          },
+          publisher: {
+            "@type": "Organization",
+            url: "https://emelineabreunutri.com.br",
+            // logo: siteMetadata.logo,
+            name: "Emeline Abreu",
+          },
+          mainEntityOfPage: {
+            "@type": "WebSite",
+            "@id": siteMetadata.url,
+          },
+          date,
+        },
+      ]
+    : schemaOrgJSONLD
+}
+
+function SEO({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+  path = "",
+  isPost,
+  date,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,14 +101,26 @@ function SEO({ description, lang, meta, title, image }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
     `
   )
 
+  const url = `${site.siteMetadata.siteUrl}${path}`
+  const imgUrl = `${url}${image}`
+
+  const schemaOrgJSONLD = getSchemaOrgJSONLD({
+    isPost,
+    url,
+    title,
+    image: imgUrl,
+    description,
+    date,
+    siteMetadata: site.siteMetadata,
+  })
   const metaDescription = description || site.siteMetadata.description
-  const { URL = "https://www.emelineabreunutri.com.br" } = process.env
   return (
     <Helmet
       htmlAttributes={{
@@ -41,7 +135,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `image`,
-          content: `${URL}${image}`,
+          content: imgUrl,
         },
         {
           property: `og:title`,
@@ -52,8 +146,12 @@ function SEO({ description, lang, meta, title, image }) {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: url,
+        },
+        {
           property: `og:image`,
-          content: `${URL}${image}`,
+          content: imgUrl,
         },
         {
           property: `og:type`,
@@ -76,7 +174,11 @@ function SEO({ description, lang, meta, title, image }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
+    </Helmet>
   )
 }
 

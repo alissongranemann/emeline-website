@@ -22,6 +22,7 @@ export const Image = styled(PreviewImage)`
   width: 100%;
   max-height: 25rem;
   margin-bottom: 3rem;
+  object-fit: cover;
 `
 
 export const Divider = styled.hr`
