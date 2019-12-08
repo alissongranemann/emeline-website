@@ -65,7 +65,7 @@ const Blog = () => {
             })}
           </Zoom>
         </PostList>
-        <Link to="/blog">Leia mais </Link>
+        <Link to="/blog">Leia mais >></Link>
       </Fade>
     </Container>
   )

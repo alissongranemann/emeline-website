@@ -78,7 +78,7 @@ export const Tooltip = styled.div`
     padding: 0.75rem;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.7);
-    color: #ff86f0;
+    color: #fff;
     font-size: 0.8rem;
     text-align: center;
 
