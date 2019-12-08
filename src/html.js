@@ -21,6 +21,7 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap"
           rel="stylesheet"
         />
+        <link rel="canonical" href="https://emelineabreunutri.com.br/" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

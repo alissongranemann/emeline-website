@@ -1,6 +1,6 @@
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://www.emelineabreunutri.com.br",
+  URL: NETLIFY_SITE_URL = "https://emelineabreunutri.com.br",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
   GATSBY_GA_TRACKING_ID: GA_TRACKING_ID,
