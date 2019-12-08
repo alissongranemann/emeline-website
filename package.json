@@ -40,6 +40,7 @@
     "typeface-montserrat": "^0.0.75"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "3.0.2",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -60,5 +61,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
