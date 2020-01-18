@@ -8,10 +8,6 @@ export const Container = styled.article`
   @media ${device.laptop} {
     grid-template-columns: 1fr 1fr;
   }
-
-  @media ${device.desktopL} {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 `
 
 export const Title = styled.h2`
