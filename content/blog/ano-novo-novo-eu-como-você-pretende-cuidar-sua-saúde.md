@@ -1,7 +1,7 @@
 ---
 title: 'Ano novo, novo eu! Como você pretende cuidar sua saúde?'
 date: 2020-01-12T14:21:16.959Z
-featuredimage: /img/novo-ano-novo-eu-.png
+featuredimage: /img/new-year.jpg
 description: >-
   2020 começou... quais são seus planos para começar a mudar sua relação com a
   comida?
