@@ -1,5 +1,5 @@
 ---
-title: 'Ano novo, novo eu! Como você pretende cuidar sua saúde?'
+title: 'Ano novo, novo eu! Como você pretende cuidar da sua saúde?'
 date: 2020-01-12T14:21:16.959Z
 featuredimage: /img/new-year.jpg
 description: >-
