@@ -1,25 +1,16 @@
 ---
-title: Bolo de mel
-date: 2019-04-20T22:16:40.748Z
-featuredimage: /img/bolo-de-pao-de-mel.jpg
+title: 'Bolo de aveia com mel '
+featuredimage: /img/bolo-de-aveia-com-mel-postado-03042020.png
 category: Bolos e tortas
 ---
 Aí vai a receita!
 
 **Ingredientes**:
 
-* 2,5 xícaras (chá) de farinha de trigo integral;
-* 1 xícara (chá) de mel;
-* 3 colheres (sopa) de cacau em pó;
-* 2 xícaras (chá) de água ou água de coco;
-* 1 colher (chá) de canela;
-* 1 colher (chá) de fermento;
-* 130-150 gramas de chocolate 70%.
-
-Opcionais: noz moscada, cravo da índia em pó, essência de baunilha.
+* 2 ovos + 2 colheres (sopa) de manteiga (eu usei a ghee, mas pode ser outra) + 2 colheres (sopa) de óleo (eu usei coco, mas adapte com o que tiver em casa) + 6 colheres (sopa) de mel + 8 colheres (sopa) de farelo de aveia + 6 colheres (sopa) de leite (eu usei de vaca, mas pode ser de arroz, coco...) + 1 colher (sopa) de canela em pó + 1 colher (sopa) rasa de fermento.
 
 **Modo de preparo**:
 
-Bater todos os ingredientes (batedeira ou á mão), com exceção do chocolate. Unte uma forma e asse em forno médio (190-200°) por 40-50 minutos. Cubra o bolo com o chocolate derretido (banho maria ou micro-ondas). Leve a geladeira para endurecer o chocolate em torno de 20 minutos.
+ate tudo no liquidificador. Preaqueça o forno por 15 minutos e em forma pequena e untada levar o bolo ao forno a 180 graus por 30 minutos.
 
-E tá pronto!
+E está pronto!Sem açúcar, sem farinha, sem frescura!
