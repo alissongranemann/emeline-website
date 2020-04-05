@@ -42,6 +42,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/ebooks`,
+        name: `ebooks`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -135,7 +142,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/blog/`, `/recipes/`],
+        precachePages: ["/blog/", "/recipes/", "/ebooks/"],
       },
     },
     "gatsby-plugin-netlify-cache",

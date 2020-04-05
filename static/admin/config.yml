@@ -68,5 +68,6 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Capa", name: "cover", widget: image }
-      - { label: "Sumário", name: "summary", widget: "markdown" }
+      - { label: "Sumário", name: "body", widget: "markdown" }
       - { label: "Arquivo", name: "file", widget: file, allow_multiple: false }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
