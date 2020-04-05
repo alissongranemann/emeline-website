@@ -2,14 +2,21 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import PreviewImage from "../components/preview-compatible-image"
+import Image from "../components/preview-compatible-image"
 import Post from "./post"
+import Card from "../components/common/card"
 
-export const Image = styled(PreviewImage)`
-  width: 15em;
-  max-height: 25rem;
-  object-fit: cover;
-  margin-bottom: 0.4em;
+const StyledCard = styled(Card)`
+  width: 12em;
+  border-radius: unset;
+  text-align: center;
+  background: #4b434d;
+
+  p {
+    color: #fff;
+    font-weight: 600;
+    margin: 0.5em 0;
+  }
 `
 
 export const Link = styled.a`
@@ -18,12 +25,7 @@ export const Link = styled.a`
   justify-content: center;
   align-items: center;
   margin: 2.5em 0;
-  font-weight: 600;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `
 
 const Small = styled.small`
@@ -46,13 +48,15 @@ const EbookPostTemplate = ({ data }) => {
       <Small>{date}</Small>
       <section dangerouslySetInnerHTML={{ __html: html }} />
       <Link href={file.publicURL} download>
-        <Image
-          imageInfo={{
-            image: cover,
-            alt: `featured image thumbnail for post ${title}`,
-          }}
-        />
-        Download
+        <StyledCard>
+          <Image
+            imageInfo={{
+              image: cover,
+              alt: `ebook ${title}`,
+            }}
+          />
+          <p>Clique para baixar</p>
+        </StyledCard>
       </Link>
     </Post>
   )
@@ -79,7 +83,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         cover {
           childImageSharp {
-            fluid(maxWidth: 150, quality: 100) {
+            fluid(maxWidth: 250, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

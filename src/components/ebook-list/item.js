@@ -1,22 +1,27 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-import ImageCard from "../common/image-card"
+import Card from "../common/card"
+import Image from "../preview-compatible-image"
 
-const StyledImageCard = styled(ImageCard)`
-  width: 17.5em;
+const StyledImageCard = styled(Card)`
+  width: 12em;
   border-radius: unset;
-
-  &:before {
-    border-radius: unset;
-  }
 `
 
 const Item = ({ title, slug, image }) => (
   <article>
-    <StyledImageCard slug={slug} image={image} alt={`ebook ${title}`}>
-      <h3>{title}</h3>
-    </StyledImageCard>
+    <Link to={slug}>
+      <StyledImageCard slug={slug} image={image} alt={`ebook ${title}`}>
+        <Image
+          imageInfo={{
+            image,
+            alt: title,
+          }}
+        />
+      </StyledImageCard>
+    </Link>
   </article>
 )
 
