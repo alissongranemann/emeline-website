@@ -6,7 +6,7 @@ import PreviewImage from "../components/preview-compatible-image"
 import Post from "./post"
 
 export const Image = styled(PreviewImage)`
-  width: 150px;
+  width: 15em;
   max-height: 25rem;
   object-fit: cover;
   margin-bottom: 0.4em;
@@ -79,7 +79,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         cover {
           childImageSharp {
-            fluid(maxWidth: 1080, quality: 100) {
+            fluid(maxWidth: 150, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -7,7 +7,6 @@ import { device } from "../../config/variables"
 
 export const Container = styled.div`
   padding: 50px 10%;
-  background-color: #f1f1f1;
 `
 
 export const Title = styled.h2`

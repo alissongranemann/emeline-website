@@ -26,6 +26,11 @@ export const StyledCard = styled(Card)`
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
+
+    &:hover {
+      transition: all 0.2s ease-out;
+      transform: scale(1.02, 1.02);
+    }
   }
 `
 
@@ -39,6 +44,7 @@ export const Image = styled(PreviewImage)`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background: #000;
 `
 export const ContentContainer = styled.section`
   height: 100%;

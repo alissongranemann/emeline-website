@@ -12,6 +12,7 @@ import NavBar from "../components/navbar"
 import Welcome from "../components/welcome"
 import Blog from "../components/blog-section"
 import Recipes from "../components/recipe-section"
+import Ebooks from "../components/ebook-section"
 
 import {
   HOME_SECTION,
@@ -20,6 +21,7 @@ import {
   SERVICES_SECTION,
   BLOG_SECTION,
   RECIPES_SECTION,
+  EBOOKS_SECTION,
   CONTACT_SECTION,
 } from "../config/variables"
 
@@ -63,6 +65,9 @@ const IndexPage = () => {
       </Section>
       <Section id={RECIPES_SECTION}>
         <Recipes />
+      </Section>
+      <Section id={EBOOKS_SECTION}>
+        <Ebooks />
       </Section>
       <Section id={CONTACT_SECTION}>
         <Contact />

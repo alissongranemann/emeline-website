@@ -8,6 +8,7 @@ import {
   FaComments,
   FaBlog,
   FaBlender,
+  FaBook,
 } from "react-icons/fa"
 
 import {
@@ -17,6 +18,7 @@ import {
   SERVICES_SECTION,
   BLOG_SECTION,
   RECIPES_SECTION,
+  EBOOKS_SECTION,
   CONTACT_SECTION,
 } from "../../config/variables"
 
@@ -33,6 +35,7 @@ export const LANDING_PAGE_SECTIONS = [
   { id: SERVICES_SECTION, icon: <FaWrench />, description: "Serviços" },
   { id: BLOG_SECTION, icon: <FaBlog />, description: "Blog" },
   { id: RECIPES_SECTION, icon: <FaBlender />, description: "Receitas" },
+  { id: EBOOKS_SECTION, icon: <FaBook />, description: "eBooks" },
   { id: CONTACT_SECTION, icon: <FaComments />, description: "Contato" },
 ]
 
