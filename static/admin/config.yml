@@ -7,6 +7,9 @@ backend:
     uploadMedia: "upload “{{path}}”"
     deleteMedia: "delete “{{path}}”"
 
+local_backend:
+  url: http://localhost:8081/api/v1
+
 media_folder: static/img
 public_folder: img
 collections:
@@ -53,3 +56,17 @@ collections:
             ],
         }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: ebooks
+    label: eBooks
+    folder: "content/ebooks"
+    path: "{{slug}}/index"
+    media_folder: ""
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Capa", name: "cover", widget: image }
+      - { label: "Sumário", name: "summary", widget: "markdown" }
+      - { label: "Arquivo", name: "file", widget: file, allow_multiple: false }
