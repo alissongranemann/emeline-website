@@ -1,7 +1,7 @@
 ---
 title: Ansiedade e escolhas alimentares
 cover: capa.png
-file: ebook-v1_compressed.pdf
+file: e-book-versão-final-06042020_compressed.pdf
 date: 2020-04-05T18:55:29.654Z
 ---
 Entre sentimentos, pensamentos e decisões... vou lá ver o que ter para comer...
