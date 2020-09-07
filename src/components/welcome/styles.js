@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 50px;
   margin-top: -1px;
-  height: 75vh;
+  height: 60vh;
   max-width: 75vw;
   text-align: center;
   word-break: keep-all;
@@ -17,7 +17,7 @@ export const Container = styled.div`
 
 export const CustomBackground = styled(Background)`
   padding: 0 10%;
-  background-color: purple;
+  background-color: rgba(106, 27, 154, 0.9);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);

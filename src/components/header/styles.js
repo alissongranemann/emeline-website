@@ -9,7 +9,7 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   padding: 10px 7.5rem;
-  background-color: #311231;
+  background-color: #2A1628;
   font-size: 1.25rem;
   font-weight: bold;
 
@@ -20,7 +20,7 @@ export const Header = styled.header`
     text-transform: uppercase;
 
     &:hover {
-      color: #ff86f0;
+      color: #9fb583;
     }
   }
 

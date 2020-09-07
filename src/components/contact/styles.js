@@ -74,7 +74,7 @@ export const IconsContainer = styled.div`
     font-size: 1.7rem;
 
     &:hover {
-      color: #5a1a78;
+      color: #82427B;
     }
   }
 
@@ -105,7 +105,7 @@ export const StyledInputLabel = styled(InputLabel)`
 export const StyledButton = styled(Button)`
   color: #fff !important;
   margin-top: 35px !important;
-  background-color: #5a1a78 !important;
+  background-color: #82427B !important;
 
   &:disabled {
     background-color: #949494 !important;

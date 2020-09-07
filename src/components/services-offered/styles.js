@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
 import { device } from "../../config/variables"
-import Background from "./background"
 
-export const Container = styled(Background)`
+export const Container = styled.div`
   padding: 50px 10%;
   color: white;
   text-align: center;
+  background-color: #7d8c67;
 `
 
 export const Title = styled.h2`
@@ -39,7 +39,7 @@ export const ListItem = styled.li`
     width: 30px;
     height: 30px;
     margin-bottom: 25px;
-    color: #671d93;
+    color: #000;
   }
 
   @media ${device.mobileL} {

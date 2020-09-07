@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   padding: 0 5%;
-  background-color: #311231;
+  background-color: #2A1628;
   color: #fff;
 
   a {
@@ -14,7 +14,7 @@ export const StyledFooter = styled.footer`
     color: unset;
 
     &:hover {
-      color: #ff86f0;
+      color: #996298;
     }
   }
 `

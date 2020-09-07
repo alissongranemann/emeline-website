@@ -44,7 +44,7 @@ export const ListItem = styled.li`
     min-width: 35px;
     height: 35px;
     margin-right: 20px;
-    color: #5a187c;
+    color: #7d8c67;
   }
 `
 export const Text = styled.p`

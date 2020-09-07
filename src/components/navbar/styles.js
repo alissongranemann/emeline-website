@@ -9,7 +9,7 @@ export const StyledScrollSpy = styled(Scrollspy)`
 
   .active {
     svg {
-      color: #ff86f0;
+      color: #9fb583;
     }
 
     span {
@@ -21,7 +21,7 @@ export const StyledScrollSpy = styled(Scrollspy)`
 export const Nav = styled.nav`
   display: none;
   position: fixed;
-  top: 35%;
+  top: 30%;
   left: 3%;
   padding: 12px 8px;
   border-radius: 25px;

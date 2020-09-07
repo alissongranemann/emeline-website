@@ -7,7 +7,7 @@ const Background = ({ className, children }) => {
   const { background } = useStaticQuery(
     graphql`
       query {
-        background: file(relativePath: { eq: "background.jpg" }) {
+        background: file(relativePath: { eq: "pattern.png" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
@@ -20,7 +20,7 @@ const Background = ({ className, children }) => {
 
   const backgroundFluidImageStack = [
     background.childImageSharp.fluid,
-    `linear-gradient(to right bottom, rgba(49, 18, 49, 1), rgba(106, 27, 154, 0.9))`,
+    `linear-gradient(to right bottom, rgba(125, 140, 103, 0.98), rgba(125, 140, 103, 0.98))`,
   ].reverse()
 
   return (
