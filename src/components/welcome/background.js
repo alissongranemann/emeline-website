@@ -20,7 +20,7 @@ const Background = ({ className, children }) => {
 
   const backgroundFluidImageStack = [
     background.childImageSharp.fluid,
-    `linear-gradient(to right bottom, rgba(125, 140, 103, 0.98), rgba(125, 140, 103, 0.98))`,
+    `linear-gradient(to right bottom, rgba(125, 140, 103, 0.96), rgba(125, 140, 103, 0.96))`,
   ].reverse()
 
   return (

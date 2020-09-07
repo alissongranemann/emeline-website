@@ -9,7 +9,7 @@ export const StyledScrollSpy = styled(Scrollspy)`
 
   .active {
     svg {
-      color: #9fb583;
+      color: #82427B;
     }
 
     span {
@@ -21,13 +21,13 @@ export const StyledScrollSpy = styled(Scrollspy)`
 export const Nav = styled.nav`
   display: none;
   position: fixed;
-  top: 30%;
+  top: 35%;
   left: 3%;
   padding: 12px 8px;
   border-radius: 25px;
   box-shadow: -1px 0px 5px 0px;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   animation: fadein 1s;
 
   @media ${device.tablet} {
