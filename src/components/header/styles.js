@@ -31,6 +31,7 @@ export const Header = styled.header`
 
 export const CustomLogo = styled(Logo)`
   width: 25rem;
+  margin: 1rem 0;
 `
 
 export const NavBar = styled.nav`

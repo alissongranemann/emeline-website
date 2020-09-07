@@ -20,7 +20,7 @@ export const StyledFooter = styled.footer`
 `
 
 export const CustomLogo = styled(Logo)`
-  width: 5rem;
+  width: 10rem;
   margin-right: 5rem;
   margin: 0.75rem 0;
 `
