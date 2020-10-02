@@ -11,7 +11,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
     title: `Emeline Abreu`,
-    description: `Nutricionista Emeline Abreu. Nutrição clínica, funcional, comportamental e estética. Atua nas cidades de Florianópolis e Lages, em Santa Catarina. `,
+    description: `Nutricionista Emeline Abreu. Nutrição clínica, funcional, comportamental e estética. Atua nas cidades de Florianópolis, Lages e Araranguá, em Santa Catarina. `,
     author: `@alissongranemann`,
     siteUrl,
   },

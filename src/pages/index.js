@@ -46,7 +46,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title="Nutricionista Florianópolis e Lages"
+        title="Nutricionista Florianópolis, Lages e Araranguá"
         image={data.placeholderImage.childImageSharp.fixed.src}
       />
       <NavBar />
