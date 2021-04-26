@@ -1,7 +1,7 @@
 ---
 title: Qual a diferença entre os açúcares?
 date: 2021-02-07T21:39:28.706Z
-featuredimage: /img/pergunte-a-nutri-1-21122020.png
+featuredimage: img/açúcar.jpg
 description: 'mascavo, refinado, cristal, demerara... '
 ---
 Uma dúvida frequente nas consultas é saber qual açúcar consumir e se isso é possível. ⠀
