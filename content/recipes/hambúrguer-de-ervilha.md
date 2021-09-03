@@ -1,6 +1,6 @@
 ---
 title: 'Hambúrguer de ervilha '
-featuredimage: /img/hamburguer-de-ervilha-postado-27042020.png
+featuredimage: img/veggie-2281212_1920.jpg
 category: Lanches
 ---
 Contribuindo para a campanha da #segundasemcarne Receita de hambúrguer feito com ervilha
