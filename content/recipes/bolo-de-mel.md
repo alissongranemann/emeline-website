@@ -1,6 +1,6 @@
 ---
 title: 'Bolo de aveia com mel '
-featuredimage: /img/bolo-de-aveia-com-mel-postado-03042020.png
+featuredimage: img/muffin-1390368_1920.jpg
 category: Bolos e tortas
 ---
 Aí vai a receita!
