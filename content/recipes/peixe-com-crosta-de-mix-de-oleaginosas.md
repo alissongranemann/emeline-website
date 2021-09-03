@@ -1,6 +1,6 @@
 ---
 title: 'Peixe com crosta de mix de oleaginosas '
-featuredimage: /img/peixe-06022021.png
+featuredimage: img/receita-robalo-com-castanha-de-caju-e-cachaca.jpg
 category: Peixes e frutos do mar
 ---
 Colocando em prática as orientações nutricionais para quem sofre com #fibromialgia uma receita leve e super saborosa!
