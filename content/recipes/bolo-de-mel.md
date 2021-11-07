@@ -1,6 +1,6 @@
 ---
 title: 'Bolo de aveia com mel '
-featuredimage: img/muffin-1390368_1920.jpg
+featuredimage: img/bolo-de-aveia-com-mel-postado-03042020.png
 category: Bolos e tortas
 ---
 Aí vai a receita!
@@ -13,4 +13,4 @@ Aí vai a receita!
 
 ate tudo no liquidificador. Preaqueça o forno por 15 minutos e em forma pequena e untada levar o bolo ao forno a 180 graus por 30 minutos.
 
-E está pronto!Sem açúcar, sem farinha, sem frescura!
+E está pronto! Sem açúcar, sem farinha, sem frescura!
