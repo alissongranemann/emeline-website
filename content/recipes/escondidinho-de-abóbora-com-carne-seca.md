@@ -1,6 +1,6 @@
 ---
 title: Escondidinho de abóbora com carne
-featuredimage: img/download.jpeg
+featuredimage: /img/download.jpeg
 category: Carnes
 ---
 Curinga para quem por algum motivo quer reduzir as calorias da refeição, a abóbora pode substituir as batatas nas receitas, tem fibras que ajudam na sensação de saciedade! Com isso, alimenta, nutre e faz com que tenhamos menos fome 😉 além de deliciosa, claro. Segue a receita 👇

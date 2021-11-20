@@ -1,6 +1,6 @@
 ---
 title: 'Quiche sem massa '
-featuredimage: img/sergio-arze-oetdlanecpy-unsplash.jpg
+featuredimage: /img/sergio-arze-oetdlanecpy-unsplash.jpg
 category: Massas
 ---
 Simples, saboroso, versátil!

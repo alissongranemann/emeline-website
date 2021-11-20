@@ -1,7 +1,7 @@
 ---
 title: Spirulina - Alga super nutritiva
 date: 2021-02-07T21:35:54.096Z
-featuredimage: img/spirulina.jpg
+featuredimage: /img/spirulina.jpg
 description: Você conhece?
 ---
 Muitas pessoas relataram não conhecer a #spirulina na enquete dos stories, achei bacana trazer um pouco de informações sobre!

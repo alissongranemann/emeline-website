@@ -1,7 +1,7 @@
 ---
 title: Quais são as recomendações nutricionais para quem tem fibromialgia?
 date: 2021-02-07T21:33:21.133Z
-featuredimage: img/fibro2.jpg
+featuredimage: /img/fibro2.jpg
 description: 'Pergunte ao nutri '
 ---
 Aproveitando o gancho do #fevereiroroxo vou contextualizar (um pouco, orientações específicas devem ser feitas em consultório) sobre como a alimentação pode ser uma ótimo aliado para o tratamento da fibromialgia! 🎉sim, é de comemorar, quem sofre com doenças reumatologias, sabe o alívio que é amenizar os sintomas de uma crise🙌

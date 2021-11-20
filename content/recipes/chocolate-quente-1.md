@@ -1,6 +1,6 @@
 ---
 title: Chocolate quente
-featuredimage: img/hot-chocolate-1058197_1920.jpg
+featuredimage: /img/hot-chocolate-1058197_1920.jpg
 category: Bebidas
 ---
 Domingo, frio, quarentena... vai um chocolate quente ai? receitinha bem básica (com o que tinha em casa) 😉
