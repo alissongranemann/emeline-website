@@ -1,5 +1,5 @@
 ---
-title: 'UMa lista de compras saudável, precisa ter esses itens '
+title: 'Uma lista de compras saudável, precisa ter esses itens '
 date: 2021-11-25T17:19:13.537Z
 featuredimage: img/abstract-blur-in-supermarket.jpg
 description: >-
