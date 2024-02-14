@@ -1,7 +1,7 @@
 ---
 title: 'Minimizando os impactos da refeição livre '
 date: 2022-10-21T20:55:23.471Z
-featuredimage: img/dialivredieta_ago19certo-940x500.jpg
+featuredimage: /img/dialivredieta_ago19certo-940x500.jpg
 description: >-
   Você costuma utilizar a estratégia de refeições livres junto ao seu plano
   alimentar?

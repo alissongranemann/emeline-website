@@ -1,6 +1,6 @@
 ---
 title: 'Granola Salgada '
-featuredimage: img/granola.jpeg
+featuredimage: /img/granola.jpeg
 category: Lanches
 ---
 Se você tem dificuldade em consumir diariamente esse grupo de alimentos tão nutritivo (sementes no geral) essa receita é para você!\

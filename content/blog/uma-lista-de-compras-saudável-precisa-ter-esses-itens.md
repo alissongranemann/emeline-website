@@ -1,7 +1,7 @@
 ---
 title: 'Uma lista de compras saudável, precisa ter esses itens '
 date: 2021-11-25T17:19:13.537Z
-featuredimage: img/abstract-blur-in-supermarket.jpg
+featuredimage: /img/abstract-blur-in-supermarket.jpg
 description: >-
   Planejamento e organização são imprescindíveis para quem deseja cuidar da
   alimentação.
