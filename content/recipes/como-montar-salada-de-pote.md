@@ -1,6 +1,6 @@
 ---
-title: 'Como montar salada de pote'
-featuredimage: /img/salada-no-pote.png
+title: Como montar salada de pote
+featuredimage: img/salada-no-pote.jpg
 category: Saladas e molhos
 ---
 
