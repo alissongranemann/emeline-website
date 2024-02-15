@@ -1,11 +1,13 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 
-import { Container, Title, ProfilePicture, TextContainer } from "./styles"
+import { Container, Title, TextContainer, Video, VideoContainer } from "./styles"
 
 const About = () => (
   <Container>
-    <ProfilePicture />
+    <VideoContainer>
+      <Video src="https://www.youtube.com/embed/1ioWZPExSgA?si=vnR-kPsa12EDy0sJ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+    </VideoContainer>
     <TextContainer>
       <Fade>
         <Title>Sobre mim</Title>
@@ -28,7 +30,7 @@ const About = () => (
         </p>
       </Fade>
     </TextContainer>
-  </Container>
+  </Container >
 )
 
 export default About

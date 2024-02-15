@@ -15,6 +15,7 @@ export const Container = styled.div`
   @media ${device.laptop} {
     flex-direction: row;
     justify-content: space-evenly;
+    max-height: 650px;
   }
 `
 
@@ -50,4 +51,30 @@ export const Title = styled.h2`
   @media ${device.laptop} {
     text-align: left;
   }
+`
+
+export const VideoContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  margin-bottom: 35px;
+  
+  @media ${device.laptop} {
+    width: 30%;
+    margin-bottom: unset;
+  }
+`
+
+export const Video = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  margin-top: auto;
+  margin-bottom: auto;
 `
