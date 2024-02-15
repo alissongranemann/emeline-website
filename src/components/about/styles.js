@@ -59,7 +59,8 @@ export const VideoContainer = styled.div`
   width: 90%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
   margin-bottom: 35px;
-  
+  min-height: 400px;
+
   @media ${device.laptop} {
     width: 30%;
     margin-bottom: unset;
