@@ -167,7 +167,7 @@ const Contact = () => {
               rel="noopener noreferrer"
             >
               <FaWhatsapp />
-              (48) 99622-9104
+              (48) 99802-5867
             </a>
           </IconsContainer>
           <Snackbar
