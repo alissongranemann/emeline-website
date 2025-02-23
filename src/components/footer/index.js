@@ -22,7 +22,7 @@ const Footer = () => (
         <FaEnvelope />
       </a>{" "}
       <a
-        href="https://api.whatsapp.com/send?phone=5548996229104"
+        href="https://api.whatsapp.com/send?phone=5548998025867"
         target="_blank"
         rel="noopener noreferrer"
       >
