@@ -35,6 +35,7 @@
     "react-icons": "^3.8.0",
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.0",
+    "sharp": "^0.33.5",
     "styled-components": "^4.4.1",
     "typeface-lato": "^0.0.75",
     "typeface-montserrat": "^0.0.75"
