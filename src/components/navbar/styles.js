@@ -1,35 +1,18 @@
 import styled from "styled-components"
 
-import { device } from "../../config/variables"
-
-export const List = styled.ul`
-  margin: unset;
-  list-style: none;
-
-  .active {
-    svg {
-      color: #82427b;
-    }
-
-    span {
-      visibility: visible;
-    }
-  }
-`
+import { colors, device } from "../../config/variables"
 
 export const Nav = styled.nav`
   display: none;
   position: fixed;
-  top: 35%;
-  left: 3%;
-  padding: 12px 8px;
-  border-radius: 25px;
-  box-shadow: -1px 0px 5px 0px;
+  top: 50%;
+  left: 24px;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%);
   animation: fadein 1s;
 
-  @media ${device.tablet} {
+  /* on narrower screens the dots would sit on top of the content */
+  @media ${device.laptop} {
     display: block;
   }
 
@@ -43,53 +26,63 @@ export const Nav = styled.nav`
   }
 `
 
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: unset;
+  list-style: none;
+`
+
 export const ListItem = styled.li`
   margin: unset;
-
-  & + & {
-    margin-top: 25px;
-  }
 `
 
+export const Label = styled.span`
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 12px);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-4px, -50%);
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+`
+
+// a dot per section; the current one stretches into a brand-colored pill.
+// The white ring keeps the dots visible on the green and photo sections.
 export const Link = styled.a`
-  display: inline-flex;
-  color: unset;
-
-  svg {
-    width: 20px;
-    height: auto;
-    font-size: 1.5rem;
-    color: #d8d8d8;
-  }
-`
-
-export const Tooltip = styled.div`
   position: relative;
-  display: inline-block;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition:
+    height 0.25s,
+    background-color 0.25s;
 
-  span {
-    position: absolute;
-    z-index: 1;
-    top: -1.75rem;
-    left: 1.1rem;
-    visibility: hidden;
-    /* width: 8rem; */
-    padding: 0.75rem;
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
+  &[aria-current] {
+    height: 26px;
+    background-color: ${colors.primary};
+  }
 
-    &::after {
-      content: " ";
-      position: absolute;
-      top: 50%;
-      right: 100%; /* To the left of the tooltip */
-      margin-top: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
+  &:hover,
+  &:focus-visible {
+    background-color: ${colors.primary};
+
+    ${Label} {
+      opacity: 1;
+      transform: translate(0, -50%);
     }
   }
 `

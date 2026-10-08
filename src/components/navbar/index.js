@@ -1,17 +1,6 @@
 import React from "react"
 
 import {
-  FaHome,
-  FaUser,
-  FaListAlt,
-  FaWrench,
-  FaComments,
-  FaBlog,
-  FaBlender,
-  FaBook,
-} from "react-icons/fa"
-
-import {
   HOME_SECTION,
   ABOUT_SECTION,
   SPECIALTIES_SECTION,
@@ -22,22 +11,18 @@ import {
   CONTACT_SECTION,
 } from "../../config/variables"
 
-import { List, Nav, ListItem, Link, Tooltip } from "./styles"
+import { List, Nav, ListItem, Link, Label } from "./styles"
 import useScrollSpy from "./use-scroll-spy"
 
 export const LANDING_PAGE_SECTIONS = [
-  { id: HOME_SECTION, icon: <FaHome />, description: "Início" },
-  { id: ABOUT_SECTION, icon: <FaUser />, description: "Sobre mim" },
-  {
-    id: SPECIALTIES_SECTION,
-    icon: <FaListAlt />,
-    description: "Especialidades",
-  },
-  { id: SERVICES_SECTION, icon: <FaWrench />, description: "Serviços" },
-  { id: BLOG_SECTION, icon: <FaBlog />, description: "Blog" },
-  { id: RECIPES_SECTION, icon: <FaBlender />, description: "Receitas" },
-  { id: EBOOKS_SECTION, icon: <FaBook />, description: "eBooks" },
-  { id: CONTACT_SECTION, icon: <FaComments />, description: "Contato" },
+  { id: HOME_SECTION, description: "Início" },
+  { id: ABOUT_SECTION, description: "Sobre mim" },
+  { id: SPECIALTIES_SECTION, description: "Especialidades" },
+  { id: SERVICES_SECTION, description: "Serviços" },
+  { id: BLOG_SECTION, description: "Blog" },
+  { id: RECIPES_SECTION, description: "Receitas" },
+  { id: EBOOKS_SECTION, description: "eBooks" },
+  { id: CONTACT_SECTION, description: "Contato" },
 ]
 
 const SECTION_IDS = LANDING_PAGE_SECTIONS.map(item => item.id)
@@ -46,17 +31,16 @@ const NavBar = () => {
   const activeId = useScrollSpy(SECTION_IDS, -200)
 
   return (
-    <Nav>
+    <Nav aria-label="Seções da página">
       <List>
         {LANDING_PAGE_SECTIONS.map(item => (
-          <ListItem
-            key={item.id}
-            className={item.id === activeId ? "active" : undefined}
-          >
-            <Link href={`#${item.id}`}>{item.icon}</Link>
-            <Tooltip>
-              <span>{item.description}</span>
-            </Tooltip>
+          <ListItem key={item.id}>
+            <Link
+              href={`#${item.id}`}
+              aria-current={item.id === activeId ? "location" : undefined}
+            >
+              <Label>{item.description}</Label>
+            </Link>
           </ListItem>
         ))}
       </List>
