@@ -7,12 +7,13 @@ import Image from "../components/preview-compatible-image"
 import Post from "./post"
 import Seo from "../components/seo"
 import Card from "../components/common/card"
+import { colors } from "../config/variables"
 
 const StyledCard = styled(Card)`
   width: 12em;
   border-radius: unset;
   text-align: center;
-  background: #4b434d;
+  background: ${colors.primary};
 
   p {
     color: #fff;

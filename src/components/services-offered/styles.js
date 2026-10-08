@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 import SectionTitle from "../common/section-title"
-import { device } from "../../config/variables"
+import { colors } from "../../config/variables"
 
 export const Container = styled.div`
   padding: 50px 10%;
@@ -15,35 +15,34 @@ export const Title = styled(SectionTitle).attrs({
 })``
 
 export const List = styled.ul`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
   list-style: none;
-  margin: unset;
 
   > div {
-    margin-bottom: 5rem;
+    height: 100%;
   }
 `
 
 export const ListItem = styled.li`
-  width: 30rem;
-  height: 34rem;
+  height: 100%;
   margin: unset;
-  padding: 3rem 2.5rem;
-  background-color: rgba(255, 255, 255, 0.65);
-  color: #000;
+  padding: 3.5rem 2.5rem;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
 
   svg {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 25px;
-    color: #000;
-  }
-
-  @media ${device.mobileL} {
-    width: 27.5rem;
-    height: 35rem;
+    box-sizing: content-box;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 2rem;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: rgba(125, 140, 103, 0.15);
+    color: ${colors.green};
   }
 `
 
@@ -52,6 +51,7 @@ export const Subtitle = styled.h3`
 `
 
 export const Text = styled.p`
-  line-height: 2.25rem;
+  margin-bottom: 0;
+  line-height: 1.6;
   overflow-wrap: break-word;
 `

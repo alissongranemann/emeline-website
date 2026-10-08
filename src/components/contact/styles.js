@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components"
 
 import SectionTitle from "../common/section-title"
-import { device } from "../../config/variables"
+import { buttonStyles } from "../common/button"
+import { colors, device } from "../../config/variables"
 
 export const Container = styled.div`
   padding: 50px 10%;
@@ -76,11 +77,11 @@ export const IconsContainer = styled.div`
   }
 `
 
-// Form controls reproduce the look of the Material UI v4 outlined text
-// field and contained button the form used before.
+// Form controls follow the Material UI v4 outlined text field the form used
+// before, in the brand colours
 const fontFamily = "inherit"
 const errorColor = "#f44336"
-const focusColor = "#9c27b0"
+const focusColor = colors.primary
 
 export const Field = styled.div`
   display: flex;
@@ -108,7 +109,7 @@ const control = css`
   padding: 17.5px 13px;
   border: 1px solid
     ${({ $invalid }) => ($invalid ? errorColor : "rgba(0, 0, 0, 0.23)")};
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
   font-family: ${fontFamily};
@@ -154,32 +155,8 @@ export const HelperText = styled.p`
 `
 
 export const SubmitButton = styled.button`
-  min-width: 64px;
+  ${buttonStyles}
   margin-top: 35px;
-  padding: 6px 16px;
-  border: 0;
-  border-radius: 4px;
-  box-shadow:
-    0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  background-color: #82427b;
-  color: #fff;
-  font-family: ${fontFamily};
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.75;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    box-shadow:
-      0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-      0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  }
 
   &:disabled {
     box-shadow: none;

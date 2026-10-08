@@ -1,9 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { FaArrowRight } from "react-icons/fa"
 
 import { Fade, Zoom } from "../common/reveal"
 import PostList from "../blog-posts"
-import { Container, StyledLink as Link } from "./styles"
+import { Container, MoreLink } from "./styles"
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -62,7 +63,9 @@ const Blog = () => {
             })}
           </Zoom>
         </PostList>
-        <Link to="/blog">Leia mais &gt;&gt;</Link>
+        <MoreLink to="/blog">
+          Ver todos os posts <FaArrowRight />
+        </MoreLink>
       </Fade>
     </Container>
   )
