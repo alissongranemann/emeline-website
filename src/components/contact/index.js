@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Formik } from "formik"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
-import emailjs from "@emailjs/browser"
 
 import { Fade } from "../common/reveal"
 import Snackbar from "../snackbar"
@@ -91,10 +90,14 @@ const Contact = () => {
                 from_phone: phone,
                 message: message,
               }
-              emailjs
-                .send("sendgrid", EMAIL_TEMPLATE_ID, variables, {
-                  publicKey: PUBLIC_KEY,
-                })
+              // loaded on submit: keeps the SDK out of the initial bundle and
+              // out of server rendering, where Gatsby would polyfill fetch
+              import("@emailjs/browser")
+                .then(({ default: emailjs }) =>
+                  emailjs.send("sendgrid", EMAIL_TEMPLATE_ID, variables, {
+                    publicKey: PUBLIC_KEY,
+                  })
+                )
                 .then(() => {
                   setFeedback(FEEDBACK.success)
                   setSubmitting(false)
