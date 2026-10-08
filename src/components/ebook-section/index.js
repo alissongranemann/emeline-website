@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Fade from "react-reveal/Fade"
 
+import { Fade } from "../common/reveal"
 import List from "../ebook-list"
 import { Container } from "./styles"
 
@@ -14,7 +14,7 @@ const Ebooks = () => {
         }
       }
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { fileAbsolutePath: { regex: "/ebooks/" } }
         limit: 5
       ) {
@@ -29,9 +29,7 @@ const Ebooks = () => {
               title
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 300, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 300, quality: 100)
                 }
               }
             }

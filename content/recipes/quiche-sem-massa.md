@@ -1,5 +1,6 @@
 ---
 title: 'Quiche sem massa '
+date: 2020-11-30T00:01:04.000Z
 featuredimage: /img/sergio-arze-oetdlanecpy-unsplash.jpg
 category: Massas
 ---

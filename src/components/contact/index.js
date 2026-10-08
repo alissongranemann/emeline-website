@@ -1,10 +1,8 @@
 import React, { useState } from "react"
 import { Formik } from "formik"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
-import TextField from "@material-ui/core/TextField"
-import Fade from "react-reveal/Fade"
-import emailjs from "emailjs-com"
 
+import { Fade } from "../common/reveal"
 import Snackbar from "../snackbar"
 import {
   Container,
@@ -12,14 +10,18 @@ import {
   ContentContainer,
   StyledForm,
   IconsContainer,
-  StyledTextField,
-  StyledButton,
-  StyledInputLabel,
+  Field,
+  Label,
+  Input,
+  TextArea,
+  HelperText,
+  SubmitButton,
 } from "./styles"
 import { FACEBOOK_URL, INSTAGRAM_URL } from "../../config/variables"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
-const USER_ID = process.env.GATSBY_EMAIL_JS_USER_ID
+// EmailJS renamed the "user ID" to "public key"; it is the same value
+const PUBLIC_KEY = process.env.GATSBY_EMAIL_JS_USER_ID
 
 const validateForm = values => {
   const errors = {}
@@ -39,8 +41,37 @@ const validateForm = values => {
   return errors
 }
 
+const TextField = ({ id, label, multiline, error, helperText, ...props }) => {
+  const Control = multiline ? TextArea : Input
+  const helperId = `${id}-helper`
+
+  return (
+    <Field>
+      <Label htmlFor={id}>{label}</Label>
+      <Control
+        id={id}
+        name={id}
+        $invalid={error}
+        aria-invalid={error}
+        aria-describedby={helperText ? helperId : undefined}
+        {...props}
+      />
+      {helperText && <HelperText id={helperId}>{helperText}</HelperText>}
+    </Field>
+  )
+}
+
+const FEEDBACK = {
+  success: { variant: "success", message: "Mensagem enviada!" },
+  error: {
+    variant: "error",
+    message:
+      "Não foi possível enviar a mensagem. Tente novamente ou fale pelo WhatsApp.",
+  },
+}
+
 const Contact = () => {
-  const [emailSent, setEmailSent] = useState(false)
+  const [feedback, setFeedback] = useState(null)
 
   return (
     <Fade>
@@ -59,14 +90,21 @@ const Contact = () => {
                 from_phone: phone,
                 message: message,
               }
-              emailjs
-                .send("sendgrid", EMAIL_TEMPLATE_ID, variables, USER_ID)
-                .then(res => {
-                  setEmailSent(true)
+              // loaded on submit: keeps the SDK out of the initial bundle and
+              // out of server rendering, where Gatsby would polyfill fetch
+              import("@emailjs/browser")
+                .then(({ default: emailjs }) =>
+                  emailjs.send("sendgrid", EMAIL_TEMPLATE_ID, variables, {
+                    publicKey: PUBLIC_KEY,
+                  })
+                )
+                .then(() => {
+                  setFeedback(FEEDBACK.success)
                   setSubmitting(false)
                   resetForm({})
                 })
-                .catch(err => {
+                .catch(() => {
+                  setFeedback(FEEDBACK.error)
                   setSubmitting(false)
                 })
             }}
@@ -81,66 +119,54 @@ const Contact = () => {
               isSubmitting,
               isValid,
             }) => (
-              <StyledForm onSubmit={handleSubmit}>
-                <StyledInputLabel htmlFor="name">Nome *</StyledInputLabel>
-                <StyledTextField
+              <StyledForm onSubmit={handleSubmit} noValidate>
+                <TextField
                   id="name"
-                  name="name"
+                  label="Nome *"
                   placeholder="João Silva"
-                  error={touched.name && Boolean(errors.name)}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
+                  error={Boolean(touched.name && errors.name)}
                   helperText={touched.name && errors.name}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
                   value={values.name || ""}
-                  variant="outlined"
                 />
-                <StyledInputLabel htmlFor="email">Email *</StyledInputLabel>
-                <StyledTextField
+                <TextField
                   id="email"
-                  name="email"
+                  type="email"
+                  label="Email *"
                   placeholder="email@gmail.com"
-                  error={touched.email && Boolean(errors.email)}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
+                  error={Boolean(touched.email && errors.email)}
                   helperText={touched.email && errors.email}
-                  value={values.email || ""}
-                  variant="outlined"
-                />
-                <StyledInputLabel htmlFor="phone">Telefone</StyledInputLabel>
-                <StyledTextField
-                  id="phone"
-                  name="phone"
-                  placeholder="48999998888"
-                  error={touched.phone && Boolean(errors.phone)}
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  helperText={touched.phone && errors.phone}
-                  value={values.phone || ""}
-                  variant="outlined"
+                  value={values.email || ""}
                 />
-                <StyledInputLabel htmlFor="message">
-                  Mensagem *
-                </StyledInputLabel>
+                <TextField
+                  id="phone"
+                  type="tel"
+                  label="Telefone"
+                  placeholder="48999998888"
+                  error={Boolean(touched.phone && errors.phone)}
+                  helperText={touched.phone && errors.phone}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.phone || ""}
+                />
                 <TextField
                   id="message"
-                  name="message"
+                  label="Mensagem *"
                   placeholder="Digite sua mensagem aqui"
                   multiline
                   rows={3}
-                  variant="outlined"
-                  error={touched.message && Boolean(errors.message)}
+                  error={Boolean(touched.message && errors.message)}
+                  helperText={touched.message && errors.message}
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  helperText={touched.message && errors.message}
                   value={values.message || ""}
                 />
-                <StyledButton
-                  disabled={isSubmitting || !isValid}
-                  type="submit"
-                  variant="contained"
-                >
+                <SubmitButton disabled={isSubmitting || !isValid} type="submit">
                   Enviar
-                </StyledButton>
+                </SubmitButton>
               </StyledForm>
             )}
           </Formik>
@@ -171,9 +197,10 @@ const Contact = () => {
             </a>
           </IconsContainer>
           <Snackbar
-            isOpen={emailSent}
-            message="Mensagem enviada!"
-            onClose={() => setEmailSent(false)}
+            isOpen={Boolean(feedback)}
+            variant={feedback?.variant}
+            message={feedback?.message}
+            onClose={() => setFeedback(null)}
           />
         </ContentContainer>
       </Container>

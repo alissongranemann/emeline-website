@@ -1,18 +1,20 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
-const createBlogPosts = async (graphql, actions) => {
+const createContentPages = async (
+  { graphql, actions },
+  { folder, template }
+) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const component = path.resolve(template)
   const result = await graphql(
     `
-      {
+      query ($regex: String!) {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { frontmatter: { date: DESC } }
           limit: 1000
-          filter: { fileAbsolutePath: { regex: "/blog/" } }
+          filter: { fileAbsolutePath: { regex: $regex } }
         ) {
           edges {
             node {
@@ -26,107 +28,8 @@ const createBlogPosts = async (graphql, actions) => {
           }
         }
       }
-    `
-  )
-
-  if (result.errors) {
-    throw result.errors
-  }
-
-  // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
-
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-
-    createPage({
-      path: post.node.fields.slug,
-      component: blogPost,
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
-    })
-  })
-}
-
-const createRecipePosts = async (graphql, actions) => {
-  const { createPage } = actions
-
-  const recipePost = path.resolve(`./src/templates/recipe-post.js`)
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-          filter: { fileAbsolutePath: { regex: "/recipes/" } }
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-    `
-  )
-
-  if (result.errors) {
-    throw result.errors
-  }
-
-  // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
-
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-
-    createPage({
-      path: post.node.fields.slug,
-      component: recipePost,
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
-    })
-  })
-}
-
-const createEbookPage = async (graphql, actions) => {
-  const { createPage } = actions
-
-  const ebookPost = path.resolve(`./src/templates/ebook-page.js`)
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-          filter: { fileAbsolutePath: { regex: "/ebooks/" } }
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-    `
+    `,
+    { regex: `/${folder}/` }
   )
 
   if (result.errors) {
@@ -141,7 +44,7 @@ const createEbookPage = async (graphql, actions) => {
 
     createPage({
       path: post.node.fields.slug,
-      component: ebookPost,
+      component,
       context: {
         slug: post.node.fields.slug,
         previous,
@@ -151,15 +54,25 @@ const createEbookPage = async (graphql, actions) => {
   })
 }
 
-exports.createPages = async ({ graphql, actions }) => {
-  createBlogPosts(graphql, actions)
-  createRecipePosts(graphql, actions)
-  createEbookPage(graphql, actions)
+exports.createPages = async args => {
+  await Promise.all([
+    createContentPages(args, {
+      folder: `blog`,
+      template: `./src/templates/blog-post.js`,
+    }),
+    createContentPages(args, {
+      folder: `recipes`,
+      template: `./src/templates/recipe-post.js`,
+    }),
+    createContentPages(args, {
+      folder: `ebooks`,
+      template: `./src/templates/ebook-page.js`,
+    }),
+  ])
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
@@ -169,4 +82,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+// `gatsby develop` doesn't serve .html files from static/, and the CMS page
+// is one; production hosting serves it directly
+exports.onCreateDevServer = ({ app }) => {
+  app.get([`/admin`, `/admin/`], (req, res) => {
+    res.sendFile(path.resolve(`static/admin/index.html`))
+  })
 }

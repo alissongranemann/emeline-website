@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Zoom from "react-reveal/Zoom"
-import Fade from "react-reveal/Fade"
 
+import { Fade, Zoom } from "../common/reveal"
 import PostList from "../recipe-posts"
 import { Container, StyledLink as Link } from "./styles"
 
@@ -15,7 +14,7 @@ const Recipes = () => {
         }
       }
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { fileAbsolutePath: { regex: "/recipes/" } }
         limit: 3
       ) {
@@ -31,9 +30,7 @@ const Recipes = () => {
               category
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 400, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 400, quality: 100)
                 }
               }
             }
@@ -65,7 +62,7 @@ const Recipes = () => {
             })}
           </Zoom>
         </PostList>
-        <Link to="/receitas">Leia mais >></Link>
+        <Link to="/receitas">Leia mais &gt;&gt;</Link>
       </Fade>
     </Container>
   )

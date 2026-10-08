@@ -9,7 +9,7 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   padding: 10px 7.5rem;
-  background-color: #2A1628;
+  background-color: #2a1628;
   font-size: 1.25rem;
   font-weight: bold;
 
@@ -122,8 +122,10 @@ export const MobileNavBar = styled.nav`
     z-index: 1;
     transform-origin: 4px 0px;
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition:
+      transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
 
     &:first-child {
       transform-origin: 0% 0%;

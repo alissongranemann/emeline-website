@@ -1,5 +1,6 @@
 ---
 title: Chocolate quente
+date: 2020-09-07T20:22:56.000Z
 featuredimage: /img/hot-chocolate-1058197_1920.jpg
 category: Bebidas
 ---

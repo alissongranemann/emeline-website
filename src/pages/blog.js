@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Fade from "react-reveal/Fade"
 
+import { Fade } from "../components/common/reveal"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import PostList from "../components/blog-posts"
 
-export const Container = styled.div`
+const Container = styled.div`
   min-height: 75vh;
   margin-bottom: 50px;
   padding: 50px 10%;
@@ -23,10 +23,6 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
-          <SEO
-            title="Blog posts"
-            description="Artigos postados pela nutricionista Emeline Abreu."
-          />
           <Fade>
             <PostList title="Blog">
               {posts.map(({ node }) => {
@@ -52,6 +48,14 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
+export const Head = ({ location }) => (
+  <Seo
+    title="Blog posts"
+    description="Artigos postados pela nutricionista Emeline Abreu."
+    pathname={location.pathname}
+  />
+)
+
 export const pageQuery = graphql`
   query {
     site {
@@ -60,7 +64,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fileAbsolutePath: { regex: "/blog/" } }
     ) {
       edges {
@@ -75,9 +79,7 @@ export const pageQuery = graphql`
             description
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 400, quality: 100)
               }
             }
           }

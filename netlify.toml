@@ -1,0 +1,14 @@
+[build]
+  command = "yarn build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22.22.0"
+  YARN_VERSION = "1.22.19"
+
+# gatsby-plugin-sitemap >= 3 writes sitemap-index.xml; keep the old URL
+# (submitted to search engines) working
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301

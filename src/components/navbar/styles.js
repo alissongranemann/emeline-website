@@ -1,15 +1,14 @@
-import Scrollspy from "react-scrollspy"
 import styled from "styled-components"
 
 import { device } from "../../config/variables"
 
-export const StyledScrollSpy = styled(Scrollspy)`
+export const List = styled.ul`
   margin: unset;
   list-style: none;
 
   .active {
     svg {
-      color: #82427B;
+      color: #82427b;
     }
 
     span {

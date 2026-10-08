@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-import Picture from "./profile-picture"
 import { device } from "../../config/variables"
 
 export const Container = styled.div`
@@ -16,22 +15,6 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     max-height: 650px;
-  }
-`
-
-export const ProfilePicture = styled(Picture)`
-  width: 90%;
-  max-width: 600px;
-  height: auto;
-  object-fit: cover;
-  max-height: 700px;
-  border-radius: 100%;
-  margin-bottom: 35px;
-  box-shadow: -2px 2px 10px 0px #5a5a5a;
-
-  @media ${device.laptop} {
-    width: 35%;
-    margin-bottom: unset;
   }
 `
 

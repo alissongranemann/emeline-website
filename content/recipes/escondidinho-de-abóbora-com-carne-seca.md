@@ -1,5 +1,6 @@
 ---
 title: Escondidinho de abóbora com carne
+date: 2021-02-07T21:31:09.000Z
 featuredimage: /img/download.jpeg
 category: Carnes
 ---

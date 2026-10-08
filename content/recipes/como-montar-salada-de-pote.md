@@ -1,5 +1,6 @@
 ---
 title: Como montar salada de pote
+date: 2021-11-21T23:22:53.000Z
 featuredimage: /img/salada-no-pote.jpg
 category: Saladas e molhos
 ---

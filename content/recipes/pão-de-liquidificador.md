@@ -1,5 +1,6 @@
 ---
 title: 'Pão de liquidificador '
+date: 2020-04-21T13:36:05.000Z
 featuredimage: /img/whatsapp-image-2020-04-16-at-18.17.34.jpeg
 category: Lanches
 ---

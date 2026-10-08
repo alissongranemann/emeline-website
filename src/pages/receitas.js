@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Fade from "react-reveal/Fade"
 
+import { Fade } from "../components/common/reveal"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import PostList from "../components/recipe-posts"
 
-export const Container = styled.div`
+const Container = styled.div`
   min-height: 75vh;
   margin-bottom: 50px;
   padding: 50px 10%;
@@ -24,10 +24,6 @@ class RecipesIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Fade>
           <Container>
-            <SEO
-              title="Receitas"
-              description="Receitas postadas pela nutricionista Emeline Abreu."
-            />
             <PostList title="Receitas">
               {recipes.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
@@ -52,6 +48,14 @@ class RecipesIndex extends React.Component {
 
 export default RecipesIndex
 
+export const Head = ({ location }) => (
+  <Seo
+    title="Receitas"
+    description="Receitas postadas pela nutricionista Emeline Abreu."
+    pathname={location.pathname}
+  />
+)
+
 export const pageQuery = graphql`
   query {
     site {
@@ -60,7 +64,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fileAbsolutePath: { regex: "/recipes/" } }
     ) {
       edges {
@@ -75,9 +79,7 @@ export const pageQuery = graphql`
             category
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 400, quality: 100)
               }
             }
           }

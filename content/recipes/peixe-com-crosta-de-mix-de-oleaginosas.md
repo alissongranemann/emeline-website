@@ -1,5 +1,6 @@
 ---
 title: 'Peixe com crosta de mix de oleaginosas '
+date: 2021-02-07T21:32:35.000Z
 featuredimage: /img/receita-robalo-com-castanha-de-caju-e-cachaca.jpg
 category: Peixes e frutos do mar
 ---

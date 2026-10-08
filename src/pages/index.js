@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import About from "../components/about"
 import Specialties from "../components/specialties"
 import Services from "../components/services-offered"
@@ -31,24 +30,8 @@ const Section = styled.section`
   }
 `
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 1200, height: 1200) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
-      <SEO
-        title="Nutricionista Araranguá, Curitibanos e Lages"
-        image={data.placeholderImage.childImageSharp.fixed.src}
-      />
       <NavBar />
       <Welcome id={HOME_SECTION} />
       <Section id={ABOUT_SECTION}>
@@ -77,3 +60,10 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Nutricionista Araranguá, Curitibanos e Lages"
+    pathname={location.pathname}
+  />
+)
