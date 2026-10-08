@@ -13,67 +13,72 @@ export const Title = styled(SectionTitle)`
 `
 
 export const ContentContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  gap: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 
   @media ${device.laptop} {
-    flex-direction: row;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
   }
 `
 
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin-bottom: 50px;
-
-  @media ${device.laptop} {
-    width: 40%;
-    margin-bottom: unset;
-  }
+  margin-bottom: 0;
 `
 
-export const IconsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 80%;
-  text-align: center;
+export const Channels = styled.div`
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: #f6f1f5;
 
-  svg {
-    height: auto;
-    width: 2.75rem;
-    margin-right: 10px;
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+
+  p {
+    margin-bottom: 2.5rem;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+
+    & + li {
+      margin-top: 1.5rem;
+    }
   }
 
   a {
     display: flex;
     align-items: center;
+    gap: 1.2rem;
+    color: inherit;
     text-decoration: none;
-    color: unset;
-    margin-bottom: 25px;
-    font-size: 1.7rem;
+    overflow-wrap: anywhere;
 
     &:hover {
-      color: #82427b;
+      color: ${colors.primary};
     }
   }
 
-  @media ${device.tablet} {
-    width: 50%;
-  }
-
-  @media ${device.laptop} {
-    width: 40%;
-    flex-direction: column;
-    margin-bottom: unset;
-
-    a + a {
-      margin-top: 25px;
-    }
+  svg {
+    flex-shrink: 0;
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: ${colors.primary};
+    color: #fff;
   }
 `
 
@@ -96,7 +101,7 @@ export const Label = styled.label`
   margin-bottom: 10px;
   color: #000;
   font-family: ${fontFamily};
-  font-size: 1.5rem;
+  font-size: max(1.5rem, 14px);
   line-height: 1;
   letter-spacing: 0.00938em;
 `
@@ -113,7 +118,8 @@ const control = css`
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
   font-family: ${fontFamily};
-  font-size: 1.5rem;
+  /* below 16px iOS zooms the page when a field gets focus */
+  font-size: max(1.5rem, 16px);
   line-height: 1.1876;
   letter-spacing: 0.00938em;
 
@@ -149,7 +155,7 @@ export const HelperText = styled.p`
   margin: 3px 14px 0;
   color: ${errorColor};
   font-family: ${fontFamily};
-  font-size: 1.1rem;
+  font-size: max(1.1rem, 12px);
   line-height: 1.66;
   letter-spacing: 0.03333em;
 `

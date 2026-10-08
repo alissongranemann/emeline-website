@@ -9,7 +9,7 @@ import {
   Title,
   ContentContainer,
   StyledForm,
-  IconsContainer,
+  Channels,
   Field,
   Label,
   Input,
@@ -174,28 +174,52 @@ const Contact = () => {
               </StyledForm>
             )}
           </Formik>
-          <IconsContainer>
-            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-              <FaFacebook />
-              Emeline Abreu
-            </a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-              <FaInstagram />
-              Emeline Abreu
-            </a>
-            <a
-              href="mailto:emeline.ntr@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaEnvelope />
-              emeline.ntr@gmail.com
-            </a>{" "}
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp />
-              (48) 99802-5867
-            </a>
-          </IconsContainer>
+          <Channels>
+            <h3>Prefere falar direto?</h3>
+            <p>Me chame em qualquer um destes canais:</p>
+            <ul>
+              <li>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp aria-hidden="true" />
+                  (48) 99802-5867
+                </a>
+              </li>
+              <li>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram aria-hidden="true" />
+                  @emelineabreunutri
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:emeline.ntr@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaEnvelope aria-hidden="true" />
+                  emeline.ntr@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook aria-hidden="true" />
+                  Emeline Abreu
+                </a>
+              </li>
+            </ul>
+          </Channels>
           <Snackbar
             isOpen={Boolean(feedback)}
             variant={feedback?.variant}
