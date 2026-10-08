@@ -78,7 +78,12 @@ const CloseButton = styled.button`
   }
 `
 
-const CustomSnackbar = ({ isOpen, message, onClose, variant }) => {
+const CustomSnackbar = ({
+  isOpen = false,
+  message = "",
+  onClose = () => {},
+  variant = "success",
+}) => {
   // keep the timer running across re-renders that pass a new onClose
   const onCloseRef = useRef(onClose)
   useEffect(() => {
@@ -115,13 +120,6 @@ CustomSnackbar.propTypes = {
   message: PropTypes.string,
   onClose: PropTypes.func,
   variant: PropTypes.oneOf(["error", "success"]),
-}
-
-CustomSnackbar.defaultProps = {
-  isOpen: false,
-  message: "",
-  onClose: () => {},
-  variant: "success",
 }
 
 export default CustomSnackbar

@@ -83,7 +83,14 @@ const getSchemaOrgJSONLD = ({
   ]
 }
 
-const Seo = ({ title, description, image, pathname, isPost, date }) => {
+const Seo = ({
+  title,
+  description = ``,
+  image,
+  pathname = `/`,
+  isPost = false,
+  date,
+}) => {
   const { site, logo } = useStaticQuery(
     graphql`
       query {
@@ -141,14 +148,6 @@ const Seo = ({ title, description, image, pathname, isPost, date }) => {
       </script>
     </>
   )
-}
-
-Seo.defaultProps = {
-  description: ``,
-  image: undefined,
-  pathname: `/`,
-  isPost: false,
-  date: undefined,
 }
 
 Seo.propTypes = {
