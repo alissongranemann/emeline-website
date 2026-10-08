@@ -1,13 +1,24 @@
 import styled from "styled-components"
 
 const Card = styled.div`
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   border-radius: 15px;
   overflow: hidden;
+  transition:
+    transform 0.25s ease-out,
+    box-shadow 0.25s ease-out;
 
   &:hover {
-    transition: all 0.2s ease-out;
-    transform: scale(1.02, 1.02);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 `
 
