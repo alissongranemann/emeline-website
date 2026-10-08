@@ -1,6 +1,6 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
 
+import { Fade } from "../common/reveal"
 import { Container, Title, TextContainer, Video, VideoContainer } from "./styles"
 
 const About = () => (

@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Fade from "react-reveal/Fade"
 
+import { Fade } from "../components/common/reveal"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostList from "../components/recipe-posts"

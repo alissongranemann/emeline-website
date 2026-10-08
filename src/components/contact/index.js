@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { Formik } from "formik"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
 import TextField from "@material-ui/core/TextField"
-import Fade from "react-reveal/Fade"
 import emailjs from "emailjs-com"
 
+import { Fade } from "../common/reveal"
 import Snackbar from "../snackbar"
 import {
   Container,

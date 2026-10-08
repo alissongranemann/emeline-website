@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Zoom from "react-reveal/Zoom"
-import Fade from "react-reveal/Fade"
 
+import { Fade, Zoom } from "../common/reveal"
 import PostList from "../blog-posts"
 import { Container, StyledLink as Link } from "./styles"
 

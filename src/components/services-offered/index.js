@@ -5,9 +5,9 @@ import {
   FaShoppingCart,
   FaRegCaretSquareRight,
 } from "react-icons/fa"
-import { Fade } from "react-reveal"
 
 import Card from "../common/card"
+import { Fade } from "../common/reveal"
 import { Container, Title, List, ListItem, Subtitle, Text } from "./styles"
 
 const SERVICES = [

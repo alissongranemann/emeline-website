@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Fade from "react-reveal/Fade"
 
+import { Fade } from "../common/reveal"
 import List from "../ebook-list"
 import { Container } from "./styles"
 
