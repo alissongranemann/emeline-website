@@ -14,26 +14,22 @@ const SERVICES = [
   {
     title: "Atendimento individualizado",
     icon: <FaNotesMedical />,
-    text:
-      "Atendimento personalizado, onde é elaborado um plano alimentar de acordo com as necessidades nutricionais individuais, hábitos alimentares e objetivos pessoais do paciente.",
+    text: "Atendimento personalizado, onde é elaborado um plano alimentar de acordo com as necessidades nutricionais individuais, hábitos alimentares e objetivos pessoais do paciente.",
   },
   {
     title: "Personal diet",
     icon: <FaUtensils />,
-    text:
-      "O serviço oferecido no consultório feito em sua casa! O foco do personal diet é trazer para quem busca o serviço as adequações e adaptações práticas a rotina domiciliar.",
+    text: "O serviço oferecido no consultório feito em sua casa! O foco do personal diet é trazer para quem busca o serviço as adequações e adaptações práticas a rotina domiciliar.",
   },
   {
     title: "Palestras e cursos",
     icon: <FaRegCaretSquareRight />,
-    text:
-      "Um jeito dinâmico e efetivo de levar mais saúde e qualidade de vida às pessoas por meio de rodas de conversa, cursos e palestras.",
+    text: "Um jeito dinâmico e efetivo de levar mais saúde e qualidade de vida às pessoas por meio de rodas de conversa, cursos e palestras.",
   },
   {
     title: "Orientações na prática",
     icon: <FaShoppingCart />,
-    text:
-      "A nutricionista o acompanha durante o processo de compras, como supermercados, feiras ou lojas de produtos naturais.",
+    text: "A nutricionista o acompanha durante o processo de compras, como supermercados, feiras ou lojas de produtos naturais.",
   },
 ]
 

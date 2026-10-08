@@ -8,7 +8,7 @@ export const List = styled.ul`
 
   .active {
     svg {
-      color: #82427B;
+      color: #82427b;
     }
 
     span {

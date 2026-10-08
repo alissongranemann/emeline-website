@@ -62,7 +62,7 @@ const Recipes = () => {
             })}
           </Zoom>
         </PostList>
-        <Link to="/receitas">Leia mais >></Link>
+        <Link to="/receitas">Leia mais &gt;&gt;</Link>
       </Fade>
     </Container>
   )

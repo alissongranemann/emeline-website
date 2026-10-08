@@ -91,25 +91,23 @@ const Seo = ({
   isPost = false,
   date,
 }) => {
-  const { site, logo } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-        logo: file(relativePath: { eq: "logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 1200, height: 1200)
-          }
+  const { site, logo } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
         }
       }
-    `
-  )
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 1200, height: 1200)
+        }
+      }
+    }
+  `)
 
   const { siteMetadata } = site
   // client-side navigation hands over an already percent-encoded pathname,

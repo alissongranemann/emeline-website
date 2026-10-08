@@ -1,7 +1,10 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const createContentPages = async ({ graphql, actions }, { folder, template }) => {
+const createContentPages = async (
+  { graphql, actions },
+  { folder, template }
+) => {
   const { createPage } = actions
 
   const component = path.resolve(template)
