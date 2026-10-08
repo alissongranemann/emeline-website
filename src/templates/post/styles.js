@@ -6,22 +6,37 @@ import Picture from "./author-picture"
 
 export const Article = styled.article`
   min-height: 80vh;
-  max-width: 80vw;
+  /* about 70 characters per line, the comfortable range for long reads */
+  width: 88%;
+  max-width: 720px;
   margin: 6rem auto;
+  font-size: max(1.8rem, 16px);
+  line-height: 1.75;
 
-  @media ${device.tablet} {
-    max-width: 65vw;
+  > h1 {
+    margin-bottom: 3rem;
   }
 
-  @media ${device.laptop} {
-    max-width: 50vw;
+  section h2,
+  section h3 {
+    margin-top: 4rem;
+    line-height: 1.3;
+  }
+
+  section img {
+    border-radius: 8px;
+  }
+
+  @media ${device.tablet} {
+    width: 80%;
   }
 `
 
 export const Image = styled(PreviewImage)`
   width: 100%;
-  max-height: 25rem;
+  max-height: 40rem;
   margin-bottom: 3rem;
+  border-radius: 12px;
   object-fit: cover;
 `
 

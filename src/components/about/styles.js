@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+import SectionTitle from "../common/section-title"
 import { device } from "../../config/variables"
 
 export const Container = styled.div`
@@ -27,12 +28,16 @@ export const TextContainer = styled.div`
   }
 `
 
-export const Title = styled.h2`
-  text-transform: none !important;
+export const Title = styled(SectionTitle)`
+  margin-bottom: 3rem;
   text-align: center;
 
   @media ${device.laptop} {
     text-align: left;
+
+    &::after {
+      margin-left: 0;
+    }
   }
 `
 

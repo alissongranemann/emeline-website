@@ -1,4 +1,6 @@
 import styled from "styled-components"
+
+import SectionTitle from "../common/section-title"
 import { device } from "../../config/variables"
 
 export const Container = styled.article`
@@ -14,7 +16,4 @@ export const Container = styled.article`
   }
 `
 
-export const Title = styled.h2`
-  text-transform: uppercase;
-  margin-bottom: 5rem;
-`
+export const Title = SectionTitle

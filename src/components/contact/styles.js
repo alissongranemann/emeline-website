@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components"
 
+import SectionTitle from "../common/section-title"
 import { device } from "../../config/variables"
 
 export const Container = styled.div`
   padding: 50px 10%;
 `
 
-export const Title = styled.h2`
+export const Title = styled(SectionTitle)`
   text-align: center;
-  margin-bottom: 40px;
 `
 
 export const ContentContainer = styled.div`
@@ -78,7 +78,7 @@ export const IconsContainer = styled.div`
 
 // Form controls reproduce the look of the Material UI v4 outlined text
 // field and contained button the form used before.
-const fontFamily = "Roboto, Helvetica, Arial, sans-serif"
+const fontFamily = "inherit"
 const errorColor = "#f44336"
 const focusColor = "#9c27b0"
 

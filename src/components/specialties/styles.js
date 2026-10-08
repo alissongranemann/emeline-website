@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+import SectionTitle from "../common/section-title"
 import { device } from "../../config/variables"
 
 export const Container = styled.div`
@@ -7,10 +8,8 @@ export const Container = styled.div`
   padding: 35px 10%;
   background-color: #f1f1f1;
 `
-export const Title = styled.h2`
-  display: inline-block;
-  margin: 0 auto;
-  margin-bottom: 7.5rem;
+export const Title = styled(SectionTitle)`
+  margin-bottom: 6rem;
 `
 
 export const List = styled.ul`

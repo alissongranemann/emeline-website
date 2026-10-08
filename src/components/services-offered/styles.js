@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+import SectionTitle from "../common/section-title"
 import { device } from "../../config/variables"
 
 export const Container = styled.div`
@@ -9,11 +10,9 @@ export const Container = styled.div`
   background-color: #7d8c67;
 `
 
-export const Title = styled.h2`
-  display: inline-block;
-  margin: 0 auto;
-  margin-bottom: 50px;
-`
+export const Title = styled(SectionTitle).attrs({
+  $accent: "rgba(255, 255, 255, 0.8)",
+})``
 
 export const List = styled.ul`
   display: flex;

@@ -41,7 +41,7 @@ const Content = styled.div`
     0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   background-color: ${({ $variant }) => colors[$variant]};
   color: #fff;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: inherit;
   font-size: 1rem;
   line-height: 1.43;
   letter-spacing: 0.01071em;

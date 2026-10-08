@@ -20,6 +20,13 @@ export const device = {
   desktopL: `(min-width: ${size.desktopL})`,
 }
 
+export const colors = {
+  primary: "#82427b",
+  primaryDark: "#6a3464",
+  green: "#7d8c67",
+  plum: "#2a1628",
+}
+
 export const FACEBOOK_URL = "https://www.facebook.com/emeline.abreu"
 export const INSTAGRAM_URL = "https://www.instagram.com/emelineabreunutri"
 

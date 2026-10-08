@@ -1155,10 +1155,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/comfortaa/-/comfortaa-5.3.0.tgz#01bd8447d4f177575e16d4b69f0cdf3d30c39c2f"
   integrity sha512-ab4DERH0q6ko8QCpEZzOV9ebK39LgQ2oM91AkLNqu0VIxxwT0nV2D3sOuI7iLirWWq4IMooaIN6/2llxrDN2JA==
 
-"@fontsource/roboto@^5":
+"@fontsource/nunito@^5":
   version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.3.0.tgz#fd0dcdaa0c6ef3a1621253ea702db933ca1b573a"
-  integrity sha512-BapRJOWYP+LZ21zp+wBQjfpPYKRoxc4LspJ/RLuI+HSMBD5u/X4O+ESDrSvEqDSy0rAl7GwBJ+09mdc16cVQ1Q==
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.3.0.tgz#6369caf65492f89cf1c937fc5c153b44128fa527"
+  integrity sha512-vw9TaTQJ/zpEpKrsODuPmOvaVjXgdda6B+xXA4YqjrdeJ62MLgVoDerdRXFQHyBnSCt2yQ2nHKCHPP/Pv7Xq4Q==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.16.0":
   version "2.16.0"
