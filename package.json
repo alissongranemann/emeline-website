@@ -5,8 +5,8 @@
   "version": "1.0.0",
   "author": "Alisson Granemann Abreu <alissongranemannabreu@gmail.com>",
   "dependencies": {
+    "@emailjs/browser": "^5.0.2",
     "babel-plugin-styled-components": "^2.3.0",
-    "emailjs-com": "^2.4.1",
     "formik": "^2.0.3",
     "gatsby": "^5.16.1",
     "gatsby-plugin-google-gtag": "^5.16.0",

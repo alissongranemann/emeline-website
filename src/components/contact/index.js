@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Formik } from "formik"
 import { FaInstagram, FaFacebook, FaWhatsapp, FaEnvelope } from "react-icons/fa"
-import emailjs from "emailjs-com"
+import emailjs from "@emailjs/browser"
 
 import { Fade } from "../common/reveal"
 import Snackbar from "../snackbar"
@@ -21,7 +21,8 @@ import {
 import { FACEBOOK_URL, INSTAGRAM_URL } from "../../config/variables"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
-const USER_ID = process.env.GATSBY_EMAIL_JS_USER_ID
+// EmailJS renamed the "user ID" to "public key"; it is the same value
+const PUBLIC_KEY = process.env.GATSBY_EMAIL_JS_USER_ID
 
 const validateForm = values => {
   const errors = {}
@@ -91,7 +92,9 @@ const Contact = () => {
                 message: message,
               }
               emailjs
-                .send("sendgrid", EMAIL_TEMPLATE_ID, variables, USER_ID)
+                .send("sendgrid", EMAIL_TEMPLATE_ID, variables, {
+                  publicKey: PUBLIC_KEY,
+                })
                 .then(() => {
                   setFeedback(FEEDBACK.success)
                   setSubmitting(false)
