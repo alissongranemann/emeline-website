@@ -1,5 +1,6 @@
 ---
 title: 'Drink para dizer adeus, inchaço!'
+date: 2021-11-25T17:16:38.000Z
 featuredimage: /img/cold-brew-hibiscus-tea-with-ice-and-basil-leaves.jpg
 category: Bebidas
 ---

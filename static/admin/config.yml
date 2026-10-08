@@ -37,6 +37,7 @@ collections:
       preview: false
     fields:
       - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
       - { label: "Imagem", name: "featuredimage", widget: image }
       - {
           label: "Categoria",

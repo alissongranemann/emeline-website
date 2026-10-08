@@ -1,5 +1,6 @@
 ---
 title: 'Granola Salgada '
+date: 2022-10-21T20:54:41.000Z
 featuredimage: /img/granola.jpeg
 category: Lanches
 ---
