@@ -13,7 +13,7 @@ const PostList = ({ title, children }) => (
 
 PostList.Item = PostItem
 
-PropTypes.propTypes = {
+PostList.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
