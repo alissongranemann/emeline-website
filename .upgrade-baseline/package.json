@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "description": "Tooling for the Gatsby 5 upgrade snapshots (not part of the site)",
-  "dependencies": {
-    "playwright-core": "^1.58.0"
-  }
-}

@@ -67,6 +67,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-# Gatsby 5 upgrade: snapshot outputs (script and url list are versioned)
-.upgrade-baseline/*/
