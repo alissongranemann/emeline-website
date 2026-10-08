@@ -22,7 +22,8 @@ import {
   CONTACT_SECTION,
 } from "../../config/variables"
 
-import { StyledScrollSpy, Nav, ListItem, Link, Tooltip } from "./styles"
+import { List, Nav, ListItem, Link, Tooltip } from "./styles"
+import useScrollSpy from "./use-scroll-spy"
 
 export const LANDING_PAGE_SECTIONS = [
   { id: HOME_SECTION, icon: <FaHome />, description: "Início" },
@@ -39,23 +40,28 @@ export const LANDING_PAGE_SECTIONS = [
   { id: CONTACT_SECTION, icon: <FaComments />, description: "Contato" },
 ]
 
-const NavBar = () => (
-  <Nav>
-    <StyledScrollSpy
-      items={LANDING_PAGE_SECTIONS.map(item => item.id)}
-      currentClassName="active"
-      offset={-200}
-    >
-      {LANDING_PAGE_SECTIONS.map(item => (
-        <ListItem>
-          <Link href={`#${item.id}`}>{item.icon}</Link>
-          <Tooltip>
-            <span>{item.description}</span>
-          </Tooltip>
-        </ListItem>
-      ))}
-    </StyledScrollSpy>
-  </Nav>
-)
+const SECTION_IDS = LANDING_PAGE_SECTIONS.map(item => item.id)
+
+const NavBar = () => {
+  const activeId = useScrollSpy(SECTION_IDS, -200)
+
+  return (
+    <Nav>
+      <List>
+        {LANDING_PAGE_SECTIONS.map(item => (
+          <ListItem
+            key={item.id}
+            className={item.id === activeId ? "active" : undefined}
+          >
+            <Link href={`#${item.id}`}>{item.icon}</Link>
+            <Tooltip>
+              <span>{item.description}</span>
+            </Tooltip>
+          </ListItem>
+        ))}
+      </List>
+    </Nav>
+  )
+}
 
 export default NavBar
