@@ -6,6 +6,8 @@
   "author": "Alisson Granemann Abreu <alissongranemannabreu@gmail.com>",
   "dependencies": {
     "@emailjs/browser": "^5.0.2",
+    "@fontsource/comfortaa": "^5",
+    "@fontsource/roboto": "^5",
     "babel-plugin-styled-components": "^2.3.0",
     "formik": "^2.0.3",
     "gatsby": "^5.16.1",
@@ -27,8 +29,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^3.8.0",
-    "styled-components": "^6.5.3",
-    "typeface-lato": "^0.0.75"
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.0.2",
