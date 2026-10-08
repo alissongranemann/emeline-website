@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostList from "../components/blog-posts"
 
-export const Container = styled.div`
+const Container = styled.div`
   min-height: 75vh;
   margin-bottom: 50px;
   padding: 50px 10%;

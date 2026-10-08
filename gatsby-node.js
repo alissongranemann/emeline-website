@@ -80,3 +80,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+// `gatsby develop` doesn't serve .html files from static/, and the CMS page
+// is one; production hosting serves it directly
+exports.onCreateDevServer = ({ app }) => {
+  app.get([`/admin`, `/admin/`], (req, res) => {
+    res.sendFile(path.resolve(`static/admin/index.html`))
+  })
+}

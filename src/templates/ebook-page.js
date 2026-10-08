@@ -21,7 +21,7 @@ const StyledCard = styled(Card)`
   }
 `
 
-export const Link = styled.a`
+const Link = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
