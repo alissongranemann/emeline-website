@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import Image from "../components/preview-compatible-image"
 import Post from "./post"
+import Seo from "../components/seo"
 import Card from "../components/common/card"
 
 const StyledCard = styled(Card)`
@@ -34,17 +36,11 @@ const Small = styled.small`
 `
 
 const EbookPostTemplate = ({ data }) => {
-  const post = data.markdownRemark
-  const {
-    frontmatter,
-    html,
-    fields: { slug },
-    excerpt,
-  } = post
+  const { frontmatter, html } = data.markdownRemark
   const { title, cover, date, file } = frontmatter
 
   return (
-    <Post title={title} description={excerpt} date={date} slug={slug}>
+    <Post title={title}>
       <Small>{date}</Small>
       <section dangerouslySetInnerHTML={{ __html: html }} />
       <Link href={file.publicURL} download>
@@ -64,6 +60,17 @@ const EbookPostTemplate = ({ data }) => {
 
 export default EbookPostTemplate
 
+export const Head = ({ data: { markdownRemark: post } }) => (
+  <Seo
+    title={post.frontmatter.title}
+    description={post.excerpt}
+    image={getSrc(post.frontmatter.cover)}
+    pathname={post.fields.slug}
+    isPost
+    date={post.frontmatter.isoDate}
+  />
+)
+
 export const pageQuery = graphql`
   query EbookPostBySlug($slug: String!) {
     site {
@@ -81,6 +88,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY")
+        isoDate: date
         cover {
           childImageSharp {
             gatsbyImageData(width: 250, quality: 100)

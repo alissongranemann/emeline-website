@@ -1,21 +1,11 @@
 import React from "react"
-import { getSrc } from "gatsby-plugin-image"
 
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
 import { Article, Image, Divider, Author, AuthorPicture } from "./styles"
 
-const PostTemplate = ({ title, description, image, date, slug, children }) => {
+const PostTemplate = ({ title, image, children }) => {
   return (
     <Layout>
-      <SEO
-        title={title}
-        description={description}
-        image={getSrc(image)}
-        path={slug}
-        isPost
-        date={date}
-      />
       <Article>
         <h1>{title}</h1>
         {image && (

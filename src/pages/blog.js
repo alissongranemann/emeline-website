@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import PostList from "../components/blog-posts"
 
 export const Container = styled.div`
@@ -23,10 +23,6 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
-          <SEO
-            title="Blog posts"
-            description="Artigos postados pela nutricionista Emeline Abreu."
-          />
           <Fade>
             <PostList title="Blog">
               {posts.map(({ node }) => {
@@ -51,6 +47,14 @@ class BlogIndex extends React.Component {
 }
 
 export default BlogIndex
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Blog posts"
+    description="Artigos postados pela nutricionista Emeline Abreu."
+    pathname={location.pathname}
+  />
+)
 
 export const pageQuery = graphql`
   query {

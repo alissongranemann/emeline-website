@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import PostList from "../components/recipe-posts"
 
 export const Container = styled.div`
@@ -24,10 +24,6 @@ class RecipesIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Fade>
           <Container>
-            <SEO
-              title="Receitas"
-              description="Receitas postadas pela nutricionista Emeline Abreu."
-            />
             <PostList title="Receitas">
               {recipes.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
@@ -51,6 +47,14 @@ class RecipesIndex extends React.Component {
 }
 
 export default RecipesIndex
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Receitas"
+    description="Receitas postadas pela nutricionista Emeline Abreu."
+    pathname={location.pathname}
+  />
+)
 
 export const pageQuery = graphql`
   query {

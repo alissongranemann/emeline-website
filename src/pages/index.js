@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
-import { getSrc } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import About from "../components/about"
 import Specialties from "../components/specialties"
 import Services from "../components/services-offered"
@@ -32,22 +30,8 @@ const Section = styled.section`
   }
 `
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 1200, height: 1200)
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
-      <SEO
-        title="Nutricionista Araranguá, Curitibanos e Lages"
-        image={getSrc(data.placeholderImage)}
-      />
       <NavBar />
       <Welcome id={HOME_SECTION} />
       <Section id={ABOUT_SECTION}>
@@ -76,3 +60,10 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Nutricionista Araranguá, Curitibanos e Lages"
+    pathname={location.pathname}
+  />
+)
