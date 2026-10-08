@@ -9,7 +9,7 @@
     "@fontsource/comfortaa": "^5",
     "@fontsource/roboto": "^5",
     "babel-plugin-styled-components": "^2.3.0",
-    "formik": "^2.0.3",
+    "formik": "^2.4.9",
     "gatsby": "^5.16.1",
     "gatsby-plugin-google-gtag": "^5.16.0",
     "gatsby-plugin-image": "^3.16.0",
@@ -25,10 +25,10 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-remark": "^6.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^3.8.0",
+    "react-icons": "^5.7.0",
     "styled-components": "^6.5.3"
   },
   "devDependencies": {
