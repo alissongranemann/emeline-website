@@ -75,27 +75,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
-      },
-    },
     `gatsby-plugin-styled-components`,
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /\.svg$/,
-        },
-      },
-    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -139,12 +119,8 @@ module.exports = {
         icon: `src/images/logo.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: ["/blog/", "/recipes/", "/ebooks/"],
-      },
-    },
-    "gatsby-plugin-netlify-cache",
+    // replaces gatsby-plugin-offline: ships a sw.js that unregisters the
+    // service worker previously installed in returning visitors' browsers
+    "gatsby-plugin-remove-serviceworker",
   ],
 }

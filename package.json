@@ -14,9 +14,8 @@
     "gatsby-plugin-google-analytics": "^2.1.27",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-netlify-cms": "^4.2.2",
-    "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.3.0",
     "gatsby-plugin-sitemap": "^2.2.21",
@@ -35,14 +34,11 @@
     "react-icons": "^3.8.0",
     "react-reveal": "^1.2.2",
     "react-scrollspy": "^3.4.0",
-    "sharp": "^0.33.5",
     "styled-components": "^4.4.1",
-    "typeface-lato": "^0.0.75",
-    "typeface-montserrat": "^0.0.75"
+    "typeface-lato": "^0.0.75"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.0.2",
-    "gatsby-plugin-netlify-cache": "^1.2.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
