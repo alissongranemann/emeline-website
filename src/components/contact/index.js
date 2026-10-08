@@ -17,7 +17,11 @@ import {
   HelperText,
   SubmitButton,
 } from "./styles"
-import { FACEBOOK_URL, INSTAGRAM_URL } from "../../config/variables"
+import {
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  WHATSAPP_URL,
+} from "../../config/variables"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
 // EmailJS renamed the "user ID" to "public key"; it is the same value
@@ -187,11 +191,7 @@ const Contact = () => {
               <FaEnvelope />
               emeline.ntr@gmail.com
             </a>{" "}
-            <a
-              href="https://api.whatsapp.com/send?phone=5548998025867"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
               (48) 99802-5867
             </a>

@@ -12,6 +12,7 @@ import styled from "styled-components"
 import "./layout.css"
 import Footer from "../footer"
 import Header from "../header"
+import WhatsAppButton from "../whatsapp-button"
 
 const Main = styled.main`
   padding-top: 0;
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
       <Header />
       <Main>{children}</Main>
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }
