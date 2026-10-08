@@ -1,23 +1,12 @@
 import React from "react"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const PreviewCompatibleImage = ({ imageInfo, className }) => {
   const { alt = "", childImageSharp, image } = imageInfo
+  const gatsbyImage = getImage(image) || getImage({ childImageSharp })
 
-  if (!!image && !!image.childImageSharp) {
-    return (
-      <Image
-        className={className}
-        fluid={image.childImageSharp.fluid}
-        alt={alt}
-      />
-    )
-  }
-
-  if (!!childImageSharp) {
-    return (
-      <Image className={className} fluid={childImageSharp.fluid} alt={alt} />
-    )
+  if (gatsbyImage) {
+    return <GatsbyImage className={className} image={gatsbyImage} alt={alt} />
   }
 
   if (!!image && typeof image === "string")

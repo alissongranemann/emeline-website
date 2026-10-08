@@ -1,4 +1,5 @@
 import React from "react"
+import { getSrc } from "gatsby-plugin-image"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -10,7 +11,7 @@ const PostTemplate = ({ title, description, image, date, slug, children }) => {
       <SEO
         title={title}
         description={description}
-        image={image && image.childImageSharp.fluid.src}
+        image={getSrc(image)}
         path={slug}
         isPost
         date={date}

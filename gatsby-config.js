@@ -3,7 +3,7 @@ const {
   URL: NETLIFY_SITE_URL = "https://emelineabreunutri.com.br",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
-  GATSBY_GA_TRACKING_ID: GA_TRACKING_ID,
+  GATSBY_GA_MEASUREMENT_ID: GA_MEASUREMENT_ID,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === "production"
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
@@ -58,9 +58,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            // turns CMS paths like /img/foo.jpg (body and frontmatter) into
+            // paths relative to the markdown file, so sharp can process them
             resolve: "gatsby-remark-relative-images",
             options: {
-              name: "uploads",
+              staticFolderName: "static",
+              include: ["featuredimage"],
             },
           },
           {
@@ -73,8 +76,15 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // gatsby-image used a blurred base64 placeholder; keep the same look
+        defaults: { placeholder: `blurred` },
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -97,16 +107,18 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: GA_TRACKING_ID,
-        head: true,
-        pageTransitionDelay: 0,
-      },
-    },
+    ...(GA_MEASUREMENT_ID
+      ? [
+          {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              trackingIds: [GA_MEASUREMENT_ID],
+              pluginConfig: { head: true },
+            },
+          },
+        ]
+      : []),
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-netlify-cms",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

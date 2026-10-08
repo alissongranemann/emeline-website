@@ -83,9 +83,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         cover {
           childImageSharp {
-            fluid(maxWidth: 250, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 250, quality: 100)
           }
         }
         file {

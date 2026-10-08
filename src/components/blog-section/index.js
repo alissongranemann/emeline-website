@@ -15,7 +15,7 @@ const Blog = () => {
         }
       }
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { fileAbsolutePath: { regex: "/blog/" } }
         limit: 2
       ) {
@@ -31,9 +31,7 @@ const Blog = () => {
               description
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 400, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 400, quality: 100)
                 }
               }
             }

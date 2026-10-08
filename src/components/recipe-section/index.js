@@ -15,7 +15,7 @@ const Recipes = () => {
         }
       }
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { fileAbsolutePath: { regex: "/recipes/" } }
         limit: 3
       ) {
@@ -31,9 +31,7 @@ const Recipes = () => {
               category
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 400, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 400, quality: 100)
                 }
               }
             }

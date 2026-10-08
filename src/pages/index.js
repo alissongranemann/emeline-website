@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,9 +36,7 @@ const IndexPage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 1200, height: 1200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED, width: 1200, height: 1200)
         }
       }
     }
@@ -47,7 +46,7 @@ const IndexPage = () => {
     <Layout>
       <SEO
         title="Nutricionista Araranguá, Curitibanos e Lages"
-        image={data.placeholderImage.childImageSharp.fixed.src}
+        image={getSrc(data.placeholderImage)}
       />
       <NavBar />
       <Welcome id={HOME_SECTION} />

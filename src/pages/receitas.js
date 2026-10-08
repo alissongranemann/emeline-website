@@ -60,7 +60,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fileAbsolutePath: { regex: "/recipes/" } }
     ) {
       edges {
@@ -75,9 +75,7 @@ export const pageQuery = graphql`
             category
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 400, quality: 100)
               }
             }
           }
