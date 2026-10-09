@@ -2,33 +2,19 @@ import React from "react"
 import { graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { FaDownload } from "react-icons/fa"
 
-import Image from "../components/preview-compatible-image"
 import Post from "./post"
 import Seo from "../components/seo"
-import Card from "../components/common/card"
-import { colors } from "../config/variables"
+import PdfViewer from "../components/pdf-viewer"
+import { buttonStyles } from "../components/common/button"
 
-const StyledCard = styled(Card)`
-  width: 12em;
-  border-radius: unset;
-  text-align: center;
-  background: ${colors.primary};
-
-  p {
-    color: #fff;
-    font-weight: 600;
-    margin: 0.5em 0;
-  }
+const Download = styled.a`
+  ${buttonStyles}
 `
 
-const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2.5em 0;
-  text-decoration: none;
+const Actions = styled.div`
+  text-align: center;
 `
 
 const Small = styled.small`
@@ -38,23 +24,19 @@ const Small = styled.small`
 
 const EbookPostTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
-  const { title, cover, date, file } = frontmatter
+  const { title, date, file } = frontmatter
 
   return (
     <Post title={title}>
       <Small>{date}</Small>
       <section dangerouslySetInnerHTML={{ __html: html }} />
-      <Link href={file.publicURL} download>
-        <StyledCard>
-          <Image
-            imageInfo={{
-              image: cover,
-              alt: `ebook ${title}`,
-            }}
-          />
-          <p>Clique para baixar</p>
-        </StyledCard>
-      </Link>
+      <PdfViewer url={file.publicURL} title={title} />
+      <Actions>
+        <Download href={file.publicURL} download>
+          <FaDownload aria-hidden="true" />
+          Baixar o ebook em PDF
+        </Download>
+      </Actions>
     </Post>
   )
 }
