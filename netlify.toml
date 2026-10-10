@@ -6,6 +6,13 @@
   NODE_VERSION = "22.22.0"
   YARN_VERSION = "1.22.19"
 
+# one host only: www is a domain alias that otherwise serves a full copy
+[[redirects]]
+  from = "https://www.emelineabreunutri.com.br/*"
+  to = "https://emelineabreunutri.com.br/:splat"
+  status = 301
+  force = true
+
 # gatsby-plugin-sitemap >= 3 writes sitemap-index.xml; keep the old URL
 # (submitted to search engines) working
 [[redirects]]
