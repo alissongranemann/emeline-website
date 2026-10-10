@@ -14,7 +14,8 @@ const About = () => (
     <VideoContainer>
       <Video
         src="https://www.youtube.com/embed/1ioWZPExSgA?si=vnR-kPsa12EDy0sJ&amp;controls=0"
-        title="YouTube video player"
+        title="Vídeo de apresentação da nutricionista Emeline Abreu"
+        loading="lazy"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
@@ -37,7 +38,7 @@ const About = () => (
           Experiência em atendimentos clínicos nutricionais em adultos,
           gestantes e idosos, com foco em reeducação alimentar, emagrecimento,
           procedimentos estéticos, orientações para cirurgia bariátrica, doenças
-          crônicas não transmissíveis, alergias e intolerâncias alimentantes,
+          crônicas não transmissíveis, alergias e intolerâncias alimentares,
           saúde da mulher e praticantes de atividades físicas com foco em
           hipertrofia.
         </p>

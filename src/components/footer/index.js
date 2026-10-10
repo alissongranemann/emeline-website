@@ -6,26 +6,43 @@ import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
   WHATSAPP_URL,
+  EMAIL,
 } from "../../config/variables"
 
 const Footer = () => (
   <StyledFooter>
     <CustomLogo />
     <IconContainer>
-      <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
+      <a
+        href={FACEBOOK_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+      >
         <FaFacebook />
       </a>
-      <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+      <a
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
         <FaInstagram />
       </a>{" "}
       <a
-        href="mailto:emeline.ntr@gmail.com"
+        href={`mailto:${EMAIL}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="E-mail"
       >
         <FaEnvelope />
       </a>{" "}
-      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+      >
         <FaWhatsapp />
       </a>
     </IconContainer>

@@ -31,7 +31,7 @@ const Recipes = () => {
               category
               featuredimage {
                 childImageSharp {
-                  gatsbyImageData(width: 400, quality: 100)
+                  gatsbyImageData(width: 400)
                 }
               }
             }

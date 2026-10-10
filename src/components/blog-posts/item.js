@@ -4,11 +4,7 @@ import ImageCard from "../common/image-card"
 
 const PostItem = ({ title, slug, description, date, image }) => (
   <article>
-    <ImageCard
-      slug={slug}
-      image={image}
-      alt={`featured image thumbnail for post ${title}`}
-    >
+    <ImageCard slug={slug} image={image} alt={title.trim()}>
       <small>{date}</small>
       <h3>{title}</h3>
       <p

@@ -24,7 +24,7 @@ class RecipesIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Fade>
           <Container>
-            <PostList title="Receitas">
+            <PostList title="Receitas" headingLevel="h1">
               {recipes.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 const category = node.frontmatter.category
@@ -50,8 +50,8 @@ export default RecipesIndex
 
 export const Head = ({ location }) => (
   <Seo
-    title="Receitas"
-    description="Receitas postadas pela nutricionista Emeline Abreu."
+    title="Receitas saudáveis"
+    description="Receitas saudáveis e práticas da nutricionista Emeline Abreu: bolos, pães, lanches, pratos principais e bebidas para o dia a dia."
     pathname={location.pathname}
   />
 )
@@ -79,7 +79,7 @@ export const pageQuery = graphql`
             category
             featuredimage {
               childImageSharp {
-                gatsbyImageData(width: 400, quality: 100)
+                gatsbyImageData(width: 400)
               }
             }
           }

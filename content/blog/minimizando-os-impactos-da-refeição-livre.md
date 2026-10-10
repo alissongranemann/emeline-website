@@ -6,7 +6,7 @@ description: >-
   Você costuma utilizar a estratégia de refeições livres junto ao seu plano
   alimentar?
 ---
-Dentro da estratégia dietética sempre há espaço para o que chamamos de REFEIÇÃO LIVRE, aquela que foge da regra ou de um plano elaborado para trabalhar a rotina, o dia a dia – o mais importante não é ter uma rotina 100% estabelecida e sim saber lidar com as diversidades que a vida social traz e não são poucas![\#semneuras](https://www.instagram.com/explore/tags/semneuras/)
+Dentro da estratégia dietética sempre há espaço para o que chamamos de REFEIÇÃO LIVRE, aquela que foge da regra ou de um plano elaborado para trabalhar a rotina, o dia a dia – o mais importante não é ter uma rotina 100% estabelecida e sim saber lidar com as diversidades que a vida social traz e não são poucas! [\#semneuras](https://www.instagram.com/explore/tags/semneuras/)
 
 A frequência disso depende muto do contexto, como tudo na vida. Para alguns, uma refeição livre na semana ou duas, ainda trazem bons resultados.\
 Não existe um protocolo que atenda a todas as necessidades e objetivos, levando em consideração que a refeição livre deve estar de acordo com a realidade e as condições de saúde de cada um.

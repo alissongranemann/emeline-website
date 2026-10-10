@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { getSrc } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { FaDownload } from "react-icons/fa"
 
@@ -47,9 +46,9 @@ export const Head = ({ data: { markdownRemark: post } }) => (
   <Seo
     title={post.frontmatter.title}
     description={post.excerpt}
-    image={getSrc(post.frontmatter.cover)}
+    image={post.frontmatter.socialImage?.childImageSharp.resize}
     pathname={post.fields.slug}
-    isPost
+    type="ebook"
     date={post.frontmatter.isoDate}
   />
 )
@@ -72,9 +71,19 @@ export const pageQuery = graphql`
         title
         date(formatString: "DD/MM/YYYY")
         isoDate: date
-        cover {
+        socialImage: cover {
           childImageSharp {
-            gatsbyImageData(width: 250, quality: 100)
+            resize(
+              width: 1200
+              height: 1200
+              fit: INSIDE
+              toFormat: JPG
+              quality: 80
+            ) {
+              src
+              width
+              height
+            }
           }
         }
         file {

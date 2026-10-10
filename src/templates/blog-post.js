@@ -1,9 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { getSrc } from "gatsby-plugin-image"
 
 import Post from "./post"
-import Seo from "../components/seo"
+import Seo, { pickDescription } from "../components/seo"
 
 const BlogPostTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
@@ -23,10 +22,11 @@ export default BlogPostTemplate
 export const Head = ({ data: { markdownRemark: post } }) => (
   <Seo
     title={post.frontmatter.title}
-    description={post.frontmatter.description || post.excerpt}
-    image={getSrc(post.frontmatter.featuredimage)}
+    description={pickDescription(post.frontmatter.description, post.excerpt)}
+    image={post.frontmatter.socialImage?.childImageSharp.resize}
     pathname={post.fields.slug}
-    isPost
+    type="post"
+    section={{ name: "Blog", path: "/blog/" }}
     date={post.frontmatter.isoDate}
   />
 )
@@ -52,7 +52,22 @@ export const pageQuery = graphql`
         description
         featuredimage {
           childImageSharp {
-            gatsbyImageData(width: 1080, quality: 100)
+            gatsbyImageData(width: 720)
+          }
+        }
+        socialImage: featuredimage {
+          childImageSharp {
+            resize(
+              width: 1200
+              height: 1200
+              fit: INSIDE
+              toFormat: JPG
+              quality: 80
+            ) {
+              src
+              width
+              height
+            }
           }
         }
       }

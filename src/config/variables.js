@@ -30,6 +30,8 @@ export const colors = {
 export const FACEBOOK_URL = "https://www.facebook.com/emeline.abreu"
 export const INSTAGRAM_URL = "https://www.instagram.com/emelineabreunutri"
 export const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5548998025867"
+export const PHONE_NUMBER = "+55 48 99802-5867"
+export const EMAIL = "emeline.ntr@gmail.com"
 
 export const HOME_SECTION = "welcome"
 export const ABOUT_SECTION = "about"

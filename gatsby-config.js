@@ -11,8 +11,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
     title: `Emeline Abreu`,
-    description: `Nutricionista Emeline Abreu. Nutrição clínica, funcional, comportamental e estética. Atua nas cidades de Araranguá, Curitibanos e Lages, em Santa Catarina. `,
-    author: `@alissongranemann`,
+    description: `Nutricionista Emeline Abreu. Nutrição clínica, funcional, comportamental e estética. Atua nas cidades de Araranguá, Curitibanos e Lages, em Santa Catarina.`,
     siteUrl,
   },
   plugins: [
@@ -81,7 +80,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         // gatsby-image used a blurred base64 placeholder; keep the same look
-        defaults: { placeholder: `blurred` },
+        defaults: { placeholder: `blurred`, quality: 75 },
       },
     },
     `gatsby-plugin-styled-components`,

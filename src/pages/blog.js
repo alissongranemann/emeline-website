@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
           <Fade>
-            <PostList title="Blog">
+            <PostList title="Blog" headingLevel="h1">
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 const description = node.frontmatter.description || node.excerpt
@@ -50,8 +50,8 @@ export default BlogIndex
 
 export const Head = ({ location }) => (
   <Seo
-    title="Blog posts"
-    description="Artigos postados pela nutricionista Emeline Abreu."
+    title="Blog de nutrição"
+    description="Artigos da nutricionista Emeline Abreu sobre alimentação saudável, emagrecimento, saúde intestinal, saúde da mulher e nutrição no dia a dia."
     pathname={location.pathname}
   />
 )
@@ -79,7 +79,7 @@ export const pageQuery = graphql`
             description
             featuredimage {
               childImageSharp {
-                gatsbyImageData(width: 400, quality: 100)
+                gatsbyImageData(width: 400)
               }
             }
           }

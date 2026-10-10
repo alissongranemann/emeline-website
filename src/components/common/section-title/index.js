@@ -7,6 +7,11 @@ import { colors } from "../../../config/variables"
 const SectionTitle = styled.h2`
   margin-bottom: 5rem;
 
+  /* a list that is the page itself renders this as h1: keep the h2 size */
+  h1& {
+    font-size: 3.4rem;
+  }
+
   &::after {
     content: "";
     display: block;

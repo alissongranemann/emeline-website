@@ -26,7 +26,13 @@ collections:
         }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
       - { label: "Imagem", name: "featuredimage", widget: image }
-      - { label: "Descrição", name: "description", widget: "string" }
+      - {
+          label: "Descrição",
+          name: "description",
+          widget: "string",
+          hint: "Resumo do post em uma ou duas frases (50 a 160 caracteres). É o texto que aparece no Google e ao compartilhar o link.",
+          pattern: [".{50,}", "Escreva pelo menos 50 caracteres"],
+        }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
   - name: receitas

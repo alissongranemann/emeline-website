@@ -21,6 +21,7 @@ import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
   WHATSAPP_URL,
+  EMAIL,
 } from "../../config/variables"
 
 const EMAIL_TEMPLATE_ID = "emeline_abreu_contact"
@@ -200,12 +201,12 @@ const Contact = () => {
               </li>
               <li>
                 <a
-                  href="mailto:emeline.ntr@gmail.com"
+                  href={`mailto:${EMAIL}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaEnvelope aria-hidden="true" />
-                  emeline.ntr@gmail.com
+                  {EMAIL}
                 </a>
               </li>
               <li>

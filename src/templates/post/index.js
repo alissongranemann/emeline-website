@@ -12,7 +12,7 @@ const PostTemplate = ({ title, image, children }) => {
           <Image
             imageInfo={{
               image: image,
-              alt: `featured image thumbnail for post ${title}`,
+              alt: title.trim(),
             }}
           />
         )}

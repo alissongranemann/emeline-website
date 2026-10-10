@@ -59,5 +59,6 @@ export const Head = ({ location }) => (
   <Seo
     title="Nutricionista Araranguá, Curitibanos e Lages"
     pathname={location.pathname}
+    type="home"
   />
 )

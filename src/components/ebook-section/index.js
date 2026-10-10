@@ -29,7 +29,7 @@ const Ebooks = () => {
               title
               cover {
                 childImageSharp {
-                  gatsbyImageData(width: 300, quality: 100)
+                  gatsbyImageData(width: 300)
                 }
               }
             }
