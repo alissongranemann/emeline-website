@@ -114,7 +114,7 @@ const toDuration = minutes => {
 }
 
 /**
- * Times, yield and calories are optional CMS fields, filled only when the
+ * Times, yield, calories and keywords are optional CMS fields, filled only when the
  * recipe states them: Google prefers a missing field to a made-up one.
  */
 const getRecipe = page => {
@@ -126,6 +126,7 @@ const getRecipe = page => {
     cookTime,
     recipeYield,
     calories,
+    keywords,
   } = page.recipe || {}
 
   return {
@@ -143,6 +144,7 @@ const getRecipe = page => {
         calories: `${calories} kcal`,
       },
     }),
+    ...(keywords?.length > 0 && { keywords: keywords.join(", ") }),
     ...(ingredients.length > 0 && { recipeIngredient: ingredients }),
     ...(instructions && { recipeInstructions: instructions }),
   }

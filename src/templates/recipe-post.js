@@ -32,6 +32,7 @@ export const Head = ({ data: { markdownRemark: post } }) => (
       cookTime: post.frontmatter.cookTime,
       recipeYield: post.frontmatter.recipeYield,
       calories: post.frontmatter.calories,
+      keywords: post.frontmatter.keywords,
       ...parseRecipe(post.rawMarkdownBody),
     }}
   />
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
         cookTime
         recipeYield
         calories
+        keywords
         featuredimage {
           childImageSharp {
             gatsbyImageData(width: 720)

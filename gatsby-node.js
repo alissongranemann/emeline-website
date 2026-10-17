@@ -105,6 +105,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       cookTime: Int
       recipeYield: String
       calories: Int
+      keywords: [String]
     }
   `)
 }

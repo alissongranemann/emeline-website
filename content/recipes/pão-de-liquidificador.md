@@ -4,6 +4,10 @@ date: 2020-04-21T13:36:05.000Z
 featuredimage: /img/whatsapp-image-2020-04-16-at-18.17.34.jpeg
 category: Lanches
 cookTime: 30
+keywords:
+  - sem glúten
+  - sem lactose
+  - sem farinha
 ---
 Da série o simples funciona: pão fofinho, quentinho, baratinho 😅 
 

@@ -4,6 +4,9 @@ date: 2019-12-07T21:19:37.000Z
 featuredimage: /img/bolo_aveia.jpg
 category: Bolos e tortas
 cookTime: 30
+keywords:
+  - sem açúcar
+  - sem farinha
 ---
 Aí vai a receita!
 

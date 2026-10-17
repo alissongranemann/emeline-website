@@ -3,6 +3,9 @@ title: 'Drink para dizer adeus, inchaço!'
 date: 2021-11-25T17:16:38.000Z
 featuredimage: /img/cold-brew-hibiscus-tea-with-ice-and-basil-leaves.jpg
 category: Bebidas
+keywords:
+  - sem álcool
+  - verão
 ---
 Super refrescante, uma opção para quem não quer ingerir bebidas alcoólicas, para quem sofre com os inchaços do verão, dos períodos de TPM, ou após um dia intenso de trabalho.
 

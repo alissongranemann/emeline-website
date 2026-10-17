@@ -96,6 +96,13 @@ collections:
           required: false,
           hint: "Opcional.",
         }
+      - {
+          label: "Palavras-chave",
+          name: "keywords",
+          widget: "list",
+          required: false,
+          hint: "Opcional, separadas por vírgula. Descrevem a receita além da categoria: sem glúten, vegetariana, verão...",
+        }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
   - name: ebooks
