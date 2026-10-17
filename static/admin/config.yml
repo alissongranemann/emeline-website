@@ -62,6 +62,40 @@ collections:
               "Lanches",
             ],
         }
+      - {
+          label: "Tempo de preparo (minutos)",
+          name: "prepTime",
+          widget: "number",
+          value_type: "int",
+          min: 1,
+          required: false,
+          hint: "Opcional. Tempo de mão na massa, antes de ir ao fogo ou ao forno.",
+        }
+      - {
+          label: "Tempo de cozimento (minutos)",
+          name: "cookTime",
+          widget: "number",
+          value_type: "int",
+          min: 1,
+          required: false,
+          hint: "Opcional. Tempo no fogo ou no forno.",
+        }
+      - {
+          label: "Rendimento",
+          name: "recipeYield",
+          widget: "string",
+          required: false,
+          hint: "Opcional. Ex.: 8 fatias, 4 porções.",
+        }
+      - {
+          label: "Calorias por porção (kcal)",
+          name: "calories",
+          widget: "number",
+          value_type: "int",
+          min: 1,
+          required: false,
+          hint: "Opcional.",
+        }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
   - name: ebooks

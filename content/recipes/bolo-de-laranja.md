@@ -3,6 +3,7 @@ title: Bolo de laranja
 date: 2019-08-08T22:11:40.649Z
 featuredimage: /img/bolo-de-laranja.jpg
 category: Bolos e tortas
+cookTime: 45
 ---
 Nova receita… e muito simples!
 

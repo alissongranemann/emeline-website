@@ -105,13 +105,44 @@ const getBlogPosting = page => ({
   mainEntityOfPage: { "@type": "WebPage", "@id": page.url },
 })
 
+// minutes as an ISO 8601 duration: 90 -> "PT1H30M"
+const toDuration = minutes => {
+  const hours = Math.floor(minutes / 60)
+  const rest = minutes % 60
+
+  return `PT${hours ? `${hours}H` : ``}${rest || !hours ? `${rest}M` : ``}`
+}
+
+/**
+ * Times, yield and calories are optional CMS fields, filled only when the
+ * recipe states them: Google prefers a missing field to a made-up one.
+ */
 const getRecipe = page => {
-  const { category, ingredients = [], instructions } = page.recipe || {}
+  const {
+    category,
+    ingredients = [],
+    instructions,
+    prepTime,
+    cookTime,
+    recipeYield,
+    calories,
+  } = page.recipe || {}
 
   return {
     "@type": "Recipe",
     ...getContentFields(page),
+    recipeCuisine: "Brasileira",
     ...(category && { recipeCategory: category }),
+    ...(prepTime && { prepTime: toDuration(prepTime) }),
+    ...(cookTime && { cookTime: toDuration(cookTime) }),
+    ...(prepTime && cookTime && { totalTime: toDuration(prepTime + cookTime) }),
+    ...(recipeYield && { recipeYield }),
+    ...(calories && {
+      nutrition: {
+        "@type": "NutritionInformation",
+        calories: `${calories} kcal`,
+      },
+    }),
     ...(ingredients.length > 0 && { recipeIngredient: ingredients }),
     ...(instructions && { recipeInstructions: instructions }),
   }

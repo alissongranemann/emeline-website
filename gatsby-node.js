@@ -91,3 +91,20 @@ exports.onCreateDevServer = ({ app }) => {
     res.sendFile(path.resolve(`static/admin/index.html`))
   })
 }
+
+// optional recipe details: no recipe may have them yet, so inference alone
+// would leave them out of the schema and break the recipe query
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type MarkdownRemark implements Node {
+      frontmatter: MarkdownRemarkFrontmatter
+    }
+
+    type MarkdownRemarkFrontmatter {
+      prepTime: Int
+      cookTime: Int
+      recipeYield: String
+      calories: Int
+    }
+  `)
+}

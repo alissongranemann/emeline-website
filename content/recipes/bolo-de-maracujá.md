@@ -3,6 +3,7 @@ title: Bolo de maracujá
 date: 2019-02-20T22:16:40.748Z
 featuredimage: /img/bolo-maracuja.jpg
 category: Bolos e tortas
+cookTime: 40
 ---
 Sugestão de hoje é bolo de maracujá. Receita prática, barata e super saborosa! 
 

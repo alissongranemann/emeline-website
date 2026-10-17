@@ -3,6 +3,8 @@ title: Empadão de grão de bico
 date: 2019-10-31T16:00:28.319Z
 featuredimage: /img/empadao.jpg
 category: Massas
+cookTime: 25
+recipeYield: 6 a 8 porções
 ---
 
 **Ingredientes**:

@@ -28,6 +28,10 @@ export const Head = ({ data: { markdownRemark: post } }) => (
     date={post.frontmatter.isoDate}
     recipe={{
       category: post.frontmatter.category,
+      prepTime: post.frontmatter.prepTime,
+      cookTime: post.frontmatter.cookTime,
+      recipeYield: post.frontmatter.recipeYield,
+      calories: post.frontmatter.calories,
       ...parseRecipe(post.rawMarkdownBody),
     }}
   />
@@ -53,6 +57,10 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         isoDate: date
         category
+        prepTime
+        cookTime
+        recipeYield
+        calories
         featuredimage {
           childImageSharp {
             gatsbyImageData(width: 720)
